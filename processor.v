@@ -92,21 +92,13 @@ module processor(
 
     /* YOUR CODE STARTS HERE */
 	 
-	 /* Level 1 */
-	/** 
-	 wire[31:0] w1,w2;
-	 wire [31:0] rs, rt , rd;
+	 /* Level 1 for Program counter */
+	
+	 wire[11:0] pc_in;
 	 
-	 reg32 pc (w2, w1, clock, 1b'1, reset);
+	 program_counter pc (address_imem, pc_in, clock, 1'b1, reset);
+	 pc_adder a1(pc_in, address_imem);
 	 
-	 //Should do
-	 imem instruction_mem(rs, rt, rd, w2, clock, reset);
-	 
-	 regfile(clock, )
-	 **/
-	 
-	 
-	 
-	 
+	 /* Level 2 */
 
 endmodule

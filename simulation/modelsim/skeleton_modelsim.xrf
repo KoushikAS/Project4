@@ -1,6 +1,7 @@
 vendor_name = ModelSim
+source_file = 1, C:/Users/ka266/Documents/Project4/program_counter.v
+source_file = 1, C:/Users/ka266/Documents/Project4/fulladder.v
 source_file = 1, C:/Users/ka266/Documents/Project4/imem.v
-source_file = 1, C:/Users/ka266/Documents/Project4/reg_32.v
 source_file = 1, C:/Users/ka266/Documents/Project4/dffe.v
 source_file = 1, C:/Users/ka266/Documents/Project4/regfile.v
 source_file = 1, C:/Users/ka266/Documents/Project4/alu.v
@@ -9,6 +10,7 @@ source_file = 1, C:/Users/ka266/Documents/Project4/processor.v
 source_file = 1, C:/Users/ka266/Documents/Project4/dmem.v
 source_file = 1, C:/Users/ka266/Documents/Project4/imem.qip
 source_file = 1, C:/Users/ka266/Documents/Project4/dmem.qip
+source_file = 1, C:/Users/ka266/Documents/Project4/pc_adder.v
 source_file = 1, c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf
 source_file = 1, c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc
 source_file = 1, c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc

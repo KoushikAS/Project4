@@ -1,5 +1,5 @@
 Analysis & Synthesis report for skeleton
-Sun Oct 30 20:05:36 2022
+Sun Oct 30 21:00:48 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -14,18 +14,30 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. General Register Statistics
- 10. Source assignments for imem:my_imem|altsyncram:altsyncram_component|altsyncram_q3b1:auto_generated
- 11. Source assignments for dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated
- 12. Parameter Settings for User Entity Instance: imem:my_imem|altsyncram:altsyncram_component
- 13. Parameter Settings for User Entity Instance: dmem:my_dmem|altsyncram:altsyncram_component
- 14. altsyncram Parameter Settings by Entity Instance
- 15. Port Connectivity Checks: "processor:my_processor"
- 16. Port Connectivity Checks: "dmem:my_dmem"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
- 20. Analysis & Synthesis Suppressed Messages
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Source assignments for imem:my_imem|altsyncram:altsyncram_component|altsyncram_q3b1:auto_generated
+ 12. Source assignments for dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated
+ 13. Parameter Settings for User Entity Instance: imem:my_imem|altsyncram:altsyncram_component
+ 14. Parameter Settings for User Entity Instance: dmem:my_dmem|altsyncram:altsyncram_component
+ 15. altsyncram Parameter Settings by Entity Instance
+ 16. Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:intialize[11].fa"
+ 17. Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:intialize[10].fa"
+ 18. Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:intialize[9].fa"
+ 19. Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:intialize[8].fa"
+ 20. Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:intialize[7].fa"
+ 21. Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:intialize[6].fa"
+ 22. Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:intialize[5].fa"
+ 23. Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:intialize[4].fa"
+ 24. Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:intialize[3].fa"
+ 25. Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:fa3"
+ 26. Port Connectivity Checks: "processor:my_processor|program_counter:pc"
+ 27. Port Connectivity Checks: "processor:my_processor"
+ 28. Port Connectivity Checks: "dmem:my_dmem"
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
+ 32. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -52,7 +64,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct 30 20:05:36 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct 30 21:00:48 2022       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; skeleton                                    ;
 ; Top-level Entity Name              ; skeleton                                    ;
@@ -176,11 +188,15 @@ agreement for further details.
 +----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                 ; Library ;
 +----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+; program_counter.v                ; yes             ; User Verilog HDL File                  ; C:/Users/ka266/Documents/Project4/program_counter.v                          ;         ;
+; fulladder.v                      ; yes             ; User Verilog HDL File                  ; C:/Users/ka266/Documents/Project4/fulladder.v                                ;         ;
 ; imem.v                           ; yes             ; User Wizard-Generated File             ; C:/Users/ka266/Documents/Project4/imem.v                                     ;         ;
+; dffe.v                           ; yes             ; User Verilog HDL File                  ; C:/Users/ka266/Documents/Project4/dffe.v                                     ;         ;
 ; regfile.v                        ; yes             ; User Verilog HDL File                  ; C:/Users/ka266/Documents/Project4/regfile.v                                  ;         ;
 ; skeleton.v                       ; yes             ; User Verilog HDL File                  ; C:/Users/ka266/Documents/Project4/skeleton.v                                 ;         ;
 ; processor.v                      ; yes             ; User Verilog HDL File                  ; C:/Users/ka266/Documents/Project4/processor.v                                ;         ;
 ; dmem.v                           ; yes             ; User Wizard-Generated File             ; C:/Users/ka266/Documents/Project4/dmem.v                                     ;         ;
+; pc_adder.v                       ; yes             ; User Verilog HDL File                  ; C:/Users/ka266/Documents/Project4/pc_adder.v                                 ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -245,6 +261,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Altera ; RAM: 1-PORT  ; 17.0    ; N/A          ; N/A          ; |skeleton|dmem:my_dmem ; dmem.v          ;
 ; Altera ; ROM: 1-PORT  ; 17.0    ; N/A          ; N/A          ; |skeleton|imem:my_imem ; imem.v          ;
 +--------+--------------+---------+--------------+--------------+------------------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                           ;
++-----------------------------------------------------------------------+--------------------------------------+
+; Register name                                                         ; Reason for Removal                   ;
++-----------------------------------------------------------------------+--------------------------------------+
+; processor:my_processor|program_counter:pc|dffe_ref:intialize[11].df|q ; Stuck at GND due to stuck port clock ;
+; processor:my_processor|program_counter:pc|dffe_ref:intialize[10].df|q ; Stuck at GND due to stuck port clock ;
+; processor:my_processor|program_counter:pc|dffe_ref:intialize[9].df|q  ; Stuck at GND due to stuck port clock ;
+; processor:my_processor|program_counter:pc|dffe_ref:intialize[8].df|q  ; Stuck at GND due to stuck port clock ;
+; processor:my_processor|program_counter:pc|dffe_ref:intialize[7].df|q  ; Stuck at GND due to stuck port clock ;
+; processor:my_processor|program_counter:pc|dffe_ref:intialize[6].df|q  ; Stuck at GND due to stuck port clock ;
+; processor:my_processor|program_counter:pc|dffe_ref:intialize[5].df|q  ; Stuck at GND due to stuck port clock ;
+; processor:my_processor|program_counter:pc|dffe_ref:intialize[4].df|q  ; Stuck at GND due to stuck port clock ;
+; processor:my_processor|program_counter:pc|dffe_ref:intialize[3].df|q  ; Stuck at GND due to stuck port clock ;
+; processor:my_processor|program_counter:pc|dffe_ref:intialize[2].df|q  ; Stuck at GND due to stuck port clock ;
+; processor:my_processor|program_counter:pc|dffe_ref:intialize[1].df|q  ; Stuck at GND due to stuck port clock ;
+; processor:my_processor|program_counter:pc|dffe_ref:intialize[0].df|q  ; Stuck at GND due to stuck port clock ;
+; Total Number of Removed Registers = 12                                ;                                      ;
++-----------------------------------------------------------------------+--------------------------------------+
 
 
 +------------------------------------------------------+
@@ -433,6 +470,107 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:intialize[11].fa"                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; in2  ; Input  ; Info     ; Stuck at GND                                                                        ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:intialize[10].fa" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:intialize[9].fa" ;
++------+-------+----------+----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                        ;
++------+-------+----------+----------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                   ;
++------+-------+----------+----------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:intialize[8].fa" ;
++------+-------+----------+----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                        ;
++------+-------+----------+----------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                   ;
++------+-------+----------+----------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:intialize[7].fa" ;
++------+-------+----------+----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                        ;
++------+-------+----------+----------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                   ;
++------+-------+----------+----------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:intialize[6].fa" ;
++------+-------+----------+----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                        ;
++------+-------+----------+----------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                   ;
++------+-------+----------+----------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:intialize[5].fa" ;
++------+-------+----------+----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                        ;
++------+-------+----------+----------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                   ;
++------+-------+----------+----------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:intialize[4].fa" ;
++------+-------+----------+----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                        ;
++------+-------+----------+----------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                   ;
++------+-------+----------+----------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:intialize[3].fa" ;
++------+-------+----------+----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                        ;
++------+-------+----------+----------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                   ;
++------+-------+----------+----------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|pc_adder:a1|fulladder:fa3" ;
++------+-------+----------+----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                            ;
++------+-------+----------+----------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at VCC                                       ;
+; cin  ; Input ; Info     ; Stuck at GND                                       ;
++------+-------+----------+----------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|program_counter:pc" ;
++--------+-------+----------+-------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                   ;
++--------+-------+----------+-------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                              ;
++--------+-------+----------+-------------------------------------------+
+
+
 +------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "processor:my_processor"                                                                     ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -486,14 +624,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Oct 30 20:05:21 2022
+    Info: Processing started: Sun Oct 30 21:00:34 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off skeleton -c skeleton
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file program_counter.v
+    Info (12023): Found entity 1: program_counter File: C:/Users/ka266/Documents/Project4/program_counter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fulladder.v
+    Info (12023): Found entity 1: fulladder File: C:/Users/ka266/Documents/Project4/fulladder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file imem.v
     Info (12023): Found entity 1: imem File: C:/Users/ka266/Documents/Project4/imem.v Line: 40
-Info (12021): Found 1 design units, including 1 entities, in source file reg_32.v
-    Info (12023): Found entity 1: reg_32 File: C:/Users/ka266/Documents/Project4/reg_32.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file dffe.v
     Info (12023): Found entity 1: dffe_ref File: C:/Users/ka266/Documents/Project4/dffe.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
@@ -506,6 +646,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file process
     Info (12023): Found entity 1: processor File: C:/Users/ka266/Documents/Project4/processor.v Line: 50
 Info (12021): Found 1 design units, including 1 entities, in source file dmem.v
     Info (12023): Found entity 1: dmem File: C:/Users/ka266/Documents/Project4/dmem.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file pc_adder.v
+    Info (12023): Found entity 1: pc_adder File: C:/Users/ka266/Documents/Project4/pc_adder.v Line: 1
 Info (12127): Elaborating entity "skeleton" for the top level hierarchy
 Info (12128): Elaborating entity "imem" for hierarchy "imem:my_imem" File: C:/Users/ka266/Documents/Project4/skeleton.v Line: 32
 Info (12128): Elaborating entity "altsyncram" for hierarchy "imem:my_imem|altsyncram:altsyncram_component" File: C:/Users/ka266/Documents/Project4/imem.v Line: 82
@@ -551,7 +693,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Info (12128): Elaborating entity "altsyncram_0jf1" for hierarchy "dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "regfile" for hierarchy "regfile:my_regfile" File: C:/Users/ka266/Documents/Project4/skeleton.v Line: 65
 Info (12128): Elaborating entity "processor" for hierarchy "processor:my_processor" File: C:/Users/ka266/Documents/Project4/skeleton.v Line: 91
-Warning (10034): Output port "address_imem" at processor.v(78) has no driver File: C:/Users/ka266/Documents/Project4/processor.v Line: 78
 Warning (10034): Output port "address_dmem" at processor.v(82) has no driver File: C:/Users/ka266/Documents/Project4/processor.v Line: 82
 Warning (10034): Output port "data" at processor.v(83) has no driver File: C:/Users/ka266/Documents/Project4/processor.v Line: 83
 Warning (10034): Output port "ctrl_writeReg" at processor.v(89) has no driver File: C:/Users/ka266/Documents/Project4/processor.v Line: 89
@@ -560,6 +701,11 @@ Warning (10034): Output port "ctrl_readRegB" at processor.v(89) has no driver Fi
 Warning (10034): Output port "data_writeReg" at processor.v(90) has no driver File: C:/Users/ka266/Documents/Project4/processor.v Line: 90
 Warning (10034): Output port "wren" at processor.v(84) has no driver File: C:/Users/ka266/Documents/Project4/processor.v Line: 84
 Warning (10034): Output port "ctrl_writeEnable" at processor.v(88) has no driver File: C:/Users/ka266/Documents/Project4/processor.v Line: 88
+Info (12128): Elaborating entity "program_counter" for hierarchy "processor:my_processor|program_counter:pc" File: C:/Users/ka266/Documents/Project4/processor.v Line: 99
+Info (12128): Elaborating entity "dffe_ref" for hierarchy "processor:my_processor|program_counter:pc|dffe_ref:intialize[0].df" File: C:/Users/ka266/Documents/Project4/program_counter.v Line: 11
+Info (12128): Elaborating entity "pc_adder" for hierarchy "processor:my_processor|pc_adder:a1" File: C:/Users/ka266/Documents/Project4/processor.v Line: 100
+Warning (10034): Output port "out[1..0]" at pc_adder.v(3) has no driver File: C:/Users/ka266/Documents/Project4/pc_adder.v Line: 3
+Info (12128): Elaborating entity "fulladder" for hierarchy "processor:my_processor|pc_adder:a1|fulladder:fa3" File: C:/Users/ka266/Documents/Project4/pc_adder.v Line: 6
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[0]" File: C:/Users/ka266/Documents/Project4/db/altsyncram_0jf1.tdf Line: 37
@@ -641,9 +787,9 @@ Info (21057): Implemented 6 device resources after synthesis - the final resourc
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 4 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 84 warnings
-    Info: Peak virtual memory: 4746 megabytes
-    Info: Processing ended: Sun Oct 30 20:05:36 2022
-    Info: Elapsed time: 00:00:15
+    Info: Peak virtual memory: 4740 megabytes
+    Info: Processing ended: Sun Oct 30 21:00:48 2022
+    Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:20
 
 

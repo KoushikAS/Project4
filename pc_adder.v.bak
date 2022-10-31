@@ -1,0 +1,19 @@
+module pc_adder(out,in1);
+	input[12:0] in1,in2;
+	input cin;
+	output[12:0] out;
+
+
+	wire w;
+	
+	fulladder fa1(out[0], in1[0], 1b'0, 1b'0);
+	fulladder fa1(out[1], in1[1], 1b'0, 1b'0);
+	fulladder fa1(out[2], in1[2], 1b'1, 1b'0);
+	genvar i;
+	generate
+		for(i=3; i<12; i = i+1) begin : intialize
+			fulladder fa (w[i]out[i], in1[i], in2[i], in[i-1]);
+		end
+	endgenerate 
+	
+endmodule 
