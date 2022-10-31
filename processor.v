@@ -96,9 +96,31 @@ module processor(
 	
 	 wire[11:0] pc_in;
 	 
-	 program_counter pc (address_imem, pc_in, clock, 1'b1, reset);
+	 //Do we need this
+	// program_counter pc (address_imem, pc_in, clock, 1'b1, reset);
 	 pc_adder a1(pc_in, address_imem);
 	 
-	 /* Level 2 */
-
+	 /* Level 2 Reg file*/
+	 
+	 //Intializing for R type
+	 and rs (ctrl_readRegA, q_imem[25:21], 1'b1);
+	 and rt (ctrl_readRegB, q_imem[20:16], 1'b1);
+	 
+	 
+	 //ToDo: Check select 
+	 mux_5bit rd (ctrl_writeReg, 1'b1, q_imem[20:16], q_imem[15:11]);
+	 //ToDo: Check select again based	 
+	 and writeEnable (ctrl_writeEnable, 1'b1, 1'b1);
+	 
+	 /* Level 3 ALU */
+	 
+	 //ToDo: Should have mux for choosing between data_readRegB or immediate 
+	/** 
+	 wire[31:0] alu_out;
+	 wire w1, w2, w3;
+	 
+	 alu a1(data_readRegA, data_readRegB, q_imem[5:0], 5'b00101, alu_out, w1, w2, w3);
+	**/
+	 
+	 
 endmodule
