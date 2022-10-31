@@ -91,22 +91,5 @@ module processor(
     input [31:0] data_readRegA, data_readRegB;
 
     /* YOUR CODE STARTS HERE */
-	 
-	 /* Level 1 */
-	/** 
-	 wire[31:0] w1,w2;
-	 wire [31:0] rs, rt , rd;
-	 
-	 reg32 pc (w2, w1, clock, 1b'1, reset);
-	 
-	 //Should do
-	 imem instruction_mem(rs, rt, rd, w2, clock, reset);
-	 
-	 regfile(clock, )
-	 **/
-	 
-	 
-	 
-	 
 
 endmodule
