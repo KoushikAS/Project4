@@ -92,35 +92,44 @@ module processor(
 
     /* YOUR CODE STARTS HERE */
 	 
+	 wire [31:0] tmp1, tmp7,tmp10;
+	 wire tmp2, tmp3, tmp4, tmp5, tmp6, tmp8, tmp9,tmp11, tmp12;
+	 wire is_not_rtype, is_not_load ,is_not_store;
+	 alu isNotRType(q_imem[31:26], 6'b000000, 1'b1, 1'b0, tmp1, is_not_rtype, tmp2, tmp3);
+	 alu isNotLoad(q_imem[31:26], 6'b100011, 1'b1, 1'b0, tmp7, is_not_load, tmp8, tmp9);
+	 alu isNotStore(q_imem[31:26], 6'b101011, 1'b1, 1'b0, tmp10, is_not_store, tmp11, tmp12);
+	 
 	 /* Level 1 for Program counter */
 	
 	 wire[11:0] pc_in;
-	 
-	 //Do we need this
-	// program_counter pc (address_imem, pc_in, clock, 1'b1, reset);
-	 pc_adder a1(pc_in, address_imem);
+	
+	 program_counter pc (address_imem, pc_in, clock, 1'b1, reset);
+	 pc_adder padd(pc_in, address_imem);
 	 
 	 /* Level 2 Reg file*/
 	 
-	 //Intializing for R type
 	 and rs (ctrl_readRegA, q_imem[25:21], 1'b1);
 	 and rt (ctrl_readRegB, q_imem[20:16], 1'b1);
 	 
+	 mux_5bit rd (ctrl_writeReg, is_not_rtype, q_imem[15:11], q_imem[20:16]);
 	 
-	 //ToDo: Check select 
-	 mux_5bit rd (ctrl_writeReg, 1'b1, q_imem[20:16], q_imem[15:11]);
-	 //ToDo: Check select again based	 
-	 and writeEnable (ctrl_writeEnable, 1'b1, 1'b1);
-	 
+	 and reg_write_enable (ctrl_writeEnable, is_not_store, is_not_store); 
+	
 	 /* Level 3 ALU */
 	 
-	 //ToDo: Should have mux for choosing between data_readRegB or immediate 
-	/** 
-	 wire[31:0] alu_out;
-	 wire w1, w2, w3;
+	 wire[31:0] alu_out, immed, alu_in2;
+	
+	 sign_extension si(immed, q_imem[15:0]);
 	 
-	 alu a1(data_readRegA, data_readRegB, q_imem[5:0], 5'b00101, alu_out, w1, w2, w3);
-	**/
+	 mux_32bit min2(alu_in2, is_not_rtype, data_readRegB, immed);
+	 //to Do check ctrlcode
+	 alu a1(data_readRegA, alu_in2, q_imem[5:0], 5'b00101, alu_out, tmp4, tmp5, tmp6);
+	
+	 /* Level 4 Data memory*/	
+	 and dm_address (address_dmem, alu_out[11:0], alu_out[11:0]);	 
+	 mux_32bit data_mem(data_writeReg, is_not_load, q_dmem, alu_out);
 	 
+	 not dmem_write_enable (wren, is_not_store);
+	 and dmem_data (data, data_readRegB, data_readRegB);
 	 
 endmodule
