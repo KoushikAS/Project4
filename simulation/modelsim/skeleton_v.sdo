@@ -30,21 +30,154 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "skeleton")
-  (DATE "10/31/2022 18:56:53")
+  (DATE "11/01/2022 15:15:30")
   (VENDOR "Altera")
   (PROGRAM "Quartus Prime")
   (VERSION "Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition")
   (DIVIDER .)
   (TIMESCALE 1 ps)
 
-	// No Timing Cells with timing info are found in the compiled design. A dummy dff Timing Cell is created.
   (CELL
-    (CELLTYPE "dff")
-    (INSTANCE * )
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE imem_clock\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (431:431:431) (468:468:468))
+        (IOPATH i o (2865:2865:2865) (2840:2840:2840))
+      )
+    )
   )
-	// No Timing Cells with timing info are found in the compiled design. A dummy dff Timing Cell is created.
   (CELL
-    (CELLTYPE "dff")
-    (INSTANCE * )
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE dmem_clock\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (368:368:368) (378:378:378))
+        (IOPATH i o (2830:2830:2830) (2855:2855:2855))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE processor_clock\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (368:368:368) (378:378:378))
+        (IOPATH i o (2870:2870:2870) (2895:2895:2895))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE regfile_clock\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (682:682:682) (662:662:662))
+        (IOPATH i o (2885:2885:2885) (2860:2860:2860))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE clock\~input)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (730:730:730) (836:836:836))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_clkctrl")
+    (INSTANCE clock\~inputclkctrl)
+    (DELAY
+      (ABSOLUTE
+        (PORT inclk[0] (187:187:187) (173:173:173))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE imem_clk\|count\[0\]\~1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datac combout (409:409:409) (429:429:429))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE reset\~input)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (680:680:680) (786:786:786))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE imem_clk\|count\[0\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (2191:2191:2191) (2203:2203:2203))
+        (PORT d (87:87:87) (104:104:104))
+        (PORT sclr (3332:3332:3332) (3625:3625:3625))
+        (IOPATH (posedge clk) q (232:232:232) (232:232:232))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (186:186:186))
+      (HOLD sclr (posedge clk) (186:186:186))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE imem_clk\|clk\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT datad (256:256:256) (328:328:328))
+        (IOPATH datac combout (409:409:409) (429:429:429))
+        (IOPATH datad combout (155:155:155) (139:139:139))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE imem_clk\|clk)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (2191:2191:2191) (2203:2203:2203))
+        (PORT d (87:87:87) (104:104:104))
+        (PORT sclr (3332:3332:3332) (3625:3625:3625))
+        (IOPATH (posedge clk) q (232:232:232) (232:232:232))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (186:186:186))
+      (HOLD sclr (posedge clk) (186:186:186))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE dmem_clk\|clk\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT datac (698:698:698) (730:730:730))
+        (PORT datad (2747:2747:2747) (3002:3002:3002))
+        (IOPATH datac combout (287:287:287) (280:280:280))
+        (IOPATH datad combout (155:155:155) (139:139:139))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE regfile_clk\|clk\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT datac (700:700:700) (732:732:732))
+        (PORT datad (2751:2751:2751) (3006:3006:3006))
+        (IOPATH datac combout (287:287:287) (280:280:280))
+        (IOPATH datad combout (155:155:155) (139:139:139))
+      )
+    )
   )
 )

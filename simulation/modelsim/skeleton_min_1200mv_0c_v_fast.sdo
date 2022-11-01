@@ -30,21 +30,154 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "skeleton")
-  (DATE "10/31/2022 18:56:53")
+  (DATE "11/01/2022 15:15:30")
   (VENDOR "Altera")
   (PROGRAM "Quartus Prime")
   (VERSION "Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition")
   (DIVIDER .)
   (TIMESCALE 1 ps)
 
-	// No Timing Cells with timing info are found in the compiled design. A dummy dff Timing Cell is created.
   (CELL
-    (CELLTYPE "dff")
-    (INSTANCE * )
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE imem_clock\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (188:188:188) (228:228:228))
+        (IOPATH i o (1589:1589:1589) (1614:1614:1614))
+      )
+    )
   )
-	// No Timing Cells with timing info are found in the compiled design. A dummy dff Timing Cell is created.
   (CELL
-    (CELLTYPE "dff")
-    (INSTANCE * )
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE dmem_clock\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (181:181:181) (161:161:161))
+        (IOPATH i o (1604:1604:1604) (1579:1579:1579))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE processor_clock\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (181:181:181) (161:161:161))
+        (IOPATH i o (1644:1644:1644) (1619:1619:1619))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE regfile_clock\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (302:302:302) (346:346:346))
+        (IOPATH i o (1609:1609:1609) (1634:1634:1634))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE clock\~input)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (368:368:368) (748:748:748))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_clkctrl")
+    (INSTANCE clock\~inputclkctrl)
+    (DELAY
+      (ABSOLUTE
+        (PORT inclk[0] (99:99:99) (85:85:85))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE imem_clk\|count\[0\]\~1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datac combout (190:190:190) (195:195:195))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE reset\~input)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (318:318:318) (698:698:698))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE imem_clk\|count\[0\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1205:1205:1205) (1216:1216:1216))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT sclr (1676:1676:1676) (1871:1871:1871))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD sclr (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE imem_clk\|clk\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT datad (118:118:118) (155:155:155))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE imem_clk\|clk)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1205:1205:1205) (1216:1216:1216))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT sclr (1676:1676:1676) (1871:1871:1871))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD sclr (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE dmem_clk\|clk\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT datac (380:380:380) (346:346:346))
+        (PORT datad (1449:1449:1449) (1610:1610:1610))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE regfile_clk\|clk\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT datac (381:381:381) (348:348:348))
+        (PORT datad (1453:1453:1453) (1615:1615:1615))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
   )
 )

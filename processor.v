@@ -95,9 +95,9 @@ module processor(
 	 wire [31:0] tmp1, tmp7,tmp10;
 	 wire tmp2, tmp3, tmp4, tmp5, tmp6, tmp8, tmp9,tmp11, tmp12;
 	 wire is_not_rtype, is_not_load ,is_not_store;
-	 alu isNotRType(q_imem[31:26], 6'b000000, 1'b1, 1'b0, tmp1, is_not_rtype, tmp2, tmp3);
-	 alu isNotLoad(q_imem[31:26], 6'b100011, 1'b1, 1'b0, tmp7, is_not_load, tmp8, tmp9);
-	 alu isNotStore(q_imem[31:26], 6'b101011, 1'b1, 1'b0, tmp10, is_not_store, tmp11, tmp12);
+	 alu isNotRType(q_imem[31:27], 5'b00000, 5'b00001, 5'b00000, tmp1, is_not_rtype, tmp2, tmp3);
+	 alu isNotLoad(q_imem[31:27], 5'b01000, 5'b00001, 5'b00000, tmp7, is_not_load, tmp8, tmp9);
+	 alu isNotStore(q_imem[31:27], 5'b00111, 5'b00001, 5'b00000, tmp10, is_not_store, tmp11, tmp12);
 	 
 	 /* Level 1 for Program counter */
 	
@@ -108,10 +108,9 @@ module processor(
 	 
 	 /* Level 2 Reg file*/
 	 
-	 and rs (ctrl_readRegA, q_imem[25:21], 1'b1);
-	 and rt (ctrl_readRegB, q_imem[20:16], 1'b1);
-	 
-	 mux_5bit rd (ctrl_writeReg, is_not_rtype, q_imem[15:11], q_imem[20:16]);
+	 and rs (ctrl_readRegA, q_imem[21:17], 1'b1);
+	 and rt (ctrl_readRegB, q_imem[16:12], 1'b1);
+	 and rd (ctrl_writeReg, q_imem[26:22], 1'b1);	 
 	 
 	 and reg_write_enable (ctrl_writeEnable, is_not_store, is_not_store); 
 	
@@ -122,8 +121,7 @@ module processor(
 	 sign_extension si(immed, q_imem[15:0]);
 	 
 	 mux_32bit min2(alu_in2, is_not_rtype, data_readRegB, immed);
-	 //to Do check ctrlcode
-	 alu a1(data_readRegA, alu_in2, q_imem[5:0], 5'b00101, alu_out, tmp4, tmp5, tmp6);
+	 alu a1(data_readRegA, alu_in2, q_imem[6:2], q_imem[11:7], alu_out, tmp4, tmp5, tmp6);
 	
 	 /* Level 4 Data memory*/	
 	 and dm_address (address_dmem, alu_out[11:0], alu_out[11:0]);	 

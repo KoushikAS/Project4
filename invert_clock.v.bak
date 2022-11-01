@@ -1,0 +1,20 @@
+module invert_clock(clk, in_clk, rst);
+	output clk;
+	input in_Clk, rst;
+	
+	always @(posedge in_clk or negedge in_clk)
+	begin
+		if(rst == 0)
+		begin
+			clk <= ~in_clk;
+		end
+		else
+		begin
+			count = 0
+			clk <= 1'b0
+		end
+	end
+endmodule 
+
+//citation :
+//http://referencedesigner.com/tutorials/verilogexamples/verilog_ex_02.php

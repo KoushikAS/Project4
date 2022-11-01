@@ -1,0 +1,24 @@
+module extend_clock(clk, in_clk, rst);
+	output clk;
+	input in_Clk, rst;
+	
+	integer count;
+	count = 0;
+	
+	always @(posedge in_clk)
+	begin
+		if(rst == 0)
+		begin
+			count = count + 1;
+			if(count % 2 == 0)
+			begin
+				clk <= ~ in_clk
+			end
+		end
+		else
+		begin
+		count = 0
+		clk <= 1'b0
+		end
+	end
+endmodule 
