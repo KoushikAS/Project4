@@ -95,6 +95,8 @@ module processor(
 	 wire [31:0] tmp1, tmp7,tmp10;
 	 wire tmp2, tmp3, tmp4, tmp5, tmp6, tmp8, tmp9,tmp11, tmp12;
 	 wire is_not_rtype, is_not_load ,is_not_store;
+	
+
 	 alu isNotRType(q_imem[31:27], 5'b00000, 5'b00001, 5'b00000, tmp1, is_not_rtype, tmp2, tmp3);
 	 alu isNotLoad(q_imem[31:27], 5'b01000, 5'b00001, 5'b00000, tmp7, is_not_load, tmp8, tmp9);
 	 alu isNotStore(q_imem[31:27], 5'b00111, 5'b00001, 5'b00000, tmp10, is_not_store, tmp11, tmp12);
@@ -108,26 +110,32 @@ module processor(
 	 
 	 /* Level 2 Reg file*/
 	 
-	 and rs (ctrl_readRegA, q_imem[21:17], 1'b1);
-	 and rt (ctrl_readRegB, q_imem[16:12], 1'b1);
-	 and rd (ctrl_writeReg, q_imem[26:22], 1'b1);	 
+	 initalize rs (ctrl_readRegA, q_imem[21:17]); //initalizing rs (i.e. ctrl_readRegA)	 
+	 initalize rt (ctrl_readRegB, q_imem[16:12]); //initalizing rt (i.e. ctrl_readRegB)
+	 initalize rd (ctrl_writeReg, q_imem[26:22]); //initalizing rd (i.e. ctrl_writeReg)
 	 
 	 and reg_write_enable (ctrl_writeEnable, is_not_store, is_not_store); 
 	
 	 /* Level 3 ALU */
 	 
 	 wire[31:0] alu_out, immed, alu_in2;
+	 wire[4:0] alu_opcode;
+	 wire overflow;
 	
-	 sign_extension si(immed, q_imem[15:0]);
+	 sign_extension si(immed, q_imem[16:0]);
 	 
-	 mux_32bit min2(alu_in2, is_not_rtype, data_readRegB, immed);
-	 alu a1(data_readRegA, alu_in2, q_imem[6:2], q_imem[11:7], alu_out, tmp4, tmp5, tmp6);
+	 assign alu_in2 = is_not_rtype? immed: data_readRegB; 		//chosing the right input for alu  
+	 assign alu_opcode = is_not_rtype? 5'b00000: q_imem[6:2]; 	//chosing the right op code for alu
+	 
+	 alu a1(data_readRegA, alu_in2, alu_opcode, q_imem[6:2], alu_out, tmp4, tmp5, overflow);
+	 
+	 //To Do Overflow.
 	
 	 /* Level 4 Data memory*/	
-	 and dm_address (address_dmem, alu_out[11:0], alu_out[11:0]);	 
+	 initalize_12 dm_address(address_dmem, alu_out[11:0]);	//initalize dm_address->address_dmem	 
 	 mux_32bit data_mem(data_writeReg, is_not_load, q_dmem, alu_out);
 	 
-	 not dmem_write_enable (wren, is_not_store);
-	 and dmem_data (data, data_readRegB, data_readRegB);
+	 not dmem_write_enable (wren, is_not_store);					//initalizing wren
+	 initalize_32 dmaddress_data(data, data_readRegB);			//initalizing dm_address->data
 	 
-endmodule
+endmodule 

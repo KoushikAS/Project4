@@ -2,21 +2,21 @@ module extend_clock(clk, in_clk, rst);
 	 output reg clk;
 	input in_clk, rst;
 	
-	integer count;
+//	integer count;
 	
 	always @(posedge in_clk)
 	begin
 		if(rst == 0)
 		begin
-			count <= count + 1;
-			if(count % 2 == 0)
-			begin
+//			count <= count + 1;
+//			if(count % 2 == 0)
+//			begin
 				clk <= ~clk;
-			end
+//			end
 		end
 		else
 		begin
-			count <= 0;
+//			count <= 0;
 			clk <= 1'b0; 
 		end
 	end
