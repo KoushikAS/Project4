@@ -220,3 +220,5 @@
 # ** Note: $stop    : C:/Users/ka266/Documents/Project4/processor_tb.v(519)
 #    Time: 300 ns  Iteration: 1  Instance: /processor_tb
 # Break in Module processor_tb at C:/Users/ka266/Documents/Project4/processor_tb.v line 519
+# End time: 11:28:18 on Nov 03,2022, Elapsed time: 0:52:02
+# Errors: 0, Warnings: 2

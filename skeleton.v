@@ -20,10 +20,10 @@ module skeleton(clock, reset, imem_clock, dmem_clock, processor_clock, regfile_c
     */
     output imem_clock, dmem_clock, processor_clock, regfile_clock;
 
-	 extend_clock imem_clk (imem_clock, clock, reset);
-	 invert_clock processor_clk (processor_clock, clock, reset);
-	 invert_clock dmem_clk (dmem_clock, clock, reset);
-	 invert_clock regfile_clk (regfile_clock, dmem_clock, reset);
+	 extend_clock processor_clk (processor_clock, reset, clock);
+	 extend_clock_negedge imem_clk (imem_clock, reset,  clock); 
+	 invert_clock dmem_clk (dmem_clock, reset,  clock);
+	 invert_clock regfile_clk (regfile_clock, reset, dmem_clock);
  
 	 
     /** IMEM **/

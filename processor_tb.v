@@ -46,6 +46,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			q_imem = 32'b00000000010001000011000000000000;
 			data_readRegA = 32'd5;
 			data_readRegB = 32'd6;
+			q_dmem = 32'd6;
 			$display($time, " << Checking Addition >>");
 			
 			begin
@@ -86,6 +87,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			q_imem = 32'b00000000010001000011000000000000;
 			data_readRegA = 32'h80000000;
 			data_readRegB = 32'h80000000;
+			q_dmem = 32'd6;
 			$display($time, " << Checking Addition Overflow >>");
 			
 			begin
@@ -126,6 +128,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			q_imem = 32'b00101000010001000000000000010100;
 			data_readRegA = 32'd5;
 			data_readRegB = 32'd6;
+			q_dmem = 32'd6;
 			$display($time, " << Checking Addition I >>");
 			
 			begin
@@ -163,6 +166,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			q_imem = 32'b00101000010001000000000000000001;
 			data_readRegA = 32'h7FFFFFFF;
 			data_readRegB = 32'd6;
+			q_dmem = 32'd6;
 			$display($time, " << Checking Addition I Overflow >>");
 			
 			begin
@@ -199,6 +203,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			q_imem = 32'b00000000010001000011000000000100;
 			data_readRegA = 32'd7;
 			data_readRegB = 32'd6;
+			q_dmem = 32'd6;
 			$display($time, " << Checking Subtraction >>");
 			
 			begin
@@ -240,6 +245,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			q_imem = 32'b00000000010001000011000000000100;
 			data_readRegA = 32'h80000000;
 			data_readRegB = 32'h0F000000;
+			q_dmem = 32'd6;
 			$display($time, " << Checking Sub Overflow >>");
 			
 			begin
@@ -280,6 +286,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			q_imem = 32'b00000000010001000011000000001000;
 			data_readRegA = 32'd5;
 			data_readRegB = 32'd3;
+			q_dmem = 32'd6;
 			$display($time, " << Checking AND >>");
 			
 			begin
@@ -320,6 +327,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			q_imem = 32'b00000000010001000011000000001100;
 			data_readRegA = 32'd5;
 			data_readRegB = 32'd3;
+			q_dmem = 32'd6;
 			$display($time, " << Checking OR >>");
 			
 			begin
@@ -360,6 +368,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			q_imem = 32'b00000000010001000011000100010000;
 			data_readRegA = 32'd5;
 			data_readRegB = 32'd3;
+			q_dmem = 32'd6;
 			$display($time, " << Checking SLL >>");
 			
 			begin
@@ -397,6 +406,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			q_imem = 32'b00000000010001000011000100010100;
 			data_readRegA = 32'd5;
 			data_readRegB = 32'd3;
+			q_dmem = 32'd6;
 			$display($time, " << Checking SRR >>");
 			
 			begin
@@ -435,6 +445,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			q_imem = 32'b00111000010001000000000000010100;
 			data_readRegA = 32'd5;
 			data_readRegB = 32'd3;
+			q_dmem = 32'd6;
 			$display($time, " << Checking SW >>");
 			
 			begin

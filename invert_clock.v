@@ -1,4 +1,4 @@
-module invert_clock(clk, in_clk, rst);
+module invert_clock(clk, rst, in_clk);
 	output reg clk;
 	input in_clk, rst;
 	

@@ -1,10 +1,10 @@
-module extend_clock(clock, reset, in_clock);
+module extend_clock_negedge(clock, reset, in_clock);
 	 output reg clock;
 	input in_clock, reset;
 	
 	integer counter =0;
 	
-	always @(posedge in_clock)
+	always @(negedge in_clock)
 	begin
 		counter = counter +1;
 		if(reset == 0)

@@ -3,7 +3,7 @@ $comment
 		vcd file skeleton.msim.vcd -direction
 $end
 $date
-	Thu Nov 03 10:21:12 2022
+	Thu Nov 03 12:18:40 2022
 $end
 $version
 	ModelSim Version 10.5b
@@ -12,79 +12,101 @@ $timescale
 	1ps
 $end
 
-$scope module program_counter_vlg_vec_tst $end
-$var reg 1 ! clk $end
-$var reg 1 " clr $end
-$var reg 1 # enable $end
-$var reg 12 $ in [11:0] $end
-$var wire 1 % out [11] $end
-$var wire 1 & out [10] $end
-$var wire 1 ' out [9] $end
-$var wire 1 ( out [8] $end
-$var wire 1 ) out [7] $end
-$var wire 1 * out [6] $end
-$var wire 1 + out [5] $end
-$var wire 1 , out [4] $end
-$var wire 1 - out [3] $end
-$var wire 1 . out [2] $end
-$var wire 1 / out [1] $end
-$var wire 1 0 out [0] $end
+$scope module skeleton_vlg_vec_tst $end
+$var reg 1 ! clock $end
+$var reg 1 " reset $end
+$var wire 1 # dmem_clock $end
+$var wire 1 $ imem_clock $end
+$var wire 1 % processor_clock $end
+$var wire 1 & regfile_clock $end
 
 $scope module i1 $end
-$var wire 1 1 gnd $end
-$var wire 1 2 vcc $end
-$var wire 1 3 unknown $end
-$var tri1 1 4 devclrn $end
-$var tri1 1 5 devpor $end
-$var tri1 1 6 devoe $end
-$var wire 1 7 out[0]~output_o $end
-$var wire 1 8 out[1]~output_o $end
-$var wire 1 9 out[2]~output_o $end
-$var wire 1 : out[3]~output_o $end
-$var wire 1 ; out[4]~output_o $end
-$var wire 1 < out[5]~output_o $end
-$var wire 1 = out[6]~output_o $end
-$var wire 1 > out[7]~output_o $end
-$var wire 1 ? out[8]~output_o $end
-$var wire 1 @ out[9]~output_o $end
-$var wire 1 A out[10]~output_o $end
-$var wire 1 B out[11]~output_o $end
-$var wire 1 C clk~input_o $end
-$var wire 1 D clk~inputclkctrl_outclk $end
-$var wire 1 E in[0]~input_o $end
-$var wire 1 F intialize[0].df|q~feeder_combout $end
-$var wire 1 G clr~input_o $end
-$var wire 1 H clr~inputclkctrl_outclk $end
-$var wire 1 I enable~input_o $end
-$var wire 1 J intialize[0].df|q~q $end
-$var wire 1 K in[1]~input_o $end
-$var wire 1 L intialize[1].df|q~q $end
-$var wire 1 M in[2]~input_o $end
-$var wire 1 N intialize[2].df|q~q $end
-$var wire 1 O in[3]~input_o $end
-$var wire 1 P intialize[3].df|q~feeder_combout $end
-$var wire 1 Q intialize[3].df|q~q $end
-$var wire 1 R in[4]~input_o $end
-$var wire 1 S intialize[4].df|q~feeder_combout $end
-$var wire 1 T intialize[4].df|q~q $end
-$var wire 1 U in[5]~input_o $end
-$var wire 1 V intialize[5].df|q~q $end
-$var wire 1 W in[6]~input_o $end
-$var wire 1 X intialize[6].df|q~feeder_combout $end
-$var wire 1 Y intialize[6].df|q~q $end
-$var wire 1 Z in[7]~input_o $end
-$var wire 1 [ intialize[7].df|q~feeder_combout $end
-$var wire 1 \ intialize[7].df|q~q $end
-$var wire 1 ] in[8]~input_o $end
-$var wire 1 ^ intialize[8].df|q~feeder_combout $end
-$var wire 1 _ intialize[8].df|q~q $end
-$var wire 1 ` in[9]~input_o $end
-$var wire 1 a intialize[9].df|q~q $end
-$var wire 1 b in[10]~input_o $end
-$var wire 1 c intialize[10].df|q~feeder_combout $end
-$var wire 1 d intialize[10].df|q~q $end
-$var wire 1 e in[11]~input_o $end
-$var wire 1 f intialize[11].df|q~q $end
+$var wire 1 ' gnd $end
+$var wire 1 ( vcc $end
+$var wire 1 ) unknown $end
+$var tri1 1 * devclrn $end
+$var tri1 1 + devpor $end
+$var tri1 1 , devoe $end
+$var wire 1 - imem_clock~output_o $end
+$var wire 1 . dmem_clock~output_o $end
+$var wire 1 / processor_clock~output_o $end
+$var wire 1 0 regfile_clock~output_o $end
+$var wire 1 1 clock~input_o $end
+$var wire 1 2 clock~inputclkctrl_outclk $end
+$var wire 1 3 reset~input_o $end
+$var wire 1 4 imem_clk|Add0~0_combout $end
+$var wire 1 5 imem_clk|clock~q $end
+$var wire 1 6 dmem_clk|clk~0_combout $end
+$var wire 1 7 processor_clk|counter[0]~feeder_combout $end
+$var wire 1 8 processor_clk|Add0~0_combout $end
+$var wire 1 9 processor_clk|Add0~2_combout $end
+$var wire 1 : processor_clk|clock~feeder_combout $end
+$var wire 1 ; processor_clk|clock~q $end
+$var wire 1 < regfile_clk|clk~0_combout $end
+$var wire 1 = imem_clk|counter [31] $end
+$var wire 1 > imem_clk|counter [30] $end
+$var wire 1 ? imem_clk|counter [29] $end
+$var wire 1 @ imem_clk|counter [28] $end
+$var wire 1 A imem_clk|counter [27] $end
+$var wire 1 B imem_clk|counter [26] $end
+$var wire 1 C imem_clk|counter [25] $end
+$var wire 1 D imem_clk|counter [24] $end
+$var wire 1 E imem_clk|counter [23] $end
+$var wire 1 F imem_clk|counter [22] $end
+$var wire 1 G imem_clk|counter [21] $end
+$var wire 1 H imem_clk|counter [20] $end
+$var wire 1 I imem_clk|counter [19] $end
+$var wire 1 J imem_clk|counter [18] $end
+$var wire 1 K imem_clk|counter [17] $end
+$var wire 1 L imem_clk|counter [16] $end
+$var wire 1 M imem_clk|counter [15] $end
+$var wire 1 N imem_clk|counter [14] $end
+$var wire 1 O imem_clk|counter [13] $end
+$var wire 1 P imem_clk|counter [12] $end
+$var wire 1 Q imem_clk|counter [11] $end
+$var wire 1 R imem_clk|counter [10] $end
+$var wire 1 S imem_clk|counter [9] $end
+$var wire 1 T imem_clk|counter [8] $end
+$var wire 1 U imem_clk|counter [7] $end
+$var wire 1 V imem_clk|counter [6] $end
+$var wire 1 W imem_clk|counter [5] $end
+$var wire 1 X imem_clk|counter [4] $end
+$var wire 1 Y imem_clk|counter [3] $end
+$var wire 1 Z imem_clk|counter [2] $end
+$var wire 1 [ imem_clk|counter [1] $end
+$var wire 1 \ imem_clk|counter [0] $end
+$var wire 1 ] processor_clk|counter [31] $end
+$var wire 1 ^ processor_clk|counter [30] $end
+$var wire 1 _ processor_clk|counter [29] $end
+$var wire 1 ` processor_clk|counter [28] $end
+$var wire 1 a processor_clk|counter [27] $end
+$var wire 1 b processor_clk|counter [26] $end
+$var wire 1 c processor_clk|counter [25] $end
+$var wire 1 d processor_clk|counter [24] $end
+$var wire 1 e processor_clk|counter [23] $end
+$var wire 1 f processor_clk|counter [22] $end
+$var wire 1 g processor_clk|counter [21] $end
+$var wire 1 h processor_clk|counter [20] $end
+$var wire 1 i processor_clk|counter [19] $end
+$var wire 1 j processor_clk|counter [18] $end
+$var wire 1 k processor_clk|counter [17] $end
+$var wire 1 l processor_clk|counter [16] $end
+$var wire 1 m processor_clk|counter [15] $end
+$var wire 1 n processor_clk|counter [14] $end
+$var wire 1 o processor_clk|counter [13] $end
+$var wire 1 p processor_clk|counter [12] $end
+$var wire 1 q processor_clk|counter [11] $end
+$var wire 1 r processor_clk|counter [10] $end
+$var wire 1 s processor_clk|counter [9] $end
+$var wire 1 t processor_clk|counter [8] $end
+$var wire 1 u processor_clk|counter [7] $end
+$var wire 1 v processor_clk|counter [6] $end
+$var wire 1 w processor_clk|counter [5] $end
+$var wire 1 x processor_clk|counter [4] $end
+$var wire 1 y processor_clk|counter [3] $end
+$var wire 1 z processor_clk|counter [2] $end
+$var wire 1 { processor_clk|counter [1] $end
+$var wire 1 | processor_clk|counter [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -92,238 +114,395 @@ $enddefinitions $end
 $dumpvars
 0!
 1"
-1#
-b0 $
-00
-0/
-0.
-0-
-0,
-0+
-0*
-0)
-0(
-0'
-0&
+0#
+0$
 0%
+0&
+0'
+1(
+x)
+1*
+1+
+1,
+0-
+0.
+0/
+00
 01
-12
-x3
-14
-15
+02
+13
+04
+05
 16
 07
-08
+18
 09
 0:
 0;
 0<
-0=
-0>
-0?
-0@
-0A
-0B
-0C
-0D
-0E
-0F
-1G
-1H
-1I
-0J
-0K
-0L
-0M
-0N
-0O
-0P
-0Q
-0R
-0S
-0T
-0U
-0V
-0W
-0X
-0Y
-0Z
-0[
 0\
-0]
-0^
-0_
-0`
-0a
-0b
-0c
-0d
-0e
-0f
+z[
+zZ
+zY
+zX
+zW
+zV
+zU
+zT
+zS
+zR
+zQ
+zP
+zO
+zN
+zM
+zL
+zK
+zJ
+zI
+zH
+zG
+zF
+zE
+zD
+zC
+zB
+zA
+z@
+z?
+z>
+z=
+0|
+z{
+zz
+zy
+zx
+zw
+zv
+zu
+zt
+zs
+zr
+zq
+zp
+zo
+zn
+zm
+zl
+zk
+zj
+zi
+zh
+zg
+zf
+ze
+zd
+zc
+zb
+za
+z`
+z_
+z^
+z]
 $end
 #50000
 1!
-1C
-1D
+11
+12
 #100000
-0"
-b100 $
 0!
-0G
-1M
-0C
-0H
-0D
+01
+02
+#120000
+0"
+03
+19
+06
+14
+1.
+1#
+1:
+17
 #150000
 1!
-1C
-1D
-1N
-19
-1.
+11
+12
+16
+1<
+10
+0.
+0#
+1&
+1|
+1;
+1/
+08
+1%
+09
+0:
+07
 #200000
-b1100 $
-b1000 $
 0!
-0M
-1O
-0C
-0D
-1P
+01
+02
+06
+0<
+00
+1.
+1#
+0&
+1\
+15
+1-
+1$
+04
 #250000
 1!
-1C
-1D
-1Q
-0N
-09
-1:
-1-
+11
+12
+16
+1<
+10
 0.
+0#
+1&
+0|
+0;
+0/
+18
+0%
+19
+1:
+17
 #300000
-b1100 $
 0!
-1M
-0C
-0D
+01
+02
+06
+0<
+00
+1.
+1#
+0&
+0\
+05
+0-
+0$
+14
 #350000
 1!
-1C
-1D
-1N
-19
-1.
+11
+12
+16
+1<
+10
+0.
+0#
+1&
+1|
+1;
+1/
+08
+1%
+09
+0:
+07
 #400000
-b11100 $
-b10100 $
-b10000 $
 0!
-0M
-0O
-1R
-0C
-0D
-0P
-1S
+01
+02
+06
+0<
+00
+1.
+1#
+0&
+1\
+15
+1-
+1$
+04
 #450000
 1!
-1C
-1D
-1T
-0Q
-0N
-09
-0:
-1;
-1,
-0-
+11
+12
+16
+1<
+10
 0.
+0#
+1&
+0|
+0;
+0/
+18
+0%
+19
+1:
+17
 #500000
-b10100 $
 0!
-1M
-0C
-0D
+01
+02
+06
+0<
+00
+1.
+1#
+0&
+0\
+05
+0-
+0$
+14
 #550000
 1!
-1C
-1D
-1N
-19
-1.
-#600000
-b11100 $
-b11000 $
-0!
-0M
-1O
-0C
-0D
-1P
-#650000
-1!
-1C
-1D
-1Q
-0N
-09
-1:
-1-
+11
+12
+16
+1<
+10
 0.
-#700000
-b11100 $
-0!
-1M
-0C
-0D
-#750000
-1!
-1C
-1D
-1N
-19
-1.
-#800000
-b111100 $
-b101100 $
-b100100 $
-b100000 $
-0!
-0M
-0O
-0R
-1U
-0C
-0D
-0P
-0S
-#850000
-1!
-1C
-1D
-1V
-0T
-0Q
-0N
+0#
+1&
+1|
+1;
+1/
+08
+1%
 09
 0:
-0;
-1<
-1+
-0,
-0-
-0.
-#900000
-b100100 $
+07
+#600000
 0!
-1M
-0C
-0D
+01
+02
+06
+0<
+00
+1.
+1#
+0&
+1\
+15
+1-
+1$
+04
+#650000
+1!
+11
+12
+16
+1<
+10
+0.
+0#
+1&
+0|
+0;
+0/
+18
+0%
+19
+1:
+17
+#700000
+0!
+01
+02
+06
+0<
+00
+1.
+1#
+0&
+0\
+05
+0-
+0$
+14
+#750000
+1!
+11
+12
+16
+1<
+10
+0.
+0#
+1&
+1|
+1;
+1/
+08
+1%
+09
+0:
+07
+#800000
+0!
+01
+02
+06
+0<
+00
+1.
+1#
+0&
+1\
+15
+1-
+1$
+04
+#850000
+1!
+11
+12
+16
+1<
+10
+0.
+0#
+1&
+0|
+0;
+0/
+18
+0%
+19
+1:
+17
+#900000
+0!
+01
+02
+06
+0<
+00
+1.
+1#
+0&
+0\
+05
+0-
+0$
+14
 #950000
 1!
-1C
-1D
-1N
-19
-1.
+11
+12
+16
+1<
+10
+0.
+0#
+1&
+1|
+1;
+1/
+08
+1%
+09
+0:
+07
 #1000000
