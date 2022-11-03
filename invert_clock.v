@@ -1,6 +1,6 @@
-module invert_clock(clk, in_clk, in_clk2, rst);
+module invert_clock(clk, in_clk, rst);
 	output reg clk;
-	input in_clk, in_clk2, rst;
+	input in_clk, rst;
 	
 	always
 	begin

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for skeleton
-Wed Nov 02 17:21:44 2022
+Thu Nov 03 00:21:04 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -22,29 +22,32 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
  14. Parameter Settings for User Entity Instance: imem:my_imem|altsyncram:altsyncram_component
  15. Parameter Settings for User Entity Instance: dmem:my_dmem|altsyncram:altsyncram_component
  16. altsyncram Parameter Settings by Entity Instance
- 17. Port Connectivity Checks: "processor:my_processor|alu:a1"
- 18. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[11].fa"
- 19. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[10].fa"
- 20. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[9].fa"
- 21. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[8].fa"
- 22. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[7].fa"
- 23. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[6].fa"
- 24. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[5].fa"
- 25. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[4].fa"
- 26. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[3].fa"
- 27. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[2].fa"
- 28. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:fa3"
- 29. Port Connectivity Checks: "processor:my_processor|program_counter:pc"
- 30. Port Connectivity Checks: "processor:my_processor|alu:isNotStore"
- 31. Port Connectivity Checks: "processor:my_processor|alu:isNotLoad"
- 32. Port Connectivity Checks: "processor:my_processor|alu:isNotRType"
- 33. Port Connectivity Checks: "invert_clock:regfile_clk"
- 34. Port Connectivity Checks: "invert_clock:dmem_clk"
- 35. Port Connectivity Checks: "invert_clock:processor_clk"
- 36. Post-Synthesis Netlist Statistics for Top Partition
- 37. Elapsed Time Per Partition
- 38. Analysis & Synthesis Messages
- 39. Analysis & Synthesis Suppressed Messages
+ 17. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|mux_32bit:m3"
+ 18. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|mux_32bit:m2"
+ 19. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|mux_32bit:m1"
+ 20. Port Connectivity Checks: "processor:my_processor|alu:a1"
+ 21. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[11].fa"
+ 22. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[10].fa"
+ 23. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[9].fa"
+ 24. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[8].fa"
+ 25. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[7].fa"
+ 26. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[6].fa"
+ 27. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[5].fa"
+ 28. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[4].fa"
+ 29. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[3].fa"
+ 30. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:intialize[2].fa"
+ 31. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder:fa3"
+ 32. Port Connectivity Checks: "processor:my_processor|program_counter:pc"
+ 33. Port Connectivity Checks: "processor:my_processor|check_two:isADD_Itype"
+ 34. Port Connectivity Checks: "processor:my_processor|check_two:isSUB_Rtype"
+ 35. Port Connectivity Checks: "processor:my_processor|check_two:isADD_Rtype"
+ 36. Port Connectivity Checks: "processor:my_processor|is_ne:isNotStore"
+ 37. Port Connectivity Checks: "processor:my_processor|is_ne:isNotLoad"
+ 38. Port Connectivity Checks: "processor:my_processor|is_ne:isNotRType"
+ 39. Post-Synthesis Netlist Statistics for Top Partition
+ 40. Elapsed Time Per Partition
+ 41. Analysis & Synthesis Messages
+ 42. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -71,13 +74,13 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 02 17:21:44 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 03 00:21:04 2022       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; skeleton                                    ;
 ; Top-level Entity Name              ; skeleton                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1                                           ;
-;     Total combinational functions  ; 1                                           ;
+; Total logic elements               ; 3                                           ;
+;     Total combinational functions  ; 3                                           ;
 ;     Dedicated logic registers      ; 1                                           ;
 ; Total registers                    ; 1                                           ;
 ; Total pins                         ; 6                                           ;
@@ -213,6 +216,10 @@ agreement for further details.
 ; initalize.v                      ; yes             ; User Verilog HDL File                  ; C:/Users/ka266/Documents/Project4/initalize.v                                ;         ;
 ; initalize_12.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/ka266/Documents/Project4/initalize_12.v                             ;         ;
 ; initalize_32.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/ka266/Documents/Project4/initalize_32.v                             ;         ;
+; is_ne.v                          ; yes             ; User Verilog HDL File                  ; C:/Users/ka266/Documents/Project4/is_ne.v                                    ;         ;
+; check_two.v                      ; yes             ; User Verilog HDL File                  ; C:/Users/ka266/Documents/Project4/check_two.v                                ;         ;
+; check_overflow.v                 ; yes             ; User Verilog HDL File                  ; C:/Users/ka266/Documents/Project4/check_overflow.v                           ;         ;
+; mux_5bit.v                       ; yes             ; User Verilog HDL File                  ; C:/Users/ka266/Documents/Project4/mux_5bit.v                                 ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -233,16 +240,16 @@ agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 1           ;
+; Estimated Total logic elements              ; 3           ;
 ;                                             ;             ;
-; Total combinational functions               ; 1           ;
+; Total combinational functions               ; 3           ;
 ; Logic element usage by number of LUT inputs ;             ;
 ;     -- 4 input functions                    ; 0           ;
 ;     -- 3 input functions                    ; 0           ;
-;     -- <=2 input functions                  ; 1           ;
+;     -- <=2 input functions                  ; 3           ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 1           ;
+;     -- normal mode                          ; 3           ;
 ;     -- arithmetic mode                      ; 0           ;
 ;                                             ;             ;
 ; Total registers                             ; 1           ;
@@ -254,20 +261,22 @@ agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 4           ;
-; Total fan-out                               ; 14          ;
-; Average fan-out                             ; 1.00        ;
+; Maximum fan-out                             ; 3           ;
+; Total fan-out                               ; 18          ;
+; Average fan-out                             ; 1.13        ;
 +---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name  ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+--------------+
-; |skeleton                  ; 1 (0)               ; 1 (0)                     ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |skeleton                       ; skeleton     ; work         ;
-;    |extend_clock:imem_clk| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|extend_clock:imem_clk ; extend_clock ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                         ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name  ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+--------------+
+; |skeleton                     ; 3 (0)               ; 1 (0)                     ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |skeleton                          ; skeleton     ; work         ;
+;    |extend_clock:imem_clk|    ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|extend_clock:imem_clk    ; extend_clock ; work         ;
+;    |invert_clock:dmem_clk|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|invert_clock:dmem_clk    ; invert_clock ; work         ;
+;    |invert_clock:regfile_clk| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|invert_clock:regfile_clk ; invert_clock ; work         ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1326,20 +1335,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------+----------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                    ;
-+----------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------+
-; Register name                                                        ; Reason for Removal        ; Registers Removed due to This Register                                      ;
-+----------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------+
-; processor:my_processor|program_counter:pc|dffe_ref:intialize[0].df|q ; Stuck at GND              ; processor:my_processor|program_counter:pc|dffe_ref:intialize[6].df|q,       ;
-;                                                                      ; due to stuck port data_in ; processor:my_processor|program_counter:pc|dffe_ref:intialize[5].df|q,       ;
-;                                                                      ;                           ; processor:my_processor|program_counter:pc|dffe_ref:intialize[4].df|q,       ;
-;                                                                      ;                           ; processor:my_processor|program_counter:pc|dffe_ref:intialize[3].df|q,       ;
-;                                                                      ;                           ; processor:my_processor|program_counter:pc|dffe_ref:intialize[2].df|q,       ;
-;                                                                      ;                           ; processor:my_processor|program_counter:pc|dffe_ref:intialize[1].df|q,       ;
-;                                                                      ;                           ; regfile:my_regfile|registers[31][27], regfile:my_regfile|registers[30][27], ;
-;                                                                      ;                           ; regfile:my_regfile|registers[29][27]                                        ;
-+----------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                              ;
++----------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------+
+; Register name                                                        ; Reason for Removal        ; Registers Removed due to This Register                                ;
++----------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------+
+; processor:my_processor|program_counter:pc|dffe_ref:intialize[0].df|q ; Stuck at GND              ; processor:my_processor|program_counter:pc|dffe_ref:intialize[6].df|q, ;
+;                                                                      ; due to stuck port data_in ; processor:my_processor|program_counter:pc|dffe_ref:intialize[5].df|q, ;
+;                                                                      ;                           ; processor:my_processor|program_counter:pc|dffe_ref:intialize[4].df|q, ;
+;                                                                      ;                           ; processor:my_processor|program_counter:pc|dffe_ref:intialize[3].df|q, ;
+;                                                                      ;                           ; processor:my_processor|program_counter:pc|dffe_ref:intialize[2].df|q, ;
+;                                                                      ;                           ; processor:my_processor|program_counter:pc|dffe_ref:intialize[1].df|q  ;
++----------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -1528,6 +1535,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------------------+
 
 
++-------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|mux_32bit:m3" ;
++------------+-------+----------+-----------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                         ;
++------------+-------+----------+-----------------------------------------------------------------+
+; in1[1..0]  ; Input ; Info     ; Stuck at VCC                                                    ;
+; in1[31..2] ; Input ; Info     ; Stuck at GND                                                    ;
++------------+-------+----------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|mux_32bit:m2" ;
++------------+-------+----------+-----------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                         ;
++------------+-------+----------+-----------------------------------------------------------------+
+; in1[31..2] ; Input ; Info     ; Stuck at GND                                                    ;
+; in1[1]     ; Input ; Info     ; Stuck at VCC                                                    ;
+; in1[0]     ; Input ; Info     ; Stuck at GND                                                    ;
++------------+-------+----------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|mux_32bit:m1" ;
++------------+-------+----------+-----------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                         ;
++------------+-------+----------+-----------------------------------------------------------------+
+; in1[31..1] ; Input ; Info     ; Stuck at GND                                                    ;
+; in1[0]     ; Input ; Info     ; Stuck at VCC                                                    ;
++------------+-------+----------+-----------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "processor:my_processor|alu:a1"                                                            ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -1535,7 +1573,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 ; isNotEqual ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; isLessThan ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; overflow   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -1649,85 +1686,71 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+-------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:my_processor|alu:isNotStore"                                                                                                                                  ;
-+----------------------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port                 ; Type   ; Severity ; Details                                                                                                                                                 ;
-+----------------------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; data_operandA        ; Input  ; Warning  ; Input port expression (5 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "data_operandA[31..5]" will be connected to GND. ;
-; data_operandB        ; Input  ; Warning  ; Input port expression (5 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "data_operandB[31..5]" will be connected to GND. ;
-; data_operandB[2..0]  ; Input  ; Info     ; Stuck at VCC                                                                                                                                            ;
-; data_operandB[4..3]  ; Input  ; Info     ; Stuck at GND                                                                                                                                            ;
-; ctrl_ALUopcode[4..1] ; Input  ; Info     ; Stuck at GND                                                                                                                                            ;
-; ctrl_ALUopcode[0]    ; Input  ; Info     ; Stuck at VCC                                                                                                                                            ;
-; ctrl_shiftamt        ; Input  ; Info     ; Stuck at GND                                                                                                                                            ;
-; data_result          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                     ;
-; isLessThan           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                     ;
-; overflow             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                     ;
-+----------------------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_two:isADD_Itype" ;
++-----------+-------+----------+-------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                   ;
++-----------+-------+----------+-------------------------------------------+
+; in2[4..3] ; Input ; Info     ; Stuck at GND                              ;
+; in2[2]    ; Input ; Info     ; Stuck at VCC                              ;
+; in2[1]    ; Input ; Info     ; Stuck at GND                              ;
+; in2[0]    ; Input ; Info     ; Stuck at VCC                              ;
+; in4[4..3] ; Input ; Info     ; Stuck at GND                              ;
+; in4[2]    ; Input ; Info     ; Stuck at VCC                              ;
+; in4[1]    ; Input ; Info     ; Stuck at GND                              ;
+; in4[0]    ; Input ; Info     ; Stuck at VCC                              ;
++-----------+-------+----------+-------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:my_processor|alu:isNotLoad"                                                                                                                                   ;
-+----------------------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port                 ; Type   ; Severity ; Details                                                                                                                                                 ;
-+----------------------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; data_operandA        ; Input  ; Warning  ; Input port expression (5 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "data_operandA[31..5]" will be connected to GND. ;
-; data_operandB        ; Input  ; Warning  ; Input port expression (5 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "data_operandB[31..5]" will be connected to GND. ;
-; data_operandB[2..0]  ; Input  ; Info     ; Stuck at GND                                                                                                                                            ;
-; data_operandB[31]    ; Input  ; Info     ; Stuck at GND                                                                                                                                            ;
-; data_operandB[30]    ; Input  ; Info     ; Stuck at VCC                                                                                                                                            ;
-; ctrl_ALUopcode[4..1] ; Input  ; Info     ; Stuck at GND                                                                                                                                            ;
-; ctrl_ALUopcode[0]    ; Input  ; Info     ; Stuck at VCC                                                                                                                                            ;
-; ctrl_shiftamt        ; Input  ; Info     ; Stuck at GND                                                                                                                                            ;
-; data_result          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                     ;
-; isLessThan           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                     ;
-; overflow             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                     ;
-+----------------------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_two:isSUB_Rtype" ;
++-----------+-------+----------+-------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                   ;
++-----------+-------+----------+-------------------------------------------+
+; in2       ; Input ; Info     ; Stuck at GND                              ;
+; in4[4..1] ; Input ; Info     ; Stuck at GND                              ;
+; in4[0]    ; Input ; Info     ; Stuck at VCC                              ;
++-----------+-------+----------+-------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:my_processor|alu:isNotRType"                                                                                                                                  ;
-+----------------------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port                 ; Type   ; Severity ; Details                                                                                                                                                 ;
-+----------------------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; data_operandA        ; Input  ; Warning  ; Input port expression (5 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "data_operandA[31..5]" will be connected to GND. ;
-; data_operandB        ; Input  ; Warning  ; Input port expression (5 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "data_operandB[31..5]" will be connected to GND. ;
-; data_operandB        ; Input  ; Info     ; Stuck at GND                                                                                                                                            ;
-; ctrl_ALUopcode[4..1] ; Input  ; Info     ; Stuck at GND                                                                                                                                            ;
-; ctrl_ALUopcode[0]    ; Input  ; Info     ; Stuck at VCC                                                                                                                                            ;
-; ctrl_shiftamt        ; Input  ; Info     ; Stuck at GND                                                                                                                                            ;
-; data_result          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                     ;
-; isLessThan           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                     ;
-; overflow             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                     ;
-+----------------------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_two:isADD_Rtype" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                   ;
+; in4  ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "invert_clock:regfile_clk"                                                                                                                   ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; rst  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|is_ne:isNotStore" ;
++-----------+-------+----------+--------------------------------------+
+; Port      ; Type  ; Severity ; Details                              ;
++-----------+-------+----------+--------------------------------------+
+; in2[2..0] ; Input ; Info     ; Stuck at VCC                         ;
+; in2[4..3] ; Input ; Info     ; Stuck at GND                         ;
++-----------+-------+----------+--------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "invert_clock:dmem_clk"                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; rst  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|is_ne:isNotLoad" ;
++-----------+-------+----------+-------------------------------------+
+; Port      ; Type  ; Severity ; Details                             ;
++-----------+-------+----------+-------------------------------------+
+; in2[2..0] ; Input ; Info     ; Stuck at GND                        ;
+; in2[4]    ; Input ; Info     ; Stuck at GND                        ;
+; in2[3]    ; Input ; Info     ; Stuck at VCC                        ;
++-----------+-------+----------+-------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "invert_clock:processor_clk"                                                                                                                 ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; rst  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|is_ne:isNotRType" ;
++------+-------+----------+-------------------------------------------+
+; Port ; Type  ; Severity ; Details                                   ;
++------+-------+----------+-------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                              ;
++------+-------+----------+-------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -1738,13 +1761,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 6                           ;
 ; cycloneiii_ff         ; 1                           ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 2                           ;
-;     normal            ; 2                           ;
+; cycloneiii_lcell_comb ; 4                           ;
+;     normal            ; 4                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 1                           ;
+;         2 data inputs ; 3                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 1.00                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.57                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1753,7 +1776,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -1763,7 +1786,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Nov 02 17:21:29 2022
+    Info: Processing started: Thu Nov 03 00:20:48 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off skeleton -c skeleton
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1801,6 +1824,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file initali
     Info (12023): Found entity 1: initalize_12 File: C:/Users/ka266/Documents/Project4/initalize_12.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file initalize_32.v
     Info (12023): Found entity 1: initalize_32 File: C:/Users/ka266/Documents/Project4/initalize_32.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file processor_tb.v
+    Info (12023): Found entity 1: processor_tb File: C:/Users/ka266/Documents/Project4/processor_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file is_ne.v
+    Info (12023): Found entity 1: is_ne File: C:/Users/ka266/Documents/Project4/is_ne.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file check_two.v
+    Info (12023): Found entity 1: check_two File: C:/Users/ka266/Documents/Project4/check_two.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file check_overflow.v
+    Info (12023): Found entity 1: check_overflow File: C:/Users/ka266/Documents/Project4/check_overflow.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_5bit.v
+    Info (12023): Found entity 1: mux_5bit File: C:/Users/ka266/Documents/Project4/mux_5bit.v Line: 1
 Info (12127): Elaborating entity "skeleton" for the top level hierarchy
 Info (12128): Elaborating entity "extend_clock" for hierarchy "extend_clock:imem_clk" File: C:/Users/ka266/Documents/Project4/skeleton.v Line: 23
 Info (12128): Elaborating entity "invert_clock" for hierarchy "invert_clock:processor_clk" File: C:/Users/ka266/Documents/Project4/skeleton.v Line: 24
@@ -1848,18 +1881,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Info (12128): Elaborating entity "altsyncram_0jf1" for hierarchy "dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "regfile" for hierarchy "regfile:my_regfile" File: C:/Users/ka266/Documents/Project4/skeleton.v Line: 71
 Info (12128): Elaborating entity "processor" for hierarchy "processor:my_processor" File: C:/Users/ka266/Documents/Project4/skeleton.v Line: 97
-Info (12128): Elaborating entity "alu" for hierarchy "processor:my_processor|alu:isNotRType" File: C:/Users/ka266/Documents/Project4/processor.v Line: 100
-Warning (10270): Verilog HDL Case Statement warning at alu.v(25): incomplete case statement has no default case item File: C:/Users/ka266/Documents/Project4/alu.v Line: 25
-Info (12128): Elaborating entity "program_counter" for hierarchy "processor:my_processor|program_counter:pc" File: C:/Users/ka266/Documents/Project4/processor.v Line: 108
+Info (12128): Elaborating entity "is_ne" for hierarchy "processor:my_processor|is_ne:isNotRType" File: C:/Users/ka266/Documents/Project4/processor.v Line: 98
+Info (12128): Elaborating entity "check_two" for hierarchy "processor:my_processor|check_two:isADD_Rtype" File: C:/Users/ka266/Documents/Project4/processor.v Line: 101
+Info (12128): Elaborating entity "program_counter" for hierarchy "processor:my_processor|program_counter:pc" File: C:/Users/ka266/Documents/Project4/processor.v Line: 110
 Info (12128): Elaborating entity "dffe_ref" for hierarchy "processor:my_processor|program_counter:pc|dffe_ref:intialize[0].df" File: C:/Users/ka266/Documents/Project4/program_counter.v Line: 11
-Info (12128): Elaborating entity "pc_adder" for hierarchy "processor:my_processor|pc_adder:padd" File: C:/Users/ka266/Documents/Project4/processor.v Line: 109
+Info (12128): Elaborating entity "pc_adder" for hierarchy "processor:my_processor|pc_adder:padd" File: C:/Users/ka266/Documents/Project4/processor.v Line: 111
 Warning (10034): Output port "out[0]" at pc_adder.v(3) has no driver File: C:/Users/ka266/Documents/Project4/pc_adder.v Line: 3
 Info (12128): Elaborating entity "fulladder" for hierarchy "processor:my_processor|pc_adder:padd|fulladder:fa3" File: C:/Users/ka266/Documents/Project4/pc_adder.v Line: 6
-Info (12128): Elaborating entity "initalize" for hierarchy "processor:my_processor|initalize:rs" File: C:/Users/ka266/Documents/Project4/processor.v Line: 113
-Info (12128): Elaborating entity "sign_extension" for hierarchy "processor:my_processor|sign_extension:si" File: C:/Users/ka266/Documents/Project4/processor.v Line: 125
-Info (12128): Elaborating entity "initalize_12" for hierarchy "processor:my_processor|initalize_12:dm_address" File: C:/Users/ka266/Documents/Project4/processor.v Line: 135
-Info (12128): Elaborating entity "mux_32bit" for hierarchy "processor:my_processor|mux_32bit:data_mem" File: C:/Users/ka266/Documents/Project4/processor.v Line: 136
-Info (12128): Elaborating entity "initalize_32" for hierarchy "processor:my_processor|initalize_32:dmaddress_data" File: C:/Users/ka266/Documents/Project4/processor.v Line: 139
+Info (12128): Elaborating entity "mux_5bit" for hierarchy "processor:my_processor|mux_5bit:rt_mux" File: C:/Users/ka266/Documents/Project4/processor.v Line: 116
+Info (12128): Elaborating entity "initalize" for hierarchy "processor:my_processor|initalize:rs" File: C:/Users/ka266/Documents/Project4/processor.v Line: 118
+Info (12128): Elaborating entity "sign_extension" for hierarchy "processor:my_processor|sign_extension:si" File: C:/Users/ka266/Documents/Project4/processor.v Line: 130
+Info (12128): Elaborating entity "alu" for hierarchy "processor:my_processor|alu:a1" File: C:/Users/ka266/Documents/Project4/processor.v Line: 137
+Warning (10270): Verilog HDL Case Statement warning at alu.v(25): incomplete case statement has no default case item File: C:/Users/ka266/Documents/Project4/alu.v Line: 25
+Info (12128): Elaborating entity "check_overflow" for hierarchy "processor:my_processor|check_overflow:checkingoverflow" File: C:/Users/ka266/Documents/Project4/processor.v Line: 138
+Info (12128): Elaborating entity "mux_32bit" for hierarchy "processor:my_processor|check_overflow:checkingoverflow|mux_32bit:m1" File: C:/Users/ka266/Documents/Project4/check_overflow.v Line: 17
+Info (12128): Elaborating entity "initalize_12" for hierarchy "processor:my_processor|initalize_12:dm_address" File: C:/Users/ka266/Documents/Project4/processor.v Line: 141
+Info (12128): Elaborating entity "initalize_32" for hierarchy "processor:my_processor|initalize_32:dmaddress_data" File: C:/Users/ka266/Documents/Project4/processor.v Line: 145
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[0]" File: C:/Users/ka266/Documents/Project4/db/altsyncram_0jf1.tdf Line: 37
@@ -1926,19 +1963,18 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "imem:my_imem|altsyncram:altsyncram_component|altsyncram_q3b1:auto_generated|q_a[29]" File: C:/Users/ka266/Documents/Project4/db/altsyncram_q3b1.tdf Line: 673
         Warning (14320): Synthesized away node "imem:my_imem|altsyncram:altsyncram_component|altsyncram_q3b1:auto_generated|q_a[30]" File: C:/Users/ka266/Documents/Project4/db/altsyncram_q3b1.tdf Line: 695
         Warning (14320): Synthesized away node "imem:my_imem|altsyncram:altsyncram_component|altsyncram_q3b1:auto_generated|q_a[31]" File: C:/Users/ka266/Documents/Project4/db/altsyncram_q3b1.tdf Line: 717
-Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1035 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/ka266/Documents/Project4/output_files/skeleton.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 7 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 9 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 1 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 70 warnings
+    Info (21061): Implemented 3 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 69 warnings
     Info: Peak virtual memory: 4746 megabytes
-    Info: Processing ended: Wed Nov 02 17:21:45 2022
+    Info: Processing ended: Thu Nov 03 00:21:04 2022
     Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:23
 

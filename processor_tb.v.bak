@@ -1,0 +1,45 @@
+// ---------- SAMPLE TEST BENCH ----------
+`timescale 1 ns / 100 ps
+
+module processor_tb();
+
+    reg  clock, ctrl_reset;
+    wire imem_clock, dmem_clock, processor_clock, regfile_clock;
+	 wire [11:0] address_imem;
+    wire [31:0] q_imem;
+	 wire [11:0] address_dmem;
+    wire [31:0] data;
+    wire wren;
+    wire [31:0] q_dmem;	 
+	 wire ctrl_writeEnable;
+    wire [4:0] ctrl_writeReg, ctrl_readRegA, ctrl_readRegB;
+    wire [31:0] data_writeReg;
+    wire [31:0] data_readRegA, data_readRegB;
+
+	 
+	 skeleton s1 (clock, reset, imem_clock, dmem_clock, processor_clock, regfile_clock
+address_imem, q_imem, address_dmem, data, wren, q_dmem, ctrl_writeEnable, ctrl_writeReg, ctrl_readRegA, ctrl_readRegB,
+data_writeReg, data_readRegA, data_readRegB  );
+
+
+
+initial
+    begin
+        $display($time, " << Starting the Simulation >>");
+        clock = 1'b0;    // at time 0
+		  
+		  ctrl_reset = 1'b1;    // assert reset
+        @(negedge clock);    // wait until next negative edge of clock
+        @(negedge clock);    // wait until next negative edge of clock
+
+        ctrl_reset = 1'b0;    // de-assert reset
+        @(negedge clock);    // wait until next negative edge of clock
+		  
+	      $stop;
+    end
+	 
+	     // Clock generator
+    always
+         #10     clock = ~clock;    // toggle
+		  
+endmodule 

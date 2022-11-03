@@ -91,51 +91,59 @@ module processor(
     input [31:0] data_readRegA, data_readRegB;
 
     /* YOUR CODE STARTS HERE */
-	 
-	 wire [31:0] tmp1, tmp7,tmp10;
-	 wire tmp2, tmp3, tmp4, tmp5, tmp6, tmp8, tmp9,tmp11, tmp12;
-	 wire is_not_rtype, is_not_load ,is_not_store;
-	
 
-	 alu isNotRType(q_imem[31:27], 5'b00000, 5'b00001, 5'b00000, tmp1, is_not_rtype, tmp2, tmp3);
-	 alu isNotLoad(q_imem[31:27], 5'b01000, 5'b00001, 5'b00000, tmp7, is_not_load, tmp8, tmp9);
-	 alu isNotStore(q_imem[31:27], 5'b00111, 5'b00001, 5'b00000, tmp10, is_not_store, tmp11, tmp12);
-	 
+
+	wire is_not_rtype, is_not_load ,is_not_store, is_add_rtype, is_sub_rtype, is_add_i;
+	
+	is_ne isNotRType(is_not_rtype, q_imem[31:27], 5'b00000);
+	is_ne isNotLoad(is_not_load, q_imem[31:27], 5'b01000);
+	is_ne isNotStore(is_not_store, q_imem[31:27], 5'b00111);
+	check_two isADD_Rtype(is_add_rtype, q_imem[31:27], 5'b00000 , q_imem[6:2], 5'd0);
+	check_two isSUB_Rtype(is_sub_rtype, q_imem[31:27], 5'b00000 , q_imem[6:2], 5'd1);
+	check_two isADD_Itype(is_add_i, q_imem[31:27], 5'b00101, q_imem[31:27], 5'b00101);
+		
 	 /* Level 1 for Program counter */
 	
 	 wire[11:0] pc_in;
+	 wire[4:0] dest_reg;
 	
 	 program_counter pc (address_imem, pc_in, clock, 1'b1, reset);
 	 pc_adder padd(pc_in, address_imem);
 	 
 	 /* Level 2 Reg file*/
 	 
+	 wire[4:0] regB_in;
+	 mux_5bit rt_mux (regB_in, is_not_store, q_imem[26:22], q_imem[16:12]); //checking for rd incase of store. 
+	 
 	 initalize rs (ctrl_readRegA, q_imem[21:17]); //initalizing rs (i.e. ctrl_readRegA)	 
-	 initalize rt (ctrl_readRegB, q_imem[16:12]); //initalizing rt (i.e. ctrl_readRegB)
-	 initalize rd (ctrl_writeReg, q_imem[26:22]); //initalizing rd (i.e. ctrl_writeReg)
+	 initalize rt (ctrl_readRegB, regB_in); //initalizing rt (i.e. ctrl_readRegB)
+	 initalize rd (dest_reg, q_imem[26:22]); //initalizing rd (i.e. dest_reg)
 	 
 	 and reg_write_enable (ctrl_writeEnable, is_not_store, is_not_store); 
 	
 	 /* Level 3 ALU */
 	 
-	 wire[31:0] alu_out, immed, alu_in2;
+	 wire[31:0] alu_out, immed, alu_in2, overflow_out;
 	 wire[4:0] alu_opcode;
 	 wire overflow;
 	
 	 sign_extension si(immed, q_imem[16:0]);
 	 
 	 assign alu_in2 = is_not_rtype? immed: data_readRegB; 		//chosing the right input for alu  
-	 assign alu_opcode = is_not_rtype? 5'b00000: q_imem[6:2]; 	//chosing the right op code for alu
+	 assign alu_opcode = is_not_rtype? 5'd0: q_imem[6:2]; 	//chosing the right op code for alu
 	 
-	 alu a1(data_readRegA, alu_in2, alu_opcode, q_imem[6:2], alu_out, tmp4, tmp5, overflow);
+	 wire tmp4, tmp5;
 	 
-	 //To Do Overflow.
+	 alu a1(data_readRegA, alu_in2, alu_opcode, q_imem[11:7], alu_out, tmp4, tmp5, overflow);
+	 check_overflow  checkingoverflow (overflow_out, ctrl_writeReg, alu_out, dest_reg, overflow, is_add_rtype, is_sub_rtype, is_add_i);
 	
 	 /* Level 4 Data memory*/	
-	 initalize_12 dm_address(address_dmem, alu_out[11:0]);	//initalize dm_address->address_dmem	 
-	 mux_32bit data_mem(data_writeReg, is_not_load, q_dmem, alu_out);
+	 initalize_12 dm_address(address_dmem, overflow_out[11:0]);	//initalize dm_address->address_dmem	 
+	 mux_32bit data_mem(data_writeReg, is_not_load, q_dmem, overflow_out);
 	 
 	 not dmem_write_enable (wren, is_not_store);					//initalizing wren
 	 initalize_32 dmaddress_data(data, data_readRegB);			//initalizing dm_address->data
+	 
+	
 	 
 endmodule 

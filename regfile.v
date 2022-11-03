@@ -11,9 +11,9 @@ module regfile(
 	reg[31:0] registers[31:0];
 	
 	always @(posedge clock or posedge ctrl_reset)
-	begin
+	begin : writingresgesiter
 		if(ctrl_reset)
-			begin
+			begin : resetting
 				integer i;
 				for(i = 0; i < 32; i = i + 1)
 					begin
