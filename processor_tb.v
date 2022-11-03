@@ -15,6 +15,7 @@ module processor_tb();
     wire [31:0] data_writeReg;
     reg  [31:0] data_readRegA, data_readRegB;
 
+	 integer counter =0;
 	 
 	processor ptest(clock, ctrl_reset, address_imem, q_imem, address_dmem, data, wren, q_dmem, ctrl_writeEnable, ctrl_writeReg, 
 ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
@@ -28,8 +29,17 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  @(negedge clock);    // wait until next negative edge of clock
 		  @(negedge clock);    // wait until next negative edge of clock
 
+		  if(address_imem != counter) begin
+			 $display("**Timescale 1 :Error on address_imem read %h but expected %h.", address_imem, counter);
+		  end
+			
 		  ctrl_reset = 1'b0;    // de-assert reset
 		  @(negedge clock);    // wait until next negative edge of clock
+		  
+		  counter = counter +4;
+		  if(address_imem != counter) begin
+				$display("**Timescale 2 :Error on address_imem read %h but expected %h.", address_imem, counter);
+			end
 		  
 		  //ADD Rtype
 		  //ADD $1, $2, $3
@@ -40,6 +50,11 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			
 			begin
 				@(negedge clock); 
+			
+				counter = counter +4;
+				if(address_imem != counter) begin
+					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
+				end
 			
 				if( ctrl_writeReg != 5'd1) begin
 					$display("**Error on Addition ctrl_writeReg: read %h but expected %h.", ctrl_writeReg, 5'd1);
@@ -75,7 +90,12 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			
 			begin
 				@(negedge clock); 
-			
+
+				counter = counter +4;
+				if(address_imem != counter) begin
+					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
+				end
+				
 				if( ctrl_writeReg != 5'd30) begin
 					$display("**Error on Addition ctrl_writeReg: read %h but expected %h.", ctrl_writeReg, 5'd30);
 				end
@@ -111,6 +131,11 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			begin
 				@(negedge clock); 
 			
+				counter = counter +4;
+				if(address_imem != counter) begin
+					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
+				end
+
 				if( ctrl_writeReg != 5'd1) begin
 					$display("**Error on Addition ctrl_writeReg: read %h but expected %h.", ctrl_writeReg, 5'd1);
 				end
@@ -142,7 +167,12 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			
 			begin
 				@(negedge clock); 
-			
+	
+				counter = counter +4;
+				if(address_imem != counter) begin
+					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
+				end
+				
 				if( ctrl_writeReg != 5'd30) begin
 					$display("**Error on Addition ctrl_writeReg: read %h but expected %h.", ctrl_writeReg, 5'd30);
 				end
@@ -173,7 +203,12 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			
 			begin
 				@(negedge clock); 
-			
+				
+				counter = counter +4;
+				if(address_imem != counter) begin
+					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
+				end
+							
 				if( ctrl_writeReg != 5'd1) begin
 					$display("**Error on Sub ctrl_writeReg: read %h but expected %h.", ctrl_writeReg, 5'd1);
 				end
@@ -209,7 +244,12 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			
 			begin
 				@(negedge clock); 
-			
+				
+				counter = counter +4;
+				if(address_imem != counter) begin
+					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
+				end
+										
 				if( ctrl_writeReg != 5'd30) begin
 					$display("**Error on ctrl_writeReg: read %h but expected %h.", ctrl_writeReg, 5'd30);
 				end
@@ -244,7 +284,12 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			
 			begin
 				@(negedge clock); 
-			
+				
+				counter = counter +4;
+				if(address_imem != counter) begin
+					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
+				end
+										
 				if( ctrl_writeReg != 5'd1) begin
 					$display("**Error on  ctrl_writeReg: read %h but expected %h.", ctrl_writeReg, 5'd1);
 				end
@@ -279,7 +324,12 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			
 			begin
 				@(negedge clock); 
-			
+				
+				counter = counter +4;
+				if(address_imem != counter) begin
+					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
+				end
+										
 				if( ctrl_writeReg != 5'd1) begin
 					$display("**Error on  ctrl_writeReg: read %h but expected %h.", ctrl_writeReg, 5'd1);
 				end
@@ -314,7 +364,12 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			
 			begin
 				@(negedge clock); 
-			
+				
+				counter = counter +4;
+				if(address_imem != counter) begin
+					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
+				end
+										
 				if( ctrl_writeReg != 5'd1) begin
 					$display("**Error on  ctrl_writeReg: read %h but expected %h.", ctrl_writeReg, 5'd1);
 				end
@@ -346,7 +401,12 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			
 			begin
 				@(negedge clock); 
-			
+				
+				counter = counter +4;
+				if(address_imem != counter) begin
+					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
+				end
+										
 				if( ctrl_writeReg != 5'd1) begin
 					$display("**Error on  ctrl_writeReg: read %h but expected %h.", ctrl_writeReg, 5'd1);
 				end
@@ -379,7 +439,12 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			
 			begin
 				@(negedge clock); 
-			
+				
+				counter = counter +4;
+				if(address_imem != counter) begin
+					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
+				end
+										
 				
 				if( ctrl_readRegA != 5'd2) begin
 					$display("**Error on  ctrl_readRegA: read %h but expected %h.", ctrl_readRegA, 5'd2);
@@ -418,6 +483,11 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 				@(negedge clock); 
 			
 				
+				counter = counter +4;
+				if(address_imem != counter) begin
+					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
+				end
+											
 				if( ctrl_readRegA != 5'd2) begin
 					$display("**Error on  ctrl_readRegA: read %h but expected %h.", ctrl_readRegA, 5'd2);
 				end

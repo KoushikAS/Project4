@@ -3,7 +3,6 @@ module program_counter(out, in, clk, enable, clr);
    input[11:0] in;
 	input clk, enable, clr;
 	output[11:0] out;
-   wire clr;
  
 	genvar i;
 	generate

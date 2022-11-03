@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/ka266/Documents/Project4/simulation/modelsim
 valu
-Z1 !s110 1667449088
+Z1 !s110 1667486175
 !i10b 1
 !s100 CM2POFHhm`MRQRPIcjMQG0
 IQo;a6mOe74Mff=JXdQD8a2
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1667449088.000000
+Z4 !s108 1667486175.000000
 !s107 C:/Users/ka266/Documents/Project4/alu.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/alu.v|
 !i113 1
@@ -31,7 +31,7 @@ Z5 o-vlog01compat -work work
 Z6 !s92 -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4
 Z7 tCvgOpt 0
 vcheck_overflow
-Z8 !s110 1667449089
+Z8 !s110 1667486176
 !i10b 1
 !s100 ON`Pe^K9OAYKLEcnUZcDh0
 I46;M]j;O0n??]nXl8X:l01
@@ -45,7 +45,7 @@ R3
 r1
 !s85 0
 31
-Z9 !s108 1667449089.000000
+Z9 !s108 1667486176.000000
 !s107 C:/Users/ka266/Documents/Project4/check_overflow.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/check_overflow.v|
 !i113 1
@@ -119,7 +119,7 @@ R5
 R6
 R7
 vinitalize
-R1
+R8
 !i10b 1
 !s100 jKibOH7OI@Ff59Y>2?X4e3
 I588_Va7GGU7GSeHe[>X8N3
@@ -133,7 +133,7 @@ R3
 r1
 !s85 0
 31
-R4
+R9
 !s107 C:/Users/ka266/Documents/Project4/initalize.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/initalize.v|
 !i113 1
@@ -207,7 +207,7 @@ R5
 R6
 R7
 vmux_32bit
-R1
+R8
 !i10b 1
 !s100 Fe5AOZ_FFb7M[eHnOLB[E2
 IJ>8:Dd=O:C@iQa29c^<WD2
@@ -221,7 +221,7 @@ R3
 r1
 !s85 0
 31
-R4
+R9
 !s107 C:/Users/ka266/Documents/Project4/mux_32bit.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/mux_32bit.v|
 !i113 1
@@ -253,11 +253,11 @@ R7
 vpc_adder
 R1
 !i10b 1
-!s100 INRoE6k8D;CQ9LLNIIXHU1
-Il^J8KlAiN4Emi45?EYNYB0
+!s100 1mRLCmkm^B`CI]8HTb7P31
+IFd]1n[>P71:[^28i7c72c1
 R2
 R0
-w1667423382
+w1667485720
 8C:/Users/ka266/Documents/Project4/pc_adder.v
 FC:/Users/ka266/Documents/Project4/pc_adder.v
 L0 1
@@ -297,11 +297,11 @@ R7
 vprocessor_tb
 R8
 !i10b 1
-!s100 Hi7O81U]=9:JPcaVR4Gl93
-IoL[CJY=AH6M_hRKfHhDlm3
+!s100 m4[nF?SlDW6S5W7OE8F0A2
+IDE4b[HNB8hi3^jk]H2o;G1
 R2
 R0
-w1667449050
+w1667486132
 8C:/Users/ka266/Documents/Project4/processor_tb.v
 FC:/Users/ka266/Documents/Project4/processor_tb.v
 L0 3
@@ -319,11 +319,11 @@ R7
 vprogram_counter
 R1
 !i10b 1
-!s100 lCWQ0m?US3_m1dBOaAC4K0
-I?ziRd27@7OY8dkP`]z;Ub1
+!s100 [51f`6FWTZiSXFTYoOCYQ1
+I@[Z]NohFlLTkmHcWK?ha61
 R2
 R0
-w1667178005
+w1667484836
 8C:/Users/ka266/Documents/Project4/program_counter.v
 FC:/Users/ka266/Documents/Project4/program_counter.v
 L0 1
