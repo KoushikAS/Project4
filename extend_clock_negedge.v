@@ -1,5 +1,5 @@
 module extend_clock_negedge(clock, reset, in_clock);
-	 output reg clock;
+	output reg clock;
 	input in_clock, reset;
 	
 	integer counter =0;

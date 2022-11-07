@@ -3,7 +3,6 @@
 module processor_tb();
 
     reg  clock, ctrl_reset;
-    wire imem_clock, dmem_clock, processor_clock, regfile_clock;
 	 wire [11:0] address_imem;
     reg [31:0] q_imem;
 	 wire [11:0] address_dmem;
@@ -36,7 +35,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  ctrl_reset = 1'b0;    // de-assert reset
 		  @(negedge clock);    // wait until next negative edge of clock
 		  
-		  counter = counter +4;
+		  counter = counter +1;
 		  if(address_imem != counter) begin
 				$display("**Timescale 2 :Error on address_imem read %h but expected %h.", address_imem, counter);
 			end
@@ -52,7 +51,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			begin
 				@(negedge clock); 
 			
-				counter = counter +4;
+				counter = counter +1;
 				if(address_imem != counter) begin
 					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
 				end
@@ -93,7 +92,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			begin
 				@(negedge clock); 
 
-				counter = counter +4;
+				counter = counter +1;
 				if(address_imem != counter) begin
 					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
 				end
@@ -134,7 +133,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			begin
 				@(negedge clock); 
 			
-				counter = counter +4;
+				counter = counter +1;
 				if(address_imem != counter) begin
 					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
 				end
@@ -172,7 +171,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			begin
 				@(negedge clock); 
 	
-				counter = counter +4;
+				counter = counter +1;
 				if(address_imem != counter) begin
 					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
 				end
@@ -209,7 +208,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			begin
 				@(negedge clock); 
 				
-				counter = counter +4;
+				counter = counter +1;
 				if(address_imem != counter) begin
 					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
 				end
@@ -251,7 +250,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			begin
 				@(negedge clock); 
 				
-				counter = counter +4;
+				counter = counter +1;
 				if(address_imem != counter) begin
 					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
 				end
@@ -292,7 +291,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			begin
 				@(negedge clock); 
 				
-				counter = counter +4;
+				counter = counter +1;
 				if(address_imem != counter) begin
 					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
 				end
@@ -333,7 +332,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			begin
 				@(negedge clock); 
 				
-				counter = counter +4;
+				counter = counter +1;
 				if(address_imem != counter) begin
 					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
 				end
@@ -374,7 +373,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			begin
 				@(negedge clock); 
 				
-				counter = counter +4;
+				counter = counter +1;
 				if(address_imem != counter) begin
 					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
 				end
@@ -412,7 +411,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			begin
 				@(negedge clock); 
 				
-				counter = counter +4;
+				counter = counter +1;
 				if(address_imem != counter) begin
 					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
 				end
@@ -451,7 +450,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			begin
 				@(negedge clock); 
 				
-				counter = counter +4;
+				counter = counter +1;
 				if(address_imem != counter) begin
 					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
 				end
@@ -494,7 +493,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 				@(negedge clock); 
 			
 				
-				counter = counter +4;
+				counter = counter +1;
 				if(address_imem != counter) begin
 					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
 				end
@@ -527,12 +526,203 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			end
 		  
 		  $display($time, " << End  Simulation >>");
-		  $stop;
+		//  $stop;
 	 end
 		  
 	
 	// Clock generator
 	always
 		#10     clock = ~clock;    // toggle
+
+			
+	 reg  main_clock, main_ctrl_reset;
+    wire imem_clock, dmem_clock, processor_clock, regfile_clock;
+    wire [31:0] main_q_imem;
+	 wire [11:0] main_address_dmem;
+    wire [31:0] main_data;
+    wire main_wren;
+	 wire main_ctrl_writeEnable;
+    wire [4:0] main_ctrl_writeReg;
+    wire [31:0] main_data_writeReg;
+
+	 
+	 integer main_counter;
+	 
+	 skeleton s1(main_clock, main_ctrl_reset, imem_clock, dmem_clock, processor_clock, regfile_clock,
+    main_q_imem);
+	// main_address_dmem, main_data, main_wren, main_ctrl_writeEnable, main_ctrl_writeReg, main_data_writeReg );
+
+	 initial 
+	 begin
+		  $display($time, " << Starting the Simulation for skeleton >>");
+		  main_clock = 1'b0;    // at time 0
+		
+	
+		  main_ctrl_reset = 1'b1;    // assert reset
+		  @(posedge main_clock);    // wait until next positive edge of clock
+
+		  if(main_q_imem != 32'b0000000000000000000000000000000) begin
+			 $display("**nop Error on main_q_imem read %h but expected %h.", main_q_imem, 32'b0000000000000000000000000000000);
+		  end
+		  	
+		  main_ctrl_reset = 1'b0;    // de-assert reset
+		  @(posedge main_clock);    // wait until next positive edge of clock
+		  
+		  begin
+		  @(posedge processor_clock);
+		  @(posedge imem_clock);	  
+		  @(posedge imem_clock);	//Don't know why ? Should check 
+				$display("*Checking nop.");
+				if(main_q_imem != 32'b0000000000000000000000000000000) begin
+					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b0000000000000000000000000000000);
+				end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock);
+				$display("*Checking addi $1, $0, 5");
+				if(main_q_imem != 32'b00101000010000000000000000000101) begin
+					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
+				end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock);
+				$display("*Checking addi $2, $0, 3");
+			  if(main_q_imem != 32'b00101000100000000000000000000011) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000100000000000000000000011);
+			  end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock);
+				$display("*Checking add  $3, $1, $2");
+				if(main_q_imem != 32'b00000000110000100010000000000000) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00000000110000100010000000000000);
+			  end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking sub $4, $1, $2");
+			  if(main_q_imem != 32'b00000001000000100010000000000100) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00000001000000100010000000000100);
+			  end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking and $5, $0, $1");
+			  if(main_q_imem != 32'b00000001010000000001000000001000) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00000001010000000001000000001000);
+			  end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking and $6, $1, $2");
+			  if(main_q_imem != 32'b00000001100000100010000000001000) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00000001100000100010000000001000);
+			  end
+		  end 
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking or $7, $0, $2");
+			  if(main_q_imem != 32'b00000001110000000010000000001100) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00000001110000000010000000001100);
+			  end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking sll $8, $1, 2");
+			  if(main_q_imem != 32'b00000010000000100000000100010000) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00000010000000100000000100010000);
+			  end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking sra $9, $3, 1");
+			  if(main_q_imem != 32'b00000010010001100000000010010100) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00000010010001100000000010010100);
+			  end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking and addi $10, $0, 345");
+			  if(main_q_imem != 32'b00101010100000000000000101011001) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101010100000000000000101011001);
+			  end
+		  end
+		  
+		  		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking addi $11, $0, 567");
+			  if(main_q_imem != 32'b00101010110000000000001000110111) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101010110000000000001000110111);
+			  end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking sw $10, 1($0)");
+			  if(main_q_imem != 32'b00111010100000000000000000000001) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010100000000000000000000001);
+			  end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking sw $11, 2($0)");
+			  if(main_q_imem != 32'b00111010110000000000000000000010) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
+			  end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking lw $12, 1($0)");
+			  if(main_q_imem != 32'b01000011000000000000000000000001) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
+			  end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking lw $13, 2($0)");
+			  if(main_q_imem != 32'b01000011010000000000000000000010) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011010000000000000000000010);
+			  end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking end");
+			  if(main_q_imem != 32'b00000000000000000000000000000000) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00000000000000000000000000000000);
+			  end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking end");
+			  if(main_q_imem != 32'b00000000000000000000000000000000) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00000000000000000000000000000000);
+			  end
+		  end
+		  
+		  
+
+		  $display($time, " << End  Simulation Skeleton>>");
+		  $stop;
+	end
+	
+	always
+	#10     main_clock = ~main_clock;    // toggle
+
+
 	
 endmodule 

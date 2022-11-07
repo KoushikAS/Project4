@@ -2,7 +2,7 @@ module invert_clock(clk, rst, in_clk);
 	output reg clk;
 	input in_clk, rst;
 	
-	always
+	always @(in_clk)
 	begin
 		if(rst == 0)
 		begin
