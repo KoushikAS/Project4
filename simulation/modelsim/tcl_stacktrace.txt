@@ -1,0 +1,25 @@
+Mon Nov 07 21:30:15 EST 2022
+Trace back: bad window path name ".main_pane.wave.interior.cs.body.pw.wf.sig_dlg"
+    while executing
+"::tk::wm geometry .main_pane.wave.interior.cs.body.pw.wf.sig_dlg"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 [concat [list ::tk::wm $option $window] $args]"
+    (procedure "wm" line 58)
+    invoked from within
+"wm geometry $dlg"
+    (procedure "CancelWaveSig" line 8)
+    invoked from within
+"CancelWaveSig $wavePriv(curr_sig_dlg)"
+    (procedure "Wave::SigDialog" line 17)
+    invoked from within
+"Wave::SigDialog .main_pane.dataflow.interior.cs.body.pw.wf.top"
+    ("eval" body line 1)
+    invoked from within
+"eval $cmd"
+    (procedure "Wave::ItemProp" line 19)
+    invoked from within
+"Wave::ItemProp .main_pane.dataflow.interior.cs.body.pw.wf.top.tree"
+    (command bound to event)
+  <2:C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/tk8.5/bgerror.tcl:92: ::tkerror {bad window path name ".main_pane.wave.interior.cs.body.pw.wf.sig_dlg"}
+  <1:eval:1: ::tk::dialog::error::bgerror {bad window path name ".main_pane.wave.interior.cs.body.pw.wf.sig_dlg"}

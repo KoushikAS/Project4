@@ -2,6 +2,7 @@
 `timescale 1 ns / 100 ps
 module processor_tb();
 
+/**
     reg  clock, ctrl_reset;
 	 wire [11:0] address_imem;
     reg [31:0] q_imem;
@@ -15,7 +16,7 @@ module processor_tb();
     reg  [31:0] data_readRegA, data_readRegB;
 
 	 integer counter =0;
-	 
+ 
 	processor ptest(clock, ctrl_reset, address_imem, q_imem, address_dmem, data, wren, q_dmem, ctrl_writeEnable, ctrl_writeReg, 
 ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 
@@ -534,7 +535,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 	always
 		#10     clock = ~clock;    // toggle
 
-			
+	**/		
 	 reg  main_clock, main_ctrl_reset;
     wire imem_clock, dmem_clock, processor_clock, regfile_clock;
     wire [31:0] main_q_imem;
@@ -549,7 +550,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 	 integer main_counter;
 	 
 	 skeleton s1(main_clock, main_ctrl_reset, imem_clock, dmem_clock, processor_clock, regfile_clock,
-    main_q_imem);
+    main_q_imem,  main_ctrl_writeEnable, main_ctrl_writeReg, main_data_writeReg, main_address_dmem, main_data, main_wren);
 	// main_address_dmem, main_data, main_wren, main_ctrl_writeEnable, main_ctrl_writeReg, main_data_writeReg );
 
 	 initial 
@@ -559,6 +560,11 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		
 	
 		  main_ctrl_reset = 1'b1;    // assert reset
+		  @(posedge main_clock);    // wait until next positive edge of clock
+		  @(posedge main_clock);    // wait until next positive edge of clock
+		  @(posedge main_clock);    // wait until next positive edge of clock
+		  @(posedge main_clock);    // wait until next positive edge of clock
+		  @(posedge main_clock);    // wait until next positive edge of clock
 		  @(posedge main_clock);    // wait until next positive edge of clock
 
 		  if(main_q_imem != 32'b0000000000000000000000000000000) begin
@@ -572,6 +578,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  @(posedge processor_clock);
 		  @(posedge imem_clock);	  
 		  @(posedge imem_clock);	//Don't know why ? Should check 
+
 				$display("*Checking nop.");
 				if(main_q_imem != 32'b0000000000000000000000000000000) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b0000000000000000000000000000000);
@@ -584,6 +591,19 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 				if(main_q_imem != 32'b00101000010000000000000000000101) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
 				end
+				if(main_ctrl_writeEnable != 1'b1) begin
+					$display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end
+				if(main_ctrl_writeReg != 5'd1) begin
+					$display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd1);
+				end
+				$display("*IMP 1st instruction on main_data_writeReg read %h.", main_data_writeReg);
+				if(main_data_writeReg != 32'd5) begin
+					$display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd5);
+				end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
 		  end
 		  
 		  begin
@@ -592,6 +612,19 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			  if(main_q_imem != 32'b00101000100000000000000000000011) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000100000000000000000000011);
 			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd2) begin
+				 $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd2);
+			  end
+			  $display("*IMP 1st instruction on main_data_writeReg read %h.", main_data_writeReg);
+			  if(main_data_writeReg != 32'd3) begin
+		       $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd3);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
 		  end
 		  
 		  begin
@@ -600,6 +633,18 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 				if(main_q_imem != 32'b00000000110000100010000000000000) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00000000110000100010000000000000);
 			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd3) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd3);
+			  end
+			  if(main_data_writeReg != 32'd8) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd8);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
 		  end
 		  
 		  begin
@@ -608,6 +653,18 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			  if(main_q_imem != 32'b00000001000000100010000000000100) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00000001000000100010000000000100);
 			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd4) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd4);
+			  end
+			  if(main_data_writeReg != 32'd2) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd2);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
 		  end
 		  
 		  begin
@@ -616,6 +673,18 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			  if(main_q_imem != 32'b00000001010000000001000000001000) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00000001010000000001000000001000);
 			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd5) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd5);
+			  end
+			  if(main_data_writeReg != 32'd0) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd0);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
 		  end
 		  
 		  begin
@@ -624,6 +693,18 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			  if(main_q_imem != 32'b00000001100000100010000000001000) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00000001100000100010000000001000);
 			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd6) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd6);
+			  end
+			  if(main_data_writeReg != 32'd1) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd1);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
 		  end 
 		  
 		  begin
@@ -632,6 +713,18 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			  if(main_q_imem != 32'b00000001110000000010000000001100) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00000001110000000010000000001100);
 			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd7) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd7);
+			  end
+			  if(main_data_writeReg != 32'd3) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd3);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
 		  end
 		  
 		  begin
@@ -640,6 +733,18 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			  if(main_q_imem != 32'b00000010000000100000000100010000) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00000010000000100000000100010000);
 			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd8) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd8);
+			  end
+			  if(main_data_writeReg != 32'd20) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd20);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
 		  end
 		  
 		  begin
@@ -648,6 +753,18 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			  if(main_q_imem != 32'b00000010010001100000000010010100) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00000010010001100000000010010100);
 			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd9) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd9);
+			  end
+			  if(main_data_writeReg != 32'd4) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd4);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
 		  end
 		  
 		  begin
@@ -656,14 +773,38 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			  if(main_q_imem != 32'b00101010100000000000000101011001) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101010100000000000000101011001);
 			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd10) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd10);
+			  end
+			  if(main_data_writeReg != 32'd345) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd345);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
 		  end
 		  
-		  		  begin
+		  begin
 		  @(posedge imem_clock); 
 			  $display("*Checking addi $11, $0, 567");
 			  if(main_q_imem != 32'b00101010110000000000001000110111) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101010110000000000001000110111);
 			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd11) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd11);
+			  end
+			  if(main_data_writeReg != 32'd567) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd567);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
 		  end
 		  
 		  begin
@@ -671,6 +812,18 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			  $display("*Checking sw $10, 1($0)");
 			  if(main_q_imem != 32'b00111010100000000000000000000001) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010100000000000000000000001);
+			  end
+			  if(main_ctrl_writeEnable != 1'b0) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+			  end
+				if(main_wren != 1'b1) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end				
+				if(main_address_dmem != 5'd1) begin
+			    $display("**Error on main_address_dmem read %h but expected %h.", main_address_dmem,  5'd1);
+			  end
+			  if(main_data != 32'd345) begin
+			    $display("**Error on main_data read %h but expected %h.", main_data,  32'd345);
 			  end
 		  end
 		  
@@ -680,6 +833,18 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			  if(main_q_imem != 32'b00111010110000000000000000000010) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
 			  end
+			  if(main_ctrl_writeEnable != 1'b0) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+			  end
+				if(main_wren != 1'b1) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end 
+				if(main_address_dmem != 5'd2) begin
+			    $display("**Error on main_address_dmem read %h but expected %h.", main_address_dmem,  5'd2);
+			  end
+			  if(main_data != 32'd567) begin
+			    $display("**Error on main_data read %h but expected %h.", main_data,  32'd567);
+			  end
 		  end
 		  
 		  begin
@@ -688,6 +853,18 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			  if(main_q_imem != 32'b01000011000000000000000000000001) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
 			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd12) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd12);
+			  end
+			  if(main_data_writeReg != 32'd345) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd345);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
 		  end
 		  
 		  begin
@@ -696,6 +873,18 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			  if(main_q_imem != 32'b01000011010000000000000000000010) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011010000000000000000000010);
 			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd13) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd13);
+			  end
+			  if(main_data_writeReg != 32'd567) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd567);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
 		  end
 		  
 		  begin

@@ -2,35 +2,35 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'extend_clock_negedge:imem_clk|clock'
+Type  : Slow 1200mV 85C Model Setup 'clock'
+Slack : -17.313
+TNS   : -15638.438
+
+Type  : Slow 1200mV 85C Model Setup 'extend_clock:imem_clk|clock'
 Slack : -2.204
-TNS   : -86.056
+TNS   : -78.893
 
 Type  : Slow 1200mV 85C Model Setup 'extend_clock:processor_clk|clock'
-Slack : -1.278
-TNS   : -9.598
-
-Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -0.203
-TNS   : -0.405
+Slack : -1.345
+TNS   : -8.935
 
 Type  : Slow 1200mV 85C Model Hold 'extend_clock:processor_clk|clock'
-Slack : 0.403
+Slack : 0.402
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clock'
 Slack : 0.407
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'extend_clock_negedge:imem_clk|clock'
-Slack : 0.569
+Type  : Slow 1200mV 85C Model Hold 'extend_clock:imem_clk|clock'
+Slack : 0.582
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -8.140
+TNS   : -1497.015
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'extend_clock_negedge:imem_clk|clock'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'extend_clock:imem_clk|clock'
 Slack : -2.693
 TNS   : -129.264
 
@@ -38,35 +38,35 @@ Type  : Slow 1200mV 85C Model Minimum Pulse Width 'extend_clock:processor_clk|cl
 Slack : -1.285
 TNS   : -15.420
 
-Type  : Slow 1200mV 0C Model Setup 'extend_clock_negedge:imem_clk|clock'
+Type  : Slow 1200mV 0C Model Setup 'clock'
+Slack : -15.868
+TNS   : -14340.596
+
+Type  : Slow 1200mV 0C Model Setup 'extend_clock:imem_clk|clock'
 Slack : -1.907
-TNS   : -74.157
+TNS   : -67.674
 
 Type  : Slow 1200mV 0C Model Setup 'extend_clock:processor_clk|clock'
-Slack : -1.048
-TNS   : -7.568
-
-Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -0.075
-TNS   : -0.150
+Slack : -1.110
+TNS   : -6.955
 
 Type  : Slow 1200mV 0C Model Hold 'extend_clock:processor_clk|clock'
-Slack : 0.355
+Slack : 0.353
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clock'
-Slack : 0.365
+Slack : 0.364
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'extend_clock_negedge:imem_clk|clock'
-Slack : 0.554
+Type  : Slow 1200mV 0C Model Hold 'extend_clock:imem_clk|clock'
+Slack : 0.556
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -8.140
+TNS   : -1494.017
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'extend_clock_negedge:imem_clk|clock'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'extend_clock:imem_clk|clock'
 Slack : -2.649
 TNS   : -127.152
 
@@ -74,35 +74,35 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'extend_clock:processor_clk|clo
 Slack : -1.285
 TNS   : -15.420
 
-Type  : Fast 1200mV 0C Model Setup 'extend_clock_negedge:imem_clk|clock'
+Type  : Fast 1200mV 0C Model Setup 'clock'
+Slack : -8.239
+TNS   : -7350.739
+
+Type  : Fast 1200mV 0C Model Setup 'extend_clock:imem_clk|clock'
 Slack : -0.324
-TNS   : -11.536
+TNS   : -10.368
 
 Type  : Fast 1200mV 0C Model Setup 'extend_clock:processor_clk|clock'
-Slack : -0.119
-TNS   : -0.238
-
-Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : 0.411
-TNS   : 0.000
+Slack : -0.151
+TNS   : -0.181
 
 Type  : Fast 1200mV 0C Model Hold 'extend_clock:processor_clk|clock'
 Slack : 0.181
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clock'
-Slack : 0.185
+Slack : 0.187
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'extend_clock_negedge:imem_clk|clock'
-Slack : 0.233
+Type  : Fast 1200mV 0C Model Hold 'extend_clock:imem_clk|clock'
+Slack : 0.239
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -7.332
+TNS   : -1140.172
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'extend_clock_negedge:imem_clk|clock'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'extend_clock:imem_clk|clock'
 Slack : -1.000
 TNS   : -48.000
 
