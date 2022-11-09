@@ -2,7 +2,6 @@
 `timescale 1 ns / 100 ps
 module processor_tb();
 
-/**
     reg  clock, ctrl_reset;
 	 wire [11:0] address_imem;
     reg [31:0] q_imem;
@@ -527,7 +526,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			end
 		  
 		  $display($time, " << End  Simulation >>");
-		//  $stop;
+		  $stop;
 	 end
 		  
 	
@@ -535,7 +534,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 	always
 		#10     clock = ~clock;    // toggle
 
-	**/		
+/**		
 	 reg  main_clock, main_ctrl_reset;
     wire imem_clock, dmem_clock, processor_clock, regfile_clock;
     wire [31:0] main_q_imem;
@@ -912,6 +911,6 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 	always
 	#10     main_clock = ~main_clock;    // toggle
 
-
+**/
 	
 endmodule 

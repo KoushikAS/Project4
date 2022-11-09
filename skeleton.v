@@ -9,9 +9,7 @@
  * inspect which signals the processor tries to assert when.
  */
 
-module skeleton(clock, reset, imem_clock, dmem_clock, processor_clock, regfile_clock,
- q_imem, ctrl_writeEnable, ctrl_writeReg, data_writeReg, address_dmem, data, wren);
- //, address_dmem, data, wren, ctrl_writeEnable, ctrl_writeReg, data_writeReg );
+module skeleton(clock, reset, imem_clock, dmem_clock, processor_clock, regfile_clock);
     input clock, reset;
     /* 
         Create four clocks for each module from the original input "clock".
@@ -21,12 +19,6 @@ module skeleton(clock, reset, imem_clock, dmem_clock, processor_clock, regfile_c
         based on proper functioning with this clock.
     */
     output imem_clock, dmem_clock, processor_clock, regfile_clock;
-/**
-	 extend_clock processor_clk (processor_clock, reset, clock);
-	 extend_clock_negedge imem_clk (imem_clock, reset,  clock); 
-	 invert_clock dmem_clk (dmem_clock, reset,  clock);
-	 invert_clock regfile_clk (regfile_clock, reset, dmem_clock);
-**/ 
 
 	 extend_clock processor_clk (processor_clock, reset, clock);
 	 extend_clock imem_clk (imem_clock, reset,  clock); 
@@ -37,7 +29,7 @@ module skeleton(clock, reset, imem_clock, dmem_clock, processor_clock, regfile_c
     // Figure out how to generate a Quartus syncram component and commit the generated verilog file.
     // Make sure you configure it correctly!
     wire [11:0] address_imem;
-    output [31:0] q_imem;
+    wire [31:0] q_imem;
     imem my_imem(
         .address    (address_imem),            // address of data
         .clock      (imem_clock),                  // you may need to invert the clock
@@ -47,9 +39,9 @@ module skeleton(clock, reset, imem_clock, dmem_clock, processor_clock, regfile_c
     /** DMEM **/
     // Figure out how to generate a Quartus syncram component and commit the generated verilog file.
     // Make sure you configure it correctly!
-    output [11:0] address_dmem;
-    output [31:0] data;
-    output wren;
+    wire [11:0] address_dmem;
+    wire [31:0] data;
+    wire wren;
     wire [31:0] q_dmem;
     dmem my_dmem(
         .address    (address_dmem),       // address of data
@@ -61,10 +53,10 @@ module skeleton(clock, reset, imem_clock, dmem_clock, processor_clock, regfile_c
 
     /** REGFILE **/
     // Instantiate your regfile
-    output ctrl_writeEnable;
-    output [4:0] ctrl_writeReg;
+    wire ctrl_writeEnable;
+    wire [4:0] ctrl_writeReg;
 	 wire[4:0] ctrl_readRegA, ctrl_readRegB;
-    output [31:0] data_writeReg;
+    wire [31:0] data_writeReg;
     wire [31:0] data_readRegA, data_readRegB;
     regfile my_regfile(
         regfile_clock,
