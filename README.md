@@ -2,7 +2,7 @@ Simple Processor -- R-type and I-type
 
 Team
 Name: Koushik Annareddy Sreenath  Net Id: ka266
-Name: Shravan Mysore Seetharam  Net Id:
+Name: Shravan Mysore Seetharam  Net Id:sm952
 
 
 Design of processor:
