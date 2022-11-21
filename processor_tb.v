@@ -13,13 +13,12 @@ module processor_tb();
     wire [4:0] ctrl_writeReg, ctrl_readRegA, ctrl_readRegB;
     wire [31:0] data_writeReg;
     reg  [31:0] data_readRegA, data_readRegB;
-	 wire is_not_eq;
-	 wire is_bne;
+	
 
 	 integer counter =0;
  
 	processor ptest(clock, ctrl_reset, address_imem, q_imem, address_dmem, data, wren, q_dmem, ctrl_writeEnable, ctrl_writeReg, 
-ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB, is_not_eq, is_bne);
+ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 
 	 initial
 	 begin
@@ -560,12 +559,11 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB, is_n
 			data_readRegB = 32'd3;
 			q_dmem = 32'd6;
 			$display($time, " << Checking BNE False>>");
-			$display($time, " << Checking is_not_eq %h>", is_not_eq);
-			$display($time, " << Checking is_bne %h>", is_bne);
-			
+
+						
 			begin
 				@(negedge clock); 
-				
+			
 				counter = counter +1;
 				if(address_imem != counter) begin
 					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
@@ -587,7 +585,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB, is_n
 					$display("**Error on  wren: read %h but expected %h.", wren, 1'b0);
 				end	
 			end
-	/**		
+		
 			//BNE RD, RS, N 
 		  //bne $1, $2, 2
 			q_imem = 32'b00010000010001000000000000000010;
@@ -686,7 +684,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB, is_n
 					$display("**Error on  wren: read %h but expected %h.", wren, 1'b0);
 				end	
 			end
-**/		  
+		  
 		  $display($time, " << End  Simulation >>");
 		  $stop;
 	 end

@@ -1,5 +1,5 @@
-Analysis & Synthesis report for skeleton
-Sat Nov 19 18:53:25 2022
+Analysis & Elaboration report for skeleton
+Mon Nov 21 13:28:14 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -7,34 +7,27 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m3"
- 11. Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m2"
- 12. Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m1"
- 13. Port Connectivity Checks: "pc_adder:padd|fulladder_12bits:f1"
- 14. Port Connectivity Checks: "program_counter:pc"
- 15. Port Connectivity Checks: "check_two:isBLT_type"
- 16. Port Connectivity Checks: "check_two:isBNE_type"
- 17. Port Connectivity Checks: "check_two:isADD_Itype"
- 18. Port Connectivity Checks: "check_two:isSUB_Rtype"
- 19. Port Connectivity Checks: "check_two:isADD_Rtype"
- 20. Port Connectivity Checks: "is_ne:isNotBLT"
- 21. Port Connectivity Checks: "is_ne:isNotBNE"
- 22. Port Connectivity Checks: "is_ne:isNotJType"
- 23. Port Connectivity Checks: "is_ne:isNotStore"
- 24. Port Connectivity Checks: "is_ne:isNotLoad"
- 25. Port Connectivity Checks: "is_ne:isNotRType"
- 26. Post-Synthesis Netlist Statistics for Top Partition
- 27. Elapsed Time Per Partition
- 28. Analysis & Synthesis Messages
- 29. Analysis & Synthesis Suppressed Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m3"
+  6. Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m2"
+  7. Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m1"
+  8. Port Connectivity Checks: "pc_adder:padd|fulladder_12bits:f1"
+  9. Port Connectivity Checks: "program_counter:pc"
+ 10. Port Connectivity Checks: "check_two:isBLT_type"
+ 11. Port Connectivity Checks: "check_two:isBNE_type"
+ 12. Port Connectivity Checks: "check_two:isADD_Itype"
+ 13. Port Connectivity Checks: "check_two:isSUB_Rtype"
+ 14. Port Connectivity Checks: "check_two:isADD_Rtype"
+ 15. Port Connectivity Checks: "is_ne:isNotBLT"
+ 16. Port Connectivity Checks: "is_ne:isNotBNE"
+ 17. Port Connectivity Checks: "is_ne:isNotJType"
+ 18. Port Connectivity Checks: "is_ne:isNotStore"
+ 19. Port Connectivity Checks: "is_ne:isNotLoad"
+ 20. Port Connectivity Checks: "is_ne:isNotRType"
+ 21. Analysis & Elaboration Messages
+ 22. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -59,27 +52,43 @@ agreement for further details.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
+; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 19 18:53:25 2022       ;
+; Analysis & Elaboration Status      ; Successful - Mon Nov 21 13:28:14 2022       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; skeleton                                    ;
 ; Top-level Entity Name              ; processor                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 679                                         ;
-;     Total combinational functions  ; 679                                         ;
-;     Dedicated logic registers      ; 12                                          ;
-; Total registers                    ; 12                                          ;
-; Total pins                         ; 237                                         ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                        ;
+; Analysis & Elaboration Settings                                                                                      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
@@ -162,158 +171,6 @@ agreement for further details.
 ; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
 ; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 2           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-+----------------------------+-------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                       ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                         ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
-; program_counter.v                ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/program_counter.v  ;         ;
-; fulladder.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/fulladder.v        ;         ;
-; dffe.v                           ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/dffe.v             ;         ;
-; alu.v                            ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/alu.v              ;         ;
-; processor.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/processor.v        ;         ;
-; pc_adder.v                       ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/pc_adder.v         ;         ;
-; sign_extension.v                 ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/sign_extension.v   ;         ;
-; mux_32bit.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/mux_32bit.v        ;         ;
-; initalize.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/initalize.v        ;         ;
-; initalize_12.v                   ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/initalize_12.v     ;         ;
-; initalize_32.v                   ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/initalize_32.v     ;         ;
-; is_ne.v                          ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/is_ne.v            ;         ;
-; check_two.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/check_two.v        ;         ;
-; check_overflow.v                 ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/check_overflow.v   ;         ;
-; mux_5bit.v                       ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/mux_5bit.v         ;         ;
-; fulladder_12bits.v               ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/fulladder_12bits.v ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                   ;
-+---------------------------------------------+-----------------+
-; Resource                                    ; Usage           ;
-+---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 679             ;
-;                                             ;                 ;
-; Total combinational functions               ; 679             ;
-; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 351             ;
-;     -- 3 input functions                    ; 308             ;
-;     -- <=2 input functions                  ; 20              ;
-;                                             ;                 ;
-; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 584             ;
-;     -- arithmetic mode                      ; 95              ;
-;                                             ;                 ;
-; Total registers                             ; 12              ;
-;     -- Dedicated logic registers            ; 12              ;
-;     -- I/O registers                        ; 0               ;
-;                                             ;                 ;
-; I/O pins                                    ; 237             ;
-;                                             ;                 ;
-; Embedded Multiplier 9-bit elements          ; 0               ;
-;                                             ;                 ;
-; Maximum fan-out node                        ; q_imem[8]~input ;
-; Maximum fan-out                             ; 78              ;
-; Total fan-out                               ; 2748            ;
-; Average fan-out                             ; 2.36            ;
-+---------------------------------------------+-----------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                            ;
-+----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+------------------+--------------+
-; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Entity Name      ; Library Name ;
-+----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+------------------+--------------+
-; |processor                             ; 679 (43)            ; 12 (0)                    ; 0           ; 0            ; 0       ; 0         ; 237  ; 0            ; |processor                                                               ; processor        ; work         ;
-;    |alu:a1|                            ; 508 (508)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|alu:a1                                                        ; alu              ; work         ;
-;    |check_overflow:checkingoverflow|   ; 32 (7)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow                               ; check_overflow   ; work         ;
-;       |mux_32bit:m3|                   ; 25 (25)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|mux_32bit:m3                  ; mux_32bit        ; work         ;
-;    |check_two:isADD_Rtype|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_two:isADD_Rtype                                         ; check_two        ; work         ;
-;    |check_two:isSUB_Rtype|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_two:isSUB_Rtype                                         ; check_two        ; work         ;
-;    |is_ne:isNotJType|                  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|is_ne:isNotJType                                              ; is_ne            ; work         ;
-;    |is_ne:isNotLoad|                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|is_ne:isNotLoad                                               ; is_ne            ; work         ;
-;    |is_ne:isNotRType|                  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|is_ne:isNotRType                                              ; is_ne            ; work         ;
-;    |is_ne:isNotStore|                  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|is_ne:isNotStore                                              ; is_ne            ; work         ;
-;    |mux_32bit:data_mem|                ; 43 (43)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mux_32bit:data_mem                                            ; mux_32bit        ; work         ;
-;    |mux_5bit:rt_mux|                   ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mux_5bit:rt_mux                                               ; mux_5bit         ; work         ;
-;    |pc_adder:padd|                     ; 40 (28)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd                                                 ; pc_adder         ; work         ;
-;       |fulladder_12bits:f1|            ; 12 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1                             ; fulladder_12bits ; work         ;
-;          |fulladder:fa11|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:fa11              ; fulladder        ; work         ;
-;          |fulladder:intialize[10].fai| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[10].fai ; fulladder        ; work         ;
-;          |fulladder:intialize[1].fai|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[1].fai  ; fulladder        ; work         ;
-;          |fulladder:intialize[2].fai|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[2].fai  ; fulladder        ; work         ;
-;          |fulladder:intialize[3].fai|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[3].fai  ; fulladder        ; work         ;
-;          |fulladder:intialize[4].fai|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[4].fai  ; fulladder        ; work         ;
-;          |fulladder:intialize[5].fai|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[5].fai  ; fulladder        ; work         ;
-;          |fulladder:intialize[6].fai|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[6].fai  ; fulladder        ; work         ;
-;          |fulladder:intialize[7].fai|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[7].fai  ; fulladder        ; work         ;
-;          |fulladder:intialize[8].fai|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[8].fai  ; fulladder        ; work         ;
-;          |fulladder:intialize[9].fai|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[9].fai  ; fulladder        ; work         ;
-;    |program_counter:pc|                ; 0 (0)               ; 12 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc                                            ; program_counter  ; work         ;
-;       |dffe_ref:intialize[0].df|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[0].df                   ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[10].df|      ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[10].df                  ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[11].df|      ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[11].df                  ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[1].df|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[1].df                   ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[2].df|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[2].df                   ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[3].df|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[3].df                   ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[4].df|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[4].df                   ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[5].df|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[5].df                   ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[6].df|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[6].df                   ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[7].df|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[7].df                   ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[8].df|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[8].df                   ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[9].df|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[9].df                   ; dffe_ref         ; work         ;
-+----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 12    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 12    ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; 3:1                ; 27 bits   ; 54 LEs        ; 54 LEs               ; 0 LEs                  ; No         ; |processor|alu_in2[30]       ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |processor|alu_in2[2]        ;
-; 35:1               ; 8 bits    ; 184 LEs       ; 40 LEs               ; 144 LEs                ; No         ; |processor|alu:a1|Selector20 ;
-; 35:1               ; 8 bits    ; 184 LEs       ; 48 LEs               ; 136 LEs                ; No         ; |processor|alu:a1|Selector12 ;
-; 36:1               ; 4 bits    ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; No         ; |processor|alu:a1|Selector25 ;
-; 36:1               ; 4 bits    ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; No         ; |processor|alu:a1|Selector7  ;
-; 37:1               ; 2 bits    ; 48 LEs        ; 12 LEs               ; 36 LEs                 ; No         ; |processor|alu:a1|Selector29 ;
-; 37:1               ; 2 bits    ; 48 LEs        ; 14 LEs               ; 34 LEs                 ; No         ; |processor|alu:a1|Selector2  ;
-; 38:1               ; 2 bits    ; 50 LEs        ; 14 LEs               ; 36 LEs                 ; No         ; |processor|alu:a1|Selector31 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 
 
 +--------------------------------------------------------------------------+
@@ -493,45 +350,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+-------+----------+--------------------+
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 237                         ;
-; cycloneiii_ff         ; 12                          ;
-;     CLR               ; 12                          ;
-; cycloneiii_lcell_comb ; 681                         ;
-;     arith             ; 95                          ;
-;         3 data inputs ; 95                          ;
-;     normal            ; 586                         ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 20                          ;
-;         3 data inputs ; 213                         ;
-;         4 data inputs ; 351                         ;
-;                       ;                             ;
-; Max LUT depth         ; 21.90                       ;
-; Average LUT depth     ; 12.57                       ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:02     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Nov 19 18:53:08 2022
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off skeleton -c skeleton
+    Info: Processing started: Mon Nov 21 13:27:55 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off skeleton -c skeleton --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file reg_32.v
@@ -582,43 +408,38 @@ Info (12021): Found 1 design units, including 1 entities, in source file check_o
     Info (12023): Found entity 1: check_overflow File: C:/Users/ka266/Documents/Project4/check_overflow.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_5bit.v
     Info (12023): Found entity 1: mux_5bit File: C:/Users/ka266/Documents/Project4/mux_5bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file extend_clock_negedge.v
+    Info (12023): Found entity 1: extend_clock_negedge File: C:/Users/ka266/Documents/Project4/extend_clock_negedge.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fulladder_12bits.v
     Info (12023): Found entity 1: fulladder_12bits File: C:/Users/ka266/Documents/Project4/fulladder_12bits.v Line: 1
 Info (12127): Elaborating entity "processor" for the top level hierarchy
-Info (12128): Elaborating entity "is_ne" for hierarchy "is_ne:isNotRType" File: C:/Users/ka266/Documents/Project4/processor.v Line: 102
-Info (12128): Elaborating entity "check_two" for hierarchy "check_two:isADD_Rtype" File: C:/Users/ka266/Documents/Project4/processor.v Line: 109
-Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:pc" File: C:/Users/ka266/Documents/Project4/processor.v Line: 123
+Info (12128): Elaborating entity "is_ne" for hierarchy "is_ne:isNotRType" File: C:/Users/ka266/Documents/Project4/processor.v Line: 100
+Info (12128): Elaborating entity "check_two" for hierarchy "check_two:isADD_Rtype" File: C:/Users/ka266/Documents/Project4/processor.v Line: 107
+Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:pc" File: C:/Users/ka266/Documents/Project4/processor.v Line: 122
 Info (12128): Elaborating entity "dffe_ref" for hierarchy "program_counter:pc|dffe_ref:intialize[0].df" File: C:/Users/ka266/Documents/Project4/program_counter.v Line: 10
-Info (12128): Elaborating entity "pc_adder" for hierarchy "pc_adder:padd" File: C:/Users/ka266/Documents/Project4/processor.v Line: 124
+Info (12128): Elaborating entity "pc_adder" for hierarchy "pc_adder:padd" File: C:/Users/ka266/Documents/Project4/processor.v Line: 123
 Info (12128): Elaborating entity "fulladder_12bits" for hierarchy "pc_adder:padd|fulladder_12bits:f1" File: C:/Users/ka266/Documents/Project4/pc_adder.v Line: 17
 Info (12128): Elaborating entity "fulladder" for hierarchy "pc_adder:padd|fulladder_12bits:f1|fulladder:fa0" File: C:/Users/ka266/Documents/Project4/fulladder_12bits.v Line: 8
-Info (12128): Elaborating entity "mux_5bit" for hierarchy "mux_5bit:rt_mux" File: C:/Users/ka266/Documents/Project4/processor.v Line: 129
-Info (12128): Elaborating entity "initalize" for hierarchy "initalize:rs" File: C:/Users/ka266/Documents/Project4/processor.v Line: 131
-Info (12128): Elaborating entity "sign_extension" for hierarchy "sign_extension:si" File: C:/Users/ka266/Documents/Project4/processor.v Line: 143
-Info (12128): Elaborating entity "alu" for hierarchy "alu:a1" File: C:/Users/ka266/Documents/Project4/processor.v Line: 150
+Info (12128): Elaborating entity "mux_5bit" for hierarchy "mux_5bit:rt_mux" File: C:/Users/ka266/Documents/Project4/processor.v Line: 128
+Info (12128): Elaborating entity "initalize" for hierarchy "initalize:rs" File: C:/Users/ka266/Documents/Project4/processor.v Line: 130
+Info (12128): Elaborating entity "sign_extension" for hierarchy "sign_extension:si" File: C:/Users/ka266/Documents/Project4/processor.v Line: 142
+Info (12128): Elaborating entity "alu" for hierarchy "alu:a1" File: C:/Users/ka266/Documents/Project4/processor.v Line: 149
 Warning (10270): Verilog HDL Case Statement warning at alu.v(25): incomplete case statement has no default case item File: C:/Users/ka266/Documents/Project4/alu.v Line: 25
-Info (12128): Elaborating entity "check_overflow" for hierarchy "check_overflow:checkingoverflow" File: C:/Users/ka266/Documents/Project4/processor.v Line: 151
+Info (12128): Elaborating entity "check_overflow" for hierarchy "check_overflow:checkingoverflow" File: C:/Users/ka266/Documents/Project4/processor.v Line: 150
 Info (12128): Elaborating entity "mux_32bit" for hierarchy "check_overflow:checkingoverflow|mux_32bit:m1" File: C:/Users/ka266/Documents/Project4/check_overflow.v Line: 17
-Info (12128): Elaborating entity "initalize_12" for hierarchy "initalize_12:dm_address" File: C:/Users/ka266/Documents/Project4/processor.v Line: 154
-Info (12128): Elaborating entity "initalize_32" for hierarchy "initalize_32:dmaddress_data" File: C:/Users/ka266/Documents/Project4/processor.v Line: 158
-Info (286030): Timing-Driven Synthesis is running
+Info (12128): Elaborating entity "initalize_12" for hierarchy "initalize_12:dm_address" File: C:/Users/ka266/Documents/Project4/processor.v Line: 153
+Info (12128): Elaborating entity "initalize_32" for hierarchy "initalize_32:dmaddress_data" File: C:/Users/ka266/Documents/Project4/processor.v Line: 157
 Info (144001): Generated suppressed messages file C:/Users/ka266/Documents/Project4/output_files/skeleton.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 916 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 130 input pins
-    Info (21059): Implemented 107 output pins
-    Info (21061): Implemented 679 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4739 megabytes
-    Info: Processing ended: Sat Nov 19 18:53:25 2022
-    Info: Elapsed time: 00:00:17
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4708 megabytes
+    Info: Processing ended: Mon Nov 21 13:28:14 2022
+    Info: Elapsed time: 00:00:19
     Info: Total CPU time (on all processors): 00:00:24
 
 
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
 The suppressed messages can be found in C:/Users/ka266/Documents/Project4/output_files/skeleton.map.smsg.
 
 

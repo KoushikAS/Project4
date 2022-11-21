@@ -69,9 +69,7 @@ module processor(
     ctrl_readRegB,                  // O: Register to read from port B of regfile
     data_writeReg,                  // O: Data to write to for regfile
     data_readRegA,                  // I: Data from port A of regfile
-    data_readRegB,                   // I: Data from port B of regfile
-	 is_not_eq,
-	 is_bne
+    data_readRegB                   // I: Data from port B of regfile
 );
     // Control signals
     input clock, reset;
@@ -94,10 +92,10 @@ module processor(
 
     /* YOUR CODE STARTS HERE */
 
-
+	
 	wire is_not_rtype, is_not_load ,is_not_store, is_add_rtype, is_sub_rtype, is_add_i;
-	wire 	is_not_jtype, is_blt, is_not_bne, is_not_blt, is_bne_blt, is_regb_rd;
-	output is_bne;
+	wire 	is_not_jtype, is_blt, is_not_blt, is_bne_blt, is_regb_rd;
+	wire is_bne, is_not_bne, is_store;
 	
 	is_ne isNotRType(is_not_rtype, q_imem[31:27], 5'b00000);
 	is_ne isNotLoad(is_not_load, q_imem[31:27], 5'b01000);
@@ -112,21 +110,22 @@ module processor(
 	check_two isBNE_type(is_bne, q_imem[31:27], 5'b00010, q_imem[31:27], 5'b00010);
 	check_two isBLT_type(is_blt, q_imem[31:27], 5'b00110, q_imem[31:27], 5'b00110);
 	or is_BNE_OR_BLT(is_bne_blt, is_bne, is_blt);	
-	or is_REGB_RD(is_regb_rd, is_bne_blt, is_not_store);
+	not is_Store (is_store, is_not_store);
+	or is_REGB_RD(is_regb_rd, is_bne_blt, is_store);
 	 /* Level 1 for Program counter */
 	
 	 wire[11:0] pc_in;
 	 wire[4:0] dest_reg;
-	 output is_not_eq;
+	 wire is_not_eq;
 	 wire is_less_than, overflow;
-	
+	 
 	 program_counter pc (address_imem, pc_in, clock, 1'b1, reset);
 	 pc_adder padd(pc_in, address_imem, q_imem[26:0], q_imem[16:0], is_not_eq, is_less_than, is_not_jtype, is_bne, is_blt);
 	 
 	 /* Level 2 Reg file*/
 	 
 	 wire[4:0] regB_in;
-	 mux_5bit rt_mux (regB_in, is_regb_rd, q_imem[26:22], q_imem[16:12] ); //checking for rd incase of store. 
+	 mux_5bit rt_mux (regB_in, is_regb_rd, q_imem[16:12], q_imem[26:22] ); //checking for rd incase of store. 
 	 
 	 initalize rs (ctrl_readRegA, q_imem[21:17]); //initalizing rs (i.e. ctrl_readRegA)	 
 	 initalize rt (ctrl_readRegB, regB_in); //initalizing rt (i.e. ctrl_readRegB)
@@ -142,8 +141,8 @@ module processor(
 	
 	 sign_extension si(immed, q_imem[16:0]);
 	 
-	 assign tmp_in2 = is_not_rtype? immed: data_readRegB; 		//chosing the right input for alu  
-	 assign alu_in2 = is_bne_blt? q_imem[26:22]: tmp_in2; 		//chosing the right input for alu  
+	 assign tmp_in2 = is_not_rtype? immed: data_readRegB; 		//chosing the right input for alu   
+	 assign alu_in2 = is_bne_blt? data_readRegB: tmp_in2 ; 		//chosing the right input for alu   
 	 assign alu_opcode = is_not_rtype? 5'd0: q_imem[6:2]; 	//chosing the right op code for alu
 	 
 	 
