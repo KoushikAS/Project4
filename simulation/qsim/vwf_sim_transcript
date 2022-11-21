@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off skeleton -c skeleton --vector_source="C:/Users/ka266/Documents/Project4/Waveform15.vwf" --testbench_file="C:/Users/ka266/Documents/Project4/simulation/qsim/Waveform15.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off skeleton -c skeleton --vector_source="C:/Users/ka266/Documents/Project4/Waveform17.vwf" --testbench_file="C:/Users/ka266/Documents/Project4/simulation/qsim/Waveform17.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,11 +26,9 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Tue Nov 08 13:07:06 2022
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off skeleton -c skeleton --vector_source=C:/Users/ka266/Documents/Project4/Waveform15.vwf --testbench_file=C:/Users/ka266/Documents/Project4/simulation/qsim/Waveform15.vwf.vt
+    Info: Processing started: Sat Nov 19 18:50:59 2022
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off skeleton -c skeleton --vector_source=C:/Users/ka266/Documents/Project4/Waveform17.vwf --testbench_file=C:/Users/ka266/Documents/Project4/simulation/qsim/Waveform17.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-
-): Ignoring output pin "data[23]" in vector source file when writing test bench files
 
 Completed successfully. 
 
@@ -57,14 +55,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Tue Nov 08 13:07:07 2022
+    Info: Processing started: Sat Nov 19 18:51:00 2022
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/ka266/Documents/Project4/simulation/qsim/ skeleton -c skeleton
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file skeleton.vo in folder "C:/Users/ka266/Documents/Project4/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4645 megabytes
-    Info: Processing ended: Tue Nov 08 13:07:09 2022
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4630 megabytes
+    Info: Processing ended: Sat Nov 19 18:51:01 2022
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
@@ -81,68 +79,58 @@ C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vsim -c -do skeleton.do
 
 Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
 
+
 # 10.5b
 
 # do skeleton.do
 
 # ** Warning: (vlib-34) Library already exists at "work".
-
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:07:17 on Nov 08,2022
+# Start time: 18:51:02 on Nov 19,2022
 # vlog -work work skeleton.vo 
-# -- Compiling module skeleton
-
+# -- Compiling module check_two
 # -- Compiling module hard_block
 # 
 # Top level modules:
-# 	skeleton
-# End time: 13:07:17 on Nov 08,2022, Elapsed time: 0:00:00
+# 	check_two
+
+# End time: 18:51:02 on Nov 19,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:07:17 on Nov 08,2022
-# vlog -work work Waveform15.vwf.vt 
-
-# -- Compiling module skeleton_vlg_vec_tst
+# Start time: 18:51:02 on Nov 19,2022
+# vlog -work work Waveform17.vwf.vt 
+# -- Compiling module check_two_vlg_vec_tst
 # 
 # Top level modules:
-# 	skeleton_vlg_vec_tst
-# End time: 13:07:17 on Nov 08,2022, Elapsed time: 0:00:00
+# 	check_two_vlg_vec_tst
+# End time: 18:51:02 on Nov 19,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.skeleton_vlg_vec_tst 
-# Start time: 13:07:21 on Nov 08,2022
-# Loading work.skeleton_vlg_vec_tst
-# Loading work.skeleton
+# vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.check_two_vlg_vec_tst 
+# Start time: 18:51:02 on Nov 19,2022
+# Loading work.check_two_vlg_vec_tst
+# Loading work.check_two
 # Loading work.hard_block
 # Loading cycloneive_ver.cycloneive_io_obuf
 # Loading cycloneive_ver.cycloneive_io_ibuf
-# Loading cycloneive_ver.cycloneive_clkctrl
-# Loading cycloneive_ver.cycloneive_mux41
-# Loading cycloneive_ver.cycloneive_ena_reg
-# Loading altera_ver.dffeas
 # Loading cycloneive_ver.cycloneive_lcell_comb
-# Loading cycloneive_ver.cycloneive_ram_block
-# Loading cycloneive_ver.cycloneive_ram_register
-# Loading cycloneive_ver.cycloneive_ram_pulse_generator
-# Loading altera_ver.PRIM_GDFF_LOW
 # after#26
-
-# ** Note: $finish    : Waveform15.vwf.vt(67)
-#    Time: 2 us  Iteration: 0  Instance: /skeleton_vlg_vec_tst
-# End time: 13:07:22 on Nov 08,2022, Elapsed time: 0:00:01
+# ** Note: $finish    : Waveform17.vwf.vt(51)
+#    Time: 1 us  Iteration: 0  Instance: /check_two_vlg_vec_tst
+# End time: 18:51:03 on Nov 19,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/ka266/Documents/Project4/Waveform15.vwf...
+Reading C:/Users/ka266/Documents/Project4/Waveform17.vwf...
 
 Reading C:/Users/ka266/Documents/Project4/simulation/qsim/skeleton.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/ka266/Documents/Project4/simulation/qsim/skeleton_20221108130722.sim.vwf
+Writing the resulting VWF to C:/Users/ka266/Documents/Project4/simulation/qsim/skeleton_20221119185103.sim.vwf
 
 Finished VCD to VWF conversion.
 

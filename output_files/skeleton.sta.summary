@@ -3,39 +3,39 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -0.608
-TNS   : -1.042
+Slack : -3.906
+TNS   : -28.736
 
 Type  : Slow 1200mV 85C Model Hold 'clock'
-Slack : 0.679
+Slack : 0.386
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -6.855
+TNS   : -18.420
 
 Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -0.471
-TNS   : -0.691
+Slack : -3.481
+TNS   : -25.207
 
 Type  : Slow 1200mV 0C Model Hold 'clock'
-Slack : 0.601
+Slack : 0.338
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -6.855
+TNS   : -18.420
 
 Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : 0.254
-TNS   : 0.000
+Slack : -1.386
+TNS   : -7.987
 
 Type  : Fast 1200mV 0C Model Hold 'clock'
-Slack : 0.325
+Slack : 0.173
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -6.205
+TNS   : -15.889
 
 ------------------------------------------------------------

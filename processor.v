@@ -69,7 +69,9 @@ module processor(
     ctrl_readRegB,                  // O: Register to read from port B of regfile
     data_writeReg,                  // O: Data to write to for regfile
     data_readRegA,                  // I: Data from port A of regfile
-    data_readRegB                   // I: Data from port B of regfile
+    data_readRegB,                   // I: Data from port B of regfile
+	 is_not_eq,
+	 is_bne
 );
     // Control signals
     input clock, reset;
@@ -94,47 +96,58 @@ module processor(
 
 
 	wire is_not_rtype, is_not_load ,is_not_store, is_add_rtype, is_sub_rtype, is_add_i;
+	wire 	is_not_jtype, is_blt, is_not_bne, is_not_blt, is_bne_blt, is_regb_rd;
+	output is_bne;
 	
 	is_ne isNotRType(is_not_rtype, q_imem[31:27], 5'b00000);
 	is_ne isNotLoad(is_not_load, q_imem[31:27], 5'b01000);
 	is_ne isNotStore(is_not_store, q_imem[31:27], 5'b00111);
+	is_ne isNotJType(is_not_jtype, q_imem[31:27], 5'b00001);
+	is_ne isNotBNE(is_not_bne, q_imem[31:27], 5'b00010);
+	is_ne isNotBLT(is_not_blt, q_imem[31:27], 5'b00110);
+	
 	check_two isADD_Rtype(is_add_rtype, q_imem[31:27], 5'b00000 , q_imem[6:2], 5'd0);
 	check_two isSUB_Rtype(is_sub_rtype, q_imem[31:27], 5'b00000 , q_imem[6:2], 5'd1);
 	check_two isADD_Itype(is_add_i, q_imem[31:27], 5'b00101, q_imem[31:27], 5'b00101);
-		
+	check_two isBNE_type(is_bne, q_imem[31:27], 5'b00010, q_imem[31:27], 5'b00010);
+	check_two isBLT_type(is_blt, q_imem[31:27], 5'b00110, q_imem[31:27], 5'b00110);
+	or is_BNE_OR_BLT(is_bne_blt, is_bne, is_blt);	
+	or is_REGB_RD(is_regb_rd, is_bne_blt, is_not_store);
 	 /* Level 1 for Program counter */
 	
 	 wire[11:0] pc_in;
 	 wire[4:0] dest_reg;
+	 output is_not_eq;
+	 wire is_less_than, overflow;
 	
 	 program_counter pc (address_imem, pc_in, clock, 1'b1, reset);
-	 pc_adder padd(pc_in, address_imem);
+	 pc_adder padd(pc_in, address_imem, q_imem[26:0], q_imem[16:0], is_not_eq, is_less_than, is_not_jtype, is_bne, is_blt);
 	 
 	 /* Level 2 Reg file*/
 	 
 	 wire[4:0] regB_in;
-	 mux_5bit rt_mux (regB_in, is_not_store, q_imem[26:22], q_imem[16:12]); //checking for rd incase of store. 
+	 mux_5bit rt_mux (regB_in, is_regb_rd, q_imem[26:22], q_imem[16:12] ); //checking for rd incase of store. 
 	 
 	 initalize rs (ctrl_readRegA, q_imem[21:17]); //initalizing rs (i.e. ctrl_readRegA)	 
 	 initalize rt (ctrl_readRegB, regB_in); //initalizing rt (i.e. ctrl_readRegB)
 	 initalize rd (dest_reg, q_imem[26:22]); //initalizing rd (i.e. dest_reg)
 	 
-	 and reg_write_enable (ctrl_writeEnable, is_not_store, is_not_store); 
+	 and reg_write_enable (ctrl_writeEnable, is_not_store, is_not_jtype, is_not_bne, is_not_blt); 
 	
 	 /* Level 3 ALU */
 	 
-	 wire[31:0] alu_out, immed, alu_in2, overflow_out;
+	 wire[31:0] alu_out, immed, alu_in2, overflow_out, tmp_in2;
 	 wire[4:0] alu_opcode;
-	 wire overflow;
+
 	
 	 sign_extension si(immed, q_imem[16:0]);
 	 
-	 assign alu_in2 = is_not_rtype? immed: data_readRegB; 		//chosing the right input for alu  
+	 assign tmp_in2 = is_not_rtype? immed: data_readRegB; 		//chosing the right input for alu  
+	 assign alu_in2 = is_bne_blt? q_imem[26:22]: tmp_in2; 		//chosing the right input for alu  
 	 assign alu_opcode = is_not_rtype? 5'd0: q_imem[6:2]; 	//chosing the right op code for alu
 	 
-	 wire tmp4, tmp5;
 	 
-	 alu a1(data_readRegA, alu_in2, alu_opcode, q_imem[11:7], alu_out, tmp4, tmp5, overflow);
+	 alu a1(data_readRegA, alu_in2, alu_opcode, q_imem[11:7], alu_out, is_not_eq, is_less_than, overflow);
 	 check_overflow  checkingoverflow (overflow_out, ctrl_writeReg, alu_out, dest_reg, overflow, is_add_rtype, is_sub_rtype, is_add_i);
 	
 	 /* Level 4 Data memory*/	
