@@ -16,6 +16,7 @@ module processor_tb();
 	
 
 	 integer counter =0;
+	 integer previous_counter =0 ;
  
 	processor ptest(clock, ctrl_reset, address_imem, q_imem, address_dmem, data, wren, q_dmem, ctrl_writeEnable, ctrl_writeReg, 
 ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
@@ -601,9 +602,9 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 				if(address_imem != counter) begin
 					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
 				end
-										
-				if( ctrl_writeReg != 5'd1) begin
-					$display("**Error on  ctrl_writeReg: read %h but expected %h.", ctrl_writeReg, 5'd1);
+													
+				if( ctrl_readRegB != 5'd1) begin
+					$display("**Error on  ctrl_readRegB: read %h but expected %h.", ctrl_readRegA, 5'd1);
 				end
 				
 				if( ctrl_readRegA != 5'd2) begin
@@ -633,10 +634,10 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 				counter = counter +1;
 				if(address_imem != counter) begin
 					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
-				end
-										
-				if( ctrl_writeReg != 5'd1) begin
-					$display("**Error on  ctrl_writeReg: read %h but expected %h.", ctrl_writeReg, 5'd1);
+				end									
+				
+				if( ctrl_readRegB != 5'd1) begin
+					$display("**Error on  ctrl_readRegB: read %h but expected %h.", ctrl_readRegA, 5'd1);
 				end
 				
 				if( ctrl_readRegA != 5'd2) begin
@@ -666,13 +667,78 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 				counter = counter +1 +2;
 				if(address_imem != counter) begin
 					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
-				end
-										
-				if( ctrl_writeReg != 5'd1) begin
-					$display("**Error on  ctrl_writeReg: read %h but expected %h.", ctrl_writeReg, 5'd1);
-				end
+				end			
 				
 				if( ctrl_readRegA != 5'd2) begin
+					$display("**Error on  ctrl_readRegA: read %h but expected %h.", ctrl_readRegA, 5'd2);
+				end
+				
+				if( ctrl_readRegB != 5'd1) begin
+					$display("**Error on  ctrl_readRegB: read %h but expected %h.", ctrl_readRegA, 5'd1);
+				end
+				
+				if( ctrl_writeEnable != 1'b0) begin
+					$display("**Error on  ctrl_writeEnable: read %h but expected %h.", ctrl_writeEnable, 1'b0);
+				end
+				
+				if( wren != 1'b0) begin
+					$display("**Error on  wren: read %h but expected %h.", wren, 1'b0);
+				end	
+			end
+			
+			//JAL T 
+		  //jal 5
+			q_imem = 32'b00011000000000000000000000000101;
+			data_readRegA = 32'd3;
+			data_readRegB = 32'd5;
+			q_dmem = 32'd6;
+			previous_counter = counter + 1;
+			$display($time, " << Checking JAL >>");
+			
+			begin
+				if( data_writeReg != previous_counter) begin
+					$display("**Error on  data_writeReg: read %h but expected %h.", data_writeReg, previous_counter);
+				end
+				
+				@(negedge clock); 
+				
+				counter = 5;
+				if(address_imem != counter) begin
+					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
+				end
+										
+				if( ctrl_writeReg != 5'd31) begin
+					$display("**Error on  ctrl_writeReg: read %h but expected %h.", ctrl_writeReg, 5'd31);
+				end
+				
+
+				
+				if( ctrl_writeEnable != 1'b1) begin
+					$display("**Error on  ctrl_writeEnable: read %h but expected %h.", ctrl_writeEnable, 1'b1);
+				end
+				
+				if( wren != 1'b0) begin
+					$display("**Error on  wren: read %h but expected %h.", wren, 1'b0);
+				end	
+			end
+			
+			//JR R 
+		  //jr $2
+			q_imem = 32'b00100000100000000000000000000000;
+			data_readRegA = 32'd4;
+			data_readRegB = 32'd3;
+			q_dmem = 32'd6;
+			$display($time, " << Checking JR >>");
+			
+			begin
+				@(negedge clock); 
+				
+				counter = 3;
+				if(address_imem != counter) begin
+					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
+				end								
+				
+				if( ctrl_readRegB != 5'd2) begin
 					$display("**Error on  ctrl_readRegA: read %h but expected %h.", ctrl_readRegA, 5'd2);
 				end
 				

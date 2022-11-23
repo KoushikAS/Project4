@@ -21,6 +21,7 @@ vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/User
 vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/check_overflow.v}
 vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/mux_5bit.v}
 vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/fulladder_12bits.v}
+vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/fulladder_PC.v}
 
 vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/processor_tb.v}
 

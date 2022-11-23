@@ -95,7 +95,7 @@ module processor(
 	
 	wire is_not_rtype, is_not_load ,is_not_store, is_add_rtype, is_sub_rtype, is_add_i;
 	wire 	is_not_jtype, is_blt, is_not_blt, is_bne_blt, is_regb_rd;
-	wire is_bne, is_not_bne, is_store;
+	wire is_bne, is_not_bne, is_store, is_not_jal, is_not_jr, is_jr;
 	
 	is_ne isNotRType(is_not_rtype, q_imem[31:27], 5'b00000);
 	is_ne isNotLoad(is_not_load, q_imem[31:27], 5'b01000);
@@ -103,6 +103,8 @@ module processor(
 	is_ne isNotJType(is_not_jtype, q_imem[31:27], 5'b00001);
 	is_ne isNotBNE(is_not_bne, q_imem[31:27], 5'b00010);
 	is_ne isNotBLT(is_not_blt, q_imem[31:27], 5'b00110);
+	is_ne isNotJAL(is_not_jal, q_imem[31:27], 5'b00011);
+	is_ne isNotJR(is_not_jr, q_imem[31:27], 5'b00100);
 	
 	check_two isADD_Rtype(is_add_rtype, q_imem[31:27], 5'b00000 , q_imem[6:2], 5'd0);
 	check_two isSUB_Rtype(is_sub_rtype, q_imem[31:27], 5'b00000 , q_imem[6:2], 5'd1);
@@ -111,7 +113,8 @@ module processor(
 	check_two isBLT_type(is_blt, q_imem[31:27], 5'b00110, q_imem[31:27], 5'b00110);
 	or is_BNE_OR_BLT(is_bne_blt, is_bne, is_blt);	
 	not is_Store (is_store, is_not_store);
-	or is_REGB_RD(is_regb_rd, is_bne_blt, is_store);
+	not is_JR (is_jr, is_not_jr);
+	or is_REGB_RD(is_regb_rd, is_bne_blt, is_store, is_jr);
 	 /* Level 1 for Program counter */
 	
 	 wire[11:0] pc_in;
@@ -120,7 +123,7 @@ module processor(
 	 wire is_less_than, overflow;
 	 
 	 program_counter pc (address_imem, pc_in, clock, 1'b1, reset);
-	 pc_adder padd(pc_in, address_imem, q_imem[26:0], q_imem[16:0], is_not_eq, is_less_than, is_not_jtype, is_bne, is_blt);
+	 pc_adder padd(pc_in, address_imem, q_imem[26:0], q_imem[16:0], is_not_eq, is_less_than, is_not_jtype, is_not_jal, is_not_jr, is_bne, is_blt, data_readRegB);
 	 
 	 /* Level 2 Reg file*/
 	 
@@ -131,7 +134,7 @@ module processor(
 	 initalize rt (ctrl_readRegB, regB_in); //initalizing rt (i.e. ctrl_readRegB)
 	 initalize rd (dest_reg, q_imem[26:22]); //initalizing rd (i.e. dest_reg)
 	 
-	 and reg_write_enable (ctrl_writeEnable, is_not_store, is_not_jtype, is_not_bne, is_not_blt); 
+	 and reg_write_enable (ctrl_writeEnable, is_not_store, is_not_jtype, is_not_bne, is_not_blt, is_not_jr); 
 	
 	 /* Level 3 ALU */
 	 
@@ -147,7 +150,7 @@ module processor(
 	 
 	 
 	 alu a1(data_readRegA, alu_in2, alu_opcode, q_imem[11:7], alu_out, is_not_eq, is_less_than, overflow);
-	 check_overflow  checkingoverflow (overflow_out, ctrl_writeReg, alu_out, dest_reg, overflow, is_add_rtype, is_sub_rtype, is_add_i);
+	 check_overflow  checkingoverflow (overflow_out, ctrl_writeReg, alu_out, dest_reg, overflow, is_add_rtype, is_sub_rtype, is_add_i, address_imem, is_not_jal);
 	
 	 /* Level 4 Data memory*/	
 	 initalize_12 dm_address(address_dmem, overflow_out[11:0]);	//initalize dm_address->address_dmem	 
