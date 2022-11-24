@@ -1,5 +1,5 @@
 Analysis & Synthesis report for skeleton
-Wed Nov 23 18:19:53 2022
+Wed Nov 23 19:55:47 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -15,61 +15,64 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m4"
- 11. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[31].faj"
- 12. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[30].faj"
- 13. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[29].faj"
- 14. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[28].faj"
- 15. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[27].faj"
- 16. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[26].faj"
- 17. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[25].faj"
- 18. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[24].faj"
- 19. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[23].faj"
- 20. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[22].faj"
- 21. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[21].faj"
- 22. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[20].faj"
- 23. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[19].faj"
- 24. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[18].faj"
- 25. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[17].faj"
- 26. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[16].faj"
- 27. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[15].faj"
- 28. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[14].faj"
- 29. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[13].faj"
- 30. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[12].faj"
- 31. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[11].fai"
- 32. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[10].fai"
- 33. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[9].fai"
- 34. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[8].fai"
- 35. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[7].fai"
- 36. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[6].fai"
- 37. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[5].fai"
- 38. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[4].fai"
- 39. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[3].fai"
- 40. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[2].fai"
- 41. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[1].fai"
- 42. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:fa0"
- 43. Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m3"
- 44. Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m2"
- 45. Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m1"
- 46. Port Connectivity Checks: "pc_adder:padd|fulladder_12bits:f1"
- 47. Port Connectivity Checks: "program_counter:pc"
- 48. Port Connectivity Checks: "check_two:isBLT_type"
- 49. Port Connectivity Checks: "check_two:isBNE_type"
- 50. Port Connectivity Checks: "check_two:isADD_Itype"
- 51. Port Connectivity Checks: "check_two:isSUB_Rtype"
- 52. Port Connectivity Checks: "check_two:isADD_Rtype"
- 53. Port Connectivity Checks: "is_ne:isNotJR"
- 54. Port Connectivity Checks: "is_ne:isNotJAL"
- 55. Port Connectivity Checks: "is_ne:isNotBLT"
- 56. Port Connectivity Checks: "is_ne:isNotBNE"
- 57. Port Connectivity Checks: "is_ne:isNotJType"
- 58. Port Connectivity Checks: "is_ne:isNotStore"
- 59. Port Connectivity Checks: "is_ne:isNotLoad"
- 60. Port Connectivity Checks: "is_ne:isNotRType"
- 61. Post-Synthesis Netlist Statistics for Top Partition
- 62. Elapsed Time Per Partition
- 63. Analysis & Synthesis Messages
- 64. Analysis & Synthesis Suppressed Messages
+ 10. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[31].faj"
+ 11. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[30].faj"
+ 12. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[29].faj"
+ 13. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[28].faj"
+ 14. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[27].faj"
+ 15. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[26].faj"
+ 16. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[25].faj"
+ 17. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[24].faj"
+ 18. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[23].faj"
+ 19. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[22].faj"
+ 20. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[21].faj"
+ 21. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[20].faj"
+ 22. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[19].faj"
+ 23. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[18].faj"
+ 24. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[17].faj"
+ 25. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[16].faj"
+ 26. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[15].faj"
+ 27. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[14].faj"
+ 28. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[13].faj"
+ 29. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[12].faj"
+ 30. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[11].fai"
+ 31. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[10].fai"
+ 32. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[9].fai"
+ 33. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[8].fai"
+ 34. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[7].fai"
+ 35. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[6].fai"
+ 36. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[5].fai"
+ 37. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[4].fai"
+ 38. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[3].fai"
+ 39. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[2].fai"
+ 40. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[1].fai"
+ 41. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:fa0"
+ 42. Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m3"
+ 43. Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m2"
+ 44. Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m1"
+ 45. Port Connectivity Checks: "mux_5bit:rt_mux2"
+ 46. Port Connectivity Checks: "pc_adder:padd|is_ne_32bit:checkrstatus0"
+ 47. Port Connectivity Checks: "pc_adder:padd|fulladder_12bits:f1"
+ 48. Port Connectivity Checks: "program_counter:pc"
+ 49. Port Connectivity Checks: "check_two:isSETX"
+ 50. Port Connectivity Checks: "check_two:isBLT_type"
+ 51. Port Connectivity Checks: "check_two:isBNE_type"
+ 52. Port Connectivity Checks: "check_two:isADD_Itype"
+ 53. Port Connectivity Checks: "check_two:isSUB_Rtype"
+ 54. Port Connectivity Checks: "check_two:isADD_Rtype"
+ 55. Port Connectivity Checks: "is_ne:isNotBEX"
+ 56. Port Connectivity Checks: "is_ne:isNotJR"
+ 57. Port Connectivity Checks: "is_ne:isNotJAL"
+ 58. Port Connectivity Checks: "is_ne:isNotBLT"
+ 59. Port Connectivity Checks: "is_ne:isNotBNE"
+ 60. Port Connectivity Checks: "is_ne:isNotJType"
+ 61. Port Connectivity Checks: "is_ne:isNotStore"
+ 62. Port Connectivity Checks: "is_ne:isNotLoad"
+ 63. Port Connectivity Checks: "is_ne:isNotRType"
+ 64. Post-Synthesis Netlist Statistics for Top Partition
+ 65. Elapsed Time Per Partition
+ 66. Analysis & Synthesis Messages
+ 67. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -96,13 +99,13 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 23 18:19:53 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 23 19:55:47 2022       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; skeleton                                    ;
 ; Top-level Entity Name              ; processor                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 330                                         ;
-;     Total combinational functions  ; 330                                         ;
+; Total logic elements               ; 754                                         ;
+;     Total combinational functions  ; 754                                         ;
 ;     Dedicated logic registers      ; 12                                          ;
 ; Total registers                    ; 12                                          ;
 ; Total pins                         ; 235                                         ;
@@ -216,61 +219,63 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                       ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                         ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
-; program_counter.v                ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/program_counter.v  ;         ;
-; fulladder.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/fulladder.v        ;         ;
-; dffe.v                           ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/dffe.v             ;         ;
-; alu.v                            ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/alu.v              ;         ;
-; processor.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/processor.v        ;         ;
-; pc_adder.v                       ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/pc_adder.v         ;         ;
-; sign_extension.v                 ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/sign_extension.v   ;         ;
-; mux_32bit.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/mux_32bit.v        ;         ;
-; initalize.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/initalize.v        ;         ;
-; initalize_12.v                   ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/initalize_12.v     ;         ;
-; initalize_32.v                   ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/initalize_32.v     ;         ;
-; is_ne.v                          ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/is_ne.v            ;         ;
-; check_two.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/check_two.v        ;         ;
-; check_overflow.v                 ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/check_overflow.v   ;         ;
-; mux_5bit.v                       ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/mux_5bit.v         ;         ;
-; fulladder_12bits.v               ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/fulladder_12bits.v ;         ;
-; fulladder_PC.v                   ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/fulladder_PC.v     ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
+; program_counter.v                ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/program_counter.v      ;         ;
+; fulladder.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/fulladder.v            ;         ;
+; dffe.v                           ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/dffe.v                 ;         ;
+; alu.v                            ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/alu.v                  ;         ;
+; processor.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/processor.v            ;         ;
+; pc_adder.v                       ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/pc_adder.v             ;         ;
+; sign_extension.v                 ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/sign_extension.v       ;         ;
+; mux_32bit.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/mux_32bit.v            ;         ;
+; initalize.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/initalize.v            ;         ;
+; initalize_12.v                   ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/initalize_12.v         ;         ;
+; initalize_32.v                   ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/initalize_32.v         ;         ;
+; is_ne.v                          ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/is_ne.v                ;         ;
+; check_two.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/check_two.v            ;         ;
+; check_overflow.v                 ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/check_overflow.v       ;         ;
+; mux_5bit.v                       ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/mux_5bit.v             ;         ;
+; fulladder_12bits.v               ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/fulladder_12bits.v     ;         ;
+; fulladder_PC.v                   ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/fulladder_PC.v         ;         ;
+; is_ne_32bit.v                    ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/is_ne_32bit.v          ;         ;
+; sign_extension_27bit.v           ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/sign_extension_27bit.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 330           ;
-;                                             ;               ;
-; Total combinational functions               ; 330           ;
-; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 130           ;
-;     -- 3 input functions                    ; 172           ;
-;     -- <=2 input functions                  ; 28            ;
-;                                             ;               ;
-; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 235           ;
-;     -- arithmetic mode                      ; 95            ;
-;                                             ;               ;
-; Total registers                             ; 12            ;
-;     -- Dedicated logic registers            ; 12            ;
-;     -- I/O registers                        ; 0             ;
-;                                             ;               ;
-; I/O pins                                    ; 235           ;
-;                                             ;               ;
-; Embedded Multiplier 9-bit elements          ; 0             ;
-;                                             ;               ;
-; Maximum fan-out node                        ; alu_in2[31]~0 ;
-; Maximum fan-out                             ; 33            ;
-; Total fan-out                               ; 1492          ;
-; Average fan-out                             ; 1.84          ;
-+---------------------------------------------+---------------+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 754             ;
+;                                             ;                 ;
+; Total combinational functions               ; 754             ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 372             ;
+;     -- 3 input functions                    ; 361             ;
+;     -- <=2 input functions                  ; 21              ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 659             ;
+;     -- arithmetic mode                      ; 95              ;
+;                                             ;                 ;
+; Total registers                             ; 12              ;
+;     -- Dedicated logic registers            ; 12              ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 235             ;
+;                                             ;                 ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; q_imem[8]~input ;
+; Maximum fan-out                             ; 80              ;
+; Total fan-out                               ; 3013            ;
+; Average fan-out                             ; 2.44            ;
++---------------------------------------------+-----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -278,44 +283,49 @@ agreement for further details.
 +-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                             ; Entity Name      ; Library Name ;
 +-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+------------------+--------------+
-; |processor                              ; 330 (38)            ; 12 (0)                    ; 0           ; 0            ; 0       ; 0         ; 235  ; 0            ; |processor                                                                                      ; processor        ; work         ;
-;    |alu:a1|                             ; 171 (171)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|alu:a1                                                                               ; alu              ; work         ;
-;    |check_overflow:checkingoverflow|    ; 34 (7)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow                                                      ; check_overflow   ; work         ;
-;       |fulladder_PC:pc_plusone|         ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone                              ; fulladder_PC     ; work         ;
-;          |fulladder:intializei[10].fai| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[10].fai ; fulladder        ; work         ;
+; |processor                              ; 754 (38)            ; 12 (0)                    ; 0           ; 0            ; 0       ; 0         ; 235  ; 0            ; |processor                                                                                      ; processor        ; work         ;
+;    |alu:a1|                             ; 538 (538)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|alu:a1                                                                               ; alu              ; work         ;
+;    |check_overflow:checkingoverflow|    ; 52 (9)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow                                                      ; check_overflow   ; work         ;
+;       |fulladder_PC:pc_plusone|         ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone                              ; fulladder_PC     ; work         ;
+;          |fulladder:intializei[10].fai| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[10].fai ; fulladder        ; work         ;
+;          |fulladder:intializei[2].fai|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[2].fai  ; fulladder        ; work         ;
 ;          |fulladder:intializei[3].fai|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[3].fai  ; fulladder        ; work         ;
-;          |fulladder:intializei[5].fai|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[5].fai  ; fulladder        ; work         ;
+;          |fulladder:intializei[4].fai|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[4].fai  ; fulladder        ; work         ;
 ;          |fulladder:intializei[6].fai|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[6].fai  ; fulladder        ; work         ;
-;          |fulladder:intializei[8].fai|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[8].fai  ; fulladder        ; work         ;
-;       |mux_32bit:m4|                    ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|mux_32bit:m4                                         ; mux_32bit        ; work         ;
-;    |check_two:isADD_Rtype|              ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_two:isADD_Rtype                                                                ; check_two        ; work         ;
+;          |fulladder:intializei[7].fai|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[7].fai  ; fulladder        ; work         ;
+;       |mux_32bit:m5|                    ; 34 (34)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|mux_32bit:m5                                         ; mux_32bit        ; work         ;
+;    |check_two:isSETX|                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_two:isSETX                                                                     ; check_two        ; work         ;
+;    |check_two:isSUB_Rtype|              ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_two:isSUB_Rtype                                                                ; check_two        ; work         ;
+;    |is_ne:isNotBEX|                     ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|is_ne:isNotBEX                                                                       ; is_ne            ; work         ;
 ;    |is_ne:isNotJAL|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|is_ne:isNotJAL                                                                       ; is_ne            ; work         ;
 ;    |is_ne:isNotJR|                      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|is_ne:isNotJR                                                                        ; is_ne            ; work         ;
+;    |is_ne:isNotJType|                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|is_ne:isNotJType                                                                     ; is_ne            ; work         ;
 ;    |is_ne:isNotLoad|                    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|is_ne:isNotLoad                                                                      ; is_ne            ; work         ;
+;    |is_ne:isNotRType|                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|is_ne:isNotRType                                                                     ; is_ne            ; work         ;
 ;    |is_ne:isNotStore|                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|is_ne:isNotStore                                                                     ; is_ne            ; work         ;
-;    |mux_32bit:data_mem|                 ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mux_32bit:data_mem                                                                   ; mux_32bit        ; work         ;
-;    |mux_5bit:rt_mux|                    ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mux_5bit:rt_mux                                                                      ; mux_5bit         ; work         ;
-;    |pc_adder:padd|                      ; 22 (7)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd                                                                        ; pc_adder         ; work         ;
-;       |fulladder_12bits:f1|             ; 15 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1                                                    ; fulladder_12bits ; work         ;
-;          |fulladder:fa0|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:fa0                                      ; fulladder        ; work         ;
+;    |mux_32bit:data_mem|                 ; 59 (59)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mux_32bit:data_mem                                                                   ; mux_32bit        ; work         ;
+;    |mux_5bit:rt_mux2|                   ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mux_5bit:rt_mux2                                                                     ; mux_5bit         ; work         ;
+;    |pc_adder:padd|                      ; 29 (7)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd                                                                        ; pc_adder         ; work         ;
+;       |fulladder_12bits:f1|             ; 12 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1                                                    ; fulladder_12bits ; work         ;
 ;          |fulladder:fa11|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:fa11                                     ; fulladder        ; work         ;
 ;          |fulladder:intialize[10].fai|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[10].fai                        ; fulladder        ; work         ;
 ;          |fulladder:intialize[1].fai|   ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[1].fai                         ; fulladder        ; work         ;
-;          |fulladder:intialize[2].fai|   ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[2].fai                         ; fulladder        ; work         ;
-;          |fulladder:intialize[3].fai|   ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[3].fai                         ; fulladder        ; work         ;
+;          |fulladder:intialize[2].fai|   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[2].fai                         ; fulladder        ; work         ;
+;          |fulladder:intialize[3].fai|   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[3].fai                         ; fulladder        ; work         ;
 ;          |fulladder:intialize[4].fai|   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[4].fai                         ; fulladder        ; work         ;
 ;          |fulladder:intialize[5].fai|   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[5].fai                         ; fulladder        ; work         ;
 ;          |fulladder:intialize[6].fai|   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[6].fai                         ; fulladder        ; work         ;
 ;          |fulladder:intialize[7].fai|   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[7].fai                         ; fulladder        ; work         ;
 ;          |fulladder:intialize[8].fai|   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[8].fai                         ; fulladder        ; work         ;
 ;          |fulladder:intialize[9].fai|   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[9].fai                         ; fulladder        ; work         ;
-;    |program_counter:pc|                 ; 19 (0)              ; 12 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc                                                                   ; program_counter  ; work         ;
+;       |is_ne_32bit:checkrstatus0|       ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|is_ne_32bit:checkrstatus0                                              ; is_ne_32bit      ; work         ;
+;    |program_counter:pc|                 ; 21 (0)              ; 12 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc                                                                   ; program_counter  ; work         ;
 ;       |dffe_ref:intialize[0].df|        ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[0].df                                          ; dffe_ref         ; work         ;
 ;       |dffe_ref:intialize[10].df|       ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[10].df                                         ; dffe_ref         ; work         ;
 ;       |dffe_ref:intialize[11].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[11].df                                         ; dffe_ref         ; work         ;
 ;       |dffe_ref:intialize[1].df|        ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[1].df                                          ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[2].df|        ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[2].df                                          ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[3].df|        ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[3].df                                          ; dffe_ref         ; work         ;
+;       |dffe_ref:intialize[2].df|        ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[2].df                                          ; dffe_ref         ; work         ;
+;       |dffe_ref:intialize[3].df|        ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[3].df                                          ; dffe_ref         ; work         ;
 ;       |dffe_ref:intialize[4].df|        ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[4].df                                          ; dffe_ref         ; work         ;
 ;       |dffe_ref:intialize[5].df|        ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[5].df                                          ; dffe_ref         ; work         ;
 ;       |dffe_ref:intialize[6].df|        ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[6].df                                          ; dffe_ref         ; work         ;
@@ -341,23 +351,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |processor|program_counter:pc|dffe_ref:intialize[0].df|q ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |processor|check_overflow:checkingoverflow|out_reg[0]    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m4"                                                                                                ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                       ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; in1  ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "in1[31..1]" will be connected to GND. ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |processor|program_counter:pc|dffe_ref:intialize[11].df|q            ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |processor|check_overflow:checkingoverflow|mux_32bit:m5|orgate[9].ok ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |processor|check_overflow:checkingoverflow|out_reg[2]                ;
+; 35:1               ; 8 bits    ; 184 LEs       ; 40 LEs               ; 144 LEs                ; No         ; |processor|alu:a1|Selector16                                         ;
+; 35:1               ; 8 bits    ; 184 LEs       ; 48 LEs               ; 136 LEs                ; No         ; |processor|alu:a1|Selector10                                         ;
+; 36:1               ; 4 bits    ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; No         ; |processor|alu:a1|Selector26                                         ;
+; 36:1               ; 4 bits    ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; No         ; |processor|alu:a1|Selector6                                          ;
+; 37:1               ; 2 bits    ; 48 LEs        ; 12 LEs               ; 36 LEs                 ; No         ; |processor|alu:a1|Selector28                                         ;
+; 37:1               ; 2 bits    ; 48 LEs        ; 14 LEs               ; 34 LEs                 ; No         ; |processor|alu:a1|Selector2                                          ;
+; 38:1               ; 2 bits    ; 50 LEs        ; 14 LEs               ; 36 LEs                 ; No         ; |processor|alu:a1|Selector31                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -670,15 +679,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+-------+----------+-------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m3"                                                                                  ;
-+------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                  ;
-+------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; out        ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "out[31..1]" have no fanouts ;
-; in1[1..0]  ; Input  ; Info     ; Stuck at VCC                                                                                                             ;
-; in1[31..2] ; Input  ; Info     ; Stuck at GND                                                                                                             ;
-+------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m3" ;
++------------+-------+----------+------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                  ;
++------------+-------+----------+------------------------------------------+
+; in1[1..0]  ; Input ; Info     ; Stuck at VCC                             ;
+; in1[31..2] ; Input ; Info     ; Stuck at GND                             ;
++------------+-------+----------+------------------------------------------+
 
 
 +--------------------------------------------------------------------------+
@@ -702,6 +710,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------+-------+----------+------------------------------------------+
 
 
++----------------------------------------------+
+; Port Connectivity Checks: "mux_5bit:rt_mux2" ;
++-----------+-------+----------+---------------+
+; Port      ; Type  ; Severity ; Details       ;
++-----------+-------+----------+---------------+
+; in0[4..1] ; Input ; Info     ; Stuck at VCC  ;
+; in0[0]    ; Input ; Info     ; Stuck at GND  ;
++-----------+-------+----------+---------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "pc_adder:padd|is_ne_32bit:checkrstatus0" ;
++------+-------+----------+-------------------------------------------+
+; Port ; Type  ; Severity ; Details                                   ;
++------+-------+----------+-------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                              ;
++------+-------+----------+-------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "pc_adder:padd|fulladder_12bits:f1"                                                  ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -719,6 +746,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+-------+----------+--------------------+
 ; enable ; Input ; Info     ; Stuck at VCC       ;
 +--------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "check_two:isSETX" ;
++--------+-------+----------+------------------+
+; Port   ; Type  ; Severity ; Details          ;
++--------+-------+----------+------------------+
+; in2[4] ; Input ; Info     ; Stuck at VCC     ;
+; in2[3] ; Input ; Info     ; Stuck at GND     ;
+; in2[2] ; Input ; Info     ; Stuck at VCC     ;
+; in2[1] ; Input ; Info     ; Stuck at GND     ;
+; in2[0] ; Input ; Info     ; Stuck at VCC     ;
+; in4[4] ; Input ; Info     ; Stuck at VCC     ;
+; in4[3] ; Input ; Info     ; Stuck at GND     ;
+; in4[2] ; Input ; Info     ; Stuck at VCC     ;
+; in4[1] ; Input ; Info     ; Stuck at GND     ;
+; in4[0] ; Input ; Info     ; Stuck at VCC     ;
++--------+-------+----------+------------------+
 
 
 +--------------------------------------------------+
@@ -784,6 +829,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; in2  ; Input ; Info     ; Stuck at GND            ;
 ; in4  ; Input ; Info     ; Stuck at GND            ;
 +------+-------+----------+-------------------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "is_ne:isNotBEX"  ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; in2[2..1] ; Input ; Info     ; Stuck at VCC ;
+; in2[4]    ; Input ; Info     ; Stuck at VCC ;
+; in2[3]    ; Input ; Info     ; Stuck at GND ;
+; in2[0]    ; Input ; Info     ; Stuck at GND ;
++-----------+-------+----------+--------------+
 
 
 +---------------------------------------------+
@@ -877,17 +934,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; boundary_port         ; 235                         ;
 ; cycloneiii_ff         ; 12                          ;
 ;     CLR SLD           ; 12                          ;
-; cycloneiii_lcell_comb ; 331                         ;
+; cycloneiii_lcell_comb ; 755                         ;
 ;     arith             ; 95                          ;
 ;         3 data inputs ; 95                          ;
-;     normal            ; 236                         ;
+;     normal            ; 660                         ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 28                          ;
-;         3 data inputs ; 77                          ;
-;         4 data inputs ; 130                         ;
+;         2 data inputs ; 21                          ;
+;         3 data inputs ; 266                         ;
+;         4 data inputs ; 372                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 21.10                       ;
-; Average LUT depth     ; 12.95                       ;
+; Average LUT depth     ; 12.89                       ;
 +-----------------------+-----------------------------+
 
 
@@ -896,7 +953,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -906,7 +963,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Nov 23 18:19:37 2022
+    Info: Processing started: Wed Nov 23 19:55:29 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off skeleton -c skeleton
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -964,38 +1021,43 @@ Info (12021): Found 1 design units, including 1 entities, in source file fulladd
     Info (12023): Found entity 1: fulladder_12bits File: C:/Users/ka266/Documents/Project4/fulladder_12bits.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fulladder_pc.v
     Info (12023): Found entity 1: fulladder_PC File: C:/Users/ka266/Documents/Project4/fulladder_PC.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file is_ne_32bit.v
+    Info (12023): Found entity 1: is_ne_32bit File: C:/Users/ka266/Documents/Project4/is_ne_32bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sign_extension_27bit.v
+    Info (12023): Found entity 1: sign_extension_27bit File: C:/Users/ka266/Documents/Project4/sign_extension_27bit.v Line: 1
 Info (12127): Elaborating entity "processor" for the top level hierarchy
 Info (12128): Elaborating entity "is_ne" for hierarchy "is_ne:isNotRType" File: C:/Users/ka266/Documents/Project4/processor.v Line: 100
-Info (12128): Elaborating entity "check_two" for hierarchy "check_two:isADD_Rtype" File: C:/Users/ka266/Documents/Project4/processor.v Line: 109
-Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:pc" File: C:/Users/ka266/Documents/Project4/processor.v Line: 125
+Info (12128): Elaborating entity "check_two" for hierarchy "check_two:isADD_Rtype" File: C:/Users/ka266/Documents/Project4/processor.v Line: 110
+Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:pc" File: C:/Users/ka266/Documents/Project4/processor.v Line: 128
 Info (12128): Elaborating entity "dffe_ref" for hierarchy "program_counter:pc|dffe_ref:intialize[0].df" File: C:/Users/ka266/Documents/Project4/program_counter.v Line: 10
-Info (12128): Elaborating entity "pc_adder" for hierarchy "pc_adder:padd" File: C:/Users/ka266/Documents/Project4/processor.v Line: 126
+Info (12128): Elaborating entity "pc_adder" for hierarchy "pc_adder:padd" File: C:/Users/ka266/Documents/Project4/processor.v Line: 129
 Info (12128): Elaborating entity "fulladder_12bits" for hierarchy "pc_adder:padd|fulladder_12bits:f1" File: C:/Users/ka266/Documents/Project4/pc_adder.v Line: 18
 Info (12128): Elaborating entity "fulladder" for hierarchy "pc_adder:padd|fulladder_12bits:f1|fulladder:fa0" File: C:/Users/ka266/Documents/Project4/fulladder_12bits.v Line: 8
-Info (12128): Elaborating entity "mux_5bit" for hierarchy "mux_5bit:rt_mux" File: C:/Users/ka266/Documents/Project4/processor.v Line: 131
-Info (12128): Elaborating entity "initalize" for hierarchy "initalize:rs" File: C:/Users/ka266/Documents/Project4/processor.v Line: 133
-Info (12128): Elaborating entity "sign_extension" for hierarchy "sign_extension:si" File: C:/Users/ka266/Documents/Project4/processor.v Line: 145
-Info (12128): Elaborating entity "alu" for hierarchy "alu:a1" File: C:/Users/ka266/Documents/Project4/processor.v Line: 152
+Info (12128): Elaborating entity "is_ne_32bit" for hierarchy "pc_adder:padd|is_ne_32bit:checkrstatus0" File: C:/Users/ka266/Documents/Project4/pc_adder.v Line: 22
+Info (12128): Elaborating entity "mux_5bit" for hierarchy "mux_5bit:rt_mux1" File: C:/Users/ka266/Documents/Project4/processor.v Line: 134
+Info (12128): Elaborating entity "initalize" for hierarchy "initalize:rs" File: C:/Users/ka266/Documents/Project4/processor.v Line: 137
+Info (12128): Elaborating entity "sign_extension" for hierarchy "sign_extension:si" File: C:/Users/ka266/Documents/Project4/processor.v Line: 149
+Info (12128): Elaborating entity "alu" for hierarchy "alu:a1" File: C:/Users/ka266/Documents/Project4/processor.v Line: 156
 Warning (10270): Verilog HDL Case Statement warning at alu.v(25): incomplete case statement has no default case item File: C:/Users/ka266/Documents/Project4/alu.v Line: 25
-Info (12128): Elaborating entity "check_overflow" for hierarchy "check_overflow:checkingoverflow" File: C:/Users/ka266/Documents/Project4/processor.v Line: 153
-Info (12128): Elaborating entity "mux_32bit" for hierarchy "check_overflow:checkingoverflow|mux_32bit:m1" File: C:/Users/ka266/Documents/Project4/check_overflow.v Line: 17
-Info (12128): Elaborating entity "fulladder_PC" for hierarchy "check_overflow:checkingoverflow|fulladder_PC:pc_plusone" File: C:/Users/ka266/Documents/Project4/check_overflow.v Line: 23
-Info (12128): Elaborating entity "initalize_12" for hierarchy "initalize_12:dm_address" File: C:/Users/ka266/Documents/Project4/processor.v Line: 156
-Info (12128): Elaborating entity "initalize_32" for hierarchy "initalize_32:dmaddress_data" File: C:/Users/ka266/Documents/Project4/processor.v Line: 160
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "check_overflow" for hierarchy "check_overflow:checkingoverflow" File: C:/Users/ka266/Documents/Project4/processor.v Line: 157
+Info (12128): Elaborating entity "mux_32bit" for hierarchy "check_overflow:checkingoverflow|mux_32bit:m1" File: C:/Users/ka266/Documents/Project4/check_overflow.v Line: 18
+Info (12128): Elaborating entity "sign_extension_27bit" for hierarchy "check_overflow:checkingoverflow|sign_extension_27bit:s" File: C:/Users/ka266/Documents/Project4/check_overflow.v Line: 22
+Info (12128): Elaborating entity "fulladder_PC" for hierarchy "check_overflow:checkingoverflow|fulladder_PC:pc_plusone" File: C:/Users/ka266/Documents/Project4/check_overflow.v Line: 28
+Info (12128): Elaborating entity "initalize_12" for hierarchy "initalize_12:dm_address" File: C:/Users/ka266/Documents/Project4/processor.v Line: 160
+Info (12128): Elaborating entity "initalize_32" for hierarchy "initalize_32:dmaddress_data" File: C:/Users/ka266/Documents/Project4/processor.v Line: 164
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/ka266/Documents/Project4/output_files/skeleton.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 565 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 989 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 130 input pins
     Info (21059): Implemented 105 output pins
-    Info (21061): Implemented 330 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4735 megabytes
-    Info: Processing ended: Wed Nov 23 18:19:53 2022
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:23
+    Info (21061): Implemented 754 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4737 megabytes
+    Info: Processing ended: Wed Nov 23 19:55:47 2022
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:24
 
 
 +------------------------------------------+

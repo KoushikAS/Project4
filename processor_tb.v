@@ -620,8 +620,8 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 				end	
 			end
 			
-			//BNE RD, RS, N 
-		  //bne $1, $2, 2
+			//BLT RD, RS, N 
+		  //blt $1, $2, 2
 			q_imem = 32'b00110000010001000000000000000010;
 			data_readRegA = 32'd5;
 			data_readRegB = 32'd3;
@@ -695,23 +695,22 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			previous_counter = counter + 1;
 			$display($time, " << Checking JAL >>");
 			
-			begin
-				if( data_writeReg != previous_counter) begin
-					$display("**Error on  data_writeReg: read %h but expected %h.", data_writeReg, previous_counter);
-				end
-				
+			begin				
 				@(negedge clock); 
 				
 				counter = 5;
 				if(address_imem != counter) begin
 					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
 				end
+				//Should test it properly
+				if( data_writeReg != counter +1) begin
+					$display("**Error on  data_writeReg: read %h but expected %h.", data_writeReg, previous_counter);
+				end
 										
 				if( ctrl_writeReg != 5'd31) begin
 					$display("**Error on  ctrl_writeReg: read %h but expected %h.", ctrl_writeReg, 5'd31);
 				end
 				
-
 				
 				if( ctrl_writeEnable != 1'b1) begin
 					$display("**Error on  ctrl_writeEnable: read %h but expected %h.", ctrl_writeEnable, 1'b1);
@@ -726,14 +725,14 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  //jr $2
 			q_imem = 32'b00100000100000000000000000000000;
 			data_readRegA = 32'd4;
-			data_readRegB = 32'd3;
+			data_readRegB = 32'd8;
 			q_dmem = 32'd6;
 			$display($time, " << Checking JR >>");
 			
 			begin
 				@(negedge clock); 
 				
-				counter = 3;
+				counter = 8;
 				if(address_imem != counter) begin
 					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
 				end								
@@ -744,6 +743,97 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 				
 				if( ctrl_writeEnable != 1'b0) begin
 					$display("**Error on  ctrl_writeEnable: read %h but expected %h.", ctrl_writeEnable, 1'b0);
+				end
+				
+				if( wren != 1'b0) begin
+					$display("**Error on  wren: read %h but expected %h.", wren, 1'b0);
+				end	
+			end
+			
+			//BEX False
+		  //bex 5
+			q_imem = 32'b10110000000000000000000000000101;
+			data_readRegA = 32'd4;
+			data_readRegB = 32'd0;
+			q_dmem = 32'd6;
+			$display($time, " << Checking BEX False >>");
+			
+			begin
+				@(negedge clock); 
+				
+				counter = counter +1;
+				if(address_imem != counter) begin
+					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
+				end								
+				
+				if( ctrl_readRegB != 5'd30) begin
+					$display("**Error on  ctrl_readRegA: read %h but expected %h.", ctrl_readRegA, 5'd30);
+				end
+				
+				if( ctrl_writeEnable != 1'b0) begin
+					$display("**Error on  ctrl_writeEnable: read %h but expected %h.", ctrl_writeEnable, 1'b0);
+				end
+				
+				if( wren != 1'b0) begin
+					$display("**Error on  wren: read %h but expected %h.", wren, 1'b0);
+				end	
+			end
+			
+			//BEX True
+		  //bex 5
+			q_imem = 32'b10110000000000000000000000000101;
+			data_readRegA = 32'd4;
+			data_readRegB = 32'd1;
+			q_dmem = 32'd6;
+			$display($time, " << Checking BEX True >>");
+			
+			begin
+				@(negedge clock); 
+				
+				counter = 5;
+				if(address_imem != counter) begin
+					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
+				end								
+				
+				if( ctrl_readRegB != 5'd30) begin
+					$display("**Error on  ctrl_readRegA: read %h but expected %h.", ctrl_readRegA, 5'd30);
+				end
+				
+				if( ctrl_writeEnable != 1'b0) begin
+					$display("**Error on  ctrl_writeEnable: read %h but expected %h.", ctrl_writeEnable, 1'b0);
+				end
+				
+				if( wren != 1'b0) begin
+					$display("**Error on  wren: read %h but expected %h.", wren, 1'b0);
+				end	
+			end
+			
+			//SETX 
+		  //setx 5
+			q_imem = 32'b10101000000000000000000000000101;
+			data_readRegA = 32'd4;
+			data_readRegB = 32'd1;
+			q_dmem = 32'd6;
+			$display($time, " << Checking SETX >>");
+			
+			begin
+				@(negedge clock); 
+				
+				counter = counter +1;
+				if(address_imem != counter) begin
+					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
+				end								
+				
+				if( data_writeReg != 5) begin
+					$display("**Error on  data_writeReg: read %h but expected %h.", data_writeReg, 32'd5);
+				end
+				
+				if( ctrl_writeEnable != 1'b1) begin
+					$display("**Error on  ctrl_writeEnable: read %h but expected %h.", ctrl_writeEnable, 1'b1);
+				end
+										
+				if( ctrl_writeReg != 5'd30) begin
+					$display("**Error on  ctrl_writeReg: read %h but expected %h.", ctrl_writeReg, 5'd30);
 				end
 				
 				if( wren != 1'b0) begin
