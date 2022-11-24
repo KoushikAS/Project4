@@ -1,10 +1,10 @@
-module check_overflow(out_data, out_reg, in_data, in_reg, overflow, is_add_rtype, is_sub_rtype, is_add_i, address_imem, is_not_jal, t, is_setx);
+module check_overflow(out_data, out_reg, in_data, in_reg, overflow, is_add_rtype, is_sub_rtype, is_add_i, pc_in, is_not_jal, t, is_setx);
 	output[31:0] out_data;
 	output[4:0] out_reg;
 	input[31:0] in_data;
 	input[4:0] in_reg;
 	input overflow, is_add_rtype, is_sub_rtype, is_add_i,is_not_jal, is_setx;
-	input[11:0] address_imem;
+	input[11:0] pc_in;
 	input[26:0] t;
 	
 	wire[31:0] w1, w2, w8, w11, w12;
@@ -25,7 +25,7 @@ module check_overflow(out_data, out_reg, in_data, in_reg, overflow, is_add_rtype
 	
 	wire[31:0] pc_adder;
 	
-	fulladder_PC pc_plusone(pc_adder, address_imem);
+	fulladder_PC pc_plusone(pc_adder, pc_in);
 	mux_32bit m5 (out_data, is_not_jal, pc_adder, w12);
 	
 	wire w6, w7, w10;

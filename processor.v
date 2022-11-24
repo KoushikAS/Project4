@@ -120,12 +120,12 @@ module processor(
 	or is_REGB_RD(is_regb_rd, is_bne_blt, is_store, is_jr);
 	 /* Level 1 for Program counter */
 	
-	 wire[11:0] pc_in;
+	 wire[11:0] pc_in, prev_pc;
 	 wire[4:0] dest_reg;
 	 wire is_not_eq;
 	 wire is_less_than, overflow;
 	 
-	 program_counter pc (address_imem, pc_in, clock, 1'b1, reset);
+	 program_counter pc (address_imem, pc_in, clock, 1'b1, reset, prev_pc);
 	 pc_adder padd(pc_in, address_imem, q_imem[26:0], q_imem[16:0], is_not_eq, is_less_than, is_not_jtype, is_not_jal, is_not_jr, is_not_bex, is_bne, is_blt, data_readRegB);
 	 
 	 /* Level 2 Reg file*/
@@ -154,7 +154,7 @@ module processor(
 	 
 	 
 	 alu a1(data_readRegA, alu_in2, alu_opcode, q_imem[11:7], alu_out, is_not_eq, is_less_than, overflow);
-	 check_overflow  checkingoverflow (overflow_out, ctrl_writeReg, alu_out, dest_reg, overflow, is_add_rtype, is_sub_rtype, is_add_i, address_imem, is_not_jal, q_imem[26:0], is_setx);
+	 check_overflow  checkingoverflow (overflow_out, ctrl_writeReg, alu_out, dest_reg, overflow, is_add_rtype, is_sub_rtype, is_add_i, prev_pc, is_not_jal, q_imem[26:0], is_setx);
 	
 	 /* Level 4 Data memory*/	
 	 initalize_12 dm_address(address_dmem, overflow_out[11:0]);	//initalize dm_address->address_dmem	 

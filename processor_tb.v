@@ -703,7 +703,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 					$display("**Timescale 3 :Error on address_imem read %h but expected %h.", address_imem, counter);
 				end
 				//Should test it properly
-				if( data_writeReg != counter +1) begin
+				if( data_writeReg != previous_counter) begin
 					$display("**Error on  data_writeReg: read %h but expected %h.", data_writeReg, previous_counter);
 				end
 										
