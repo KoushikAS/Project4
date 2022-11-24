@@ -1,5 +1,5 @@
-Analysis & Synthesis report for skeleton
-Thu Nov 24 11:13:37 2022
+Analysis & Elaboration report for skeleton
+Thu Nov 24 13:05:29 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -7,72 +7,73 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[31].faj"
- 11. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[30].faj"
- 12. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[29].faj"
- 13. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[28].faj"
- 14. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[27].faj"
- 15. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[26].faj"
- 16. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[25].faj"
- 17. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[24].faj"
- 18. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[23].faj"
- 19. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[22].faj"
- 20. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[21].faj"
- 21. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[20].faj"
- 22. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[19].faj"
- 23. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[18].faj"
- 24. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[17].faj"
- 25. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[16].faj"
- 26. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[15].faj"
- 27. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[14].faj"
- 28. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[13].faj"
- 29. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[12].faj"
- 30. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[11].fai"
- 31. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[10].fai"
- 32. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[9].fai"
- 33. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[8].fai"
- 34. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[7].fai"
- 35. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[6].fai"
- 36. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[5].fai"
- 37. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[4].fai"
- 38. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[3].fai"
- 39. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[2].fai"
- 40. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[1].fai"
- 41. Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:fa0"
- 42. Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m3"
- 43. Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m2"
- 44. Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m1"
- 45. Port Connectivity Checks: "mux_5bit:rt_mux2"
- 46. Port Connectivity Checks: "pc_adder:padd|is_ne_32bit:checkrstatus0"
- 47. Port Connectivity Checks: "pc_adder:padd|fulladder_12bits:f1"
- 48. Port Connectivity Checks: "program_counter:pc"
- 49. Port Connectivity Checks: "check_two:isSETX"
- 50. Port Connectivity Checks: "check_two:isBLT_type"
- 51. Port Connectivity Checks: "check_two:isBNE_type"
- 52. Port Connectivity Checks: "check_two:isADD_Itype"
- 53. Port Connectivity Checks: "check_two:isSUB_Rtype"
- 54. Port Connectivity Checks: "check_two:isADD_Rtype"
- 55. Port Connectivity Checks: "is_ne:isNotBEX"
- 56. Port Connectivity Checks: "is_ne:isNotJR"
- 57. Port Connectivity Checks: "is_ne:isNotJAL"
- 58. Port Connectivity Checks: "is_ne:isNotBLT"
- 59. Port Connectivity Checks: "is_ne:isNotBNE"
- 60. Port Connectivity Checks: "is_ne:isNotJType"
- 61. Port Connectivity Checks: "is_ne:isNotStore"
- 62. Port Connectivity Checks: "is_ne:isNotLoad"
- 63. Port Connectivity Checks: "is_ne:isNotRType"
- 64. Post-Synthesis Netlist Statistics for Top Partition
- 65. Elapsed Time Per Partition
- 66. Analysis & Synthesis Messages
- 67. Analysis & Synthesis Suppressed Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration IP Cores Summary
+  5. Source assignments for imem:my_imem|altsyncram:altsyncram_component|altsyncram_q3b1:auto_generated
+  6. Source assignments for dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated
+  7. Parameter Settings for User Entity Instance: imem:my_imem|altsyncram:altsyncram_component
+  8. Parameter Settings for User Entity Instance: dmem:my_dmem|altsyncram:altsyncram_component
+  9. altsyncram Parameter Settings by Entity Instance
+ 10. Analysis & Elaboration Settings
+ 11. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[31].faj"
+ 12. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[30].faj"
+ 13. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[29].faj"
+ 14. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[28].faj"
+ 15. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[27].faj"
+ 16. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[26].faj"
+ 17. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[25].faj"
+ 18. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[24].faj"
+ 19. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[23].faj"
+ 20. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[22].faj"
+ 21. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[21].faj"
+ 22. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[20].faj"
+ 23. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[19].faj"
+ 24. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[18].faj"
+ 25. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[17].faj"
+ 26. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[16].faj"
+ 27. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[15].faj"
+ 28. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[14].faj"
+ 29. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[13].faj"
+ 30. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[12].faj"
+ 31. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[11].fai"
+ 32. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[10].fai"
+ 33. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[9].fai"
+ 34. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[8].fai"
+ 35. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[7].fai"
+ 36. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[6].fai"
+ 37. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[5].fai"
+ 38. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[4].fai"
+ 39. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[3].fai"
+ 40. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[2].fai"
+ 41. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[1].fai"
+ 42. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:fa0"
+ 43. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|mux_32bit:m3"
+ 44. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|mux_32bit:m2"
+ 45. Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|mux_32bit:m1"
+ 46. Port Connectivity Checks: "processor:my_processor|mux_5bit:rt_mux2"
+ 47. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|is_ne_32bit:checkrstatus0"
+ 48. Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder_12bits:f1"
+ 49. Port Connectivity Checks: "processor:my_processor|program_counter:pc"
+ 50. Port Connectivity Checks: "processor:my_processor|check_two:isSETX"
+ 51. Port Connectivity Checks: "processor:my_processor|check_two:isBLT_type"
+ 52. Port Connectivity Checks: "processor:my_processor|check_two:isBNE_type"
+ 53. Port Connectivity Checks: "processor:my_processor|check_two:isADD_Itype"
+ 54. Port Connectivity Checks: "processor:my_processor|check_two:isSUB_Rtype"
+ 55. Port Connectivity Checks: "processor:my_processor|check_two:isADD_Rtype"
+ 56. Port Connectivity Checks: "processor:my_processor|is_ne:isNotBEX"
+ 57. Port Connectivity Checks: "processor:my_processor|is_ne:isNotJR"
+ 58. Port Connectivity Checks: "processor:my_processor|is_ne:isNotJAL"
+ 59. Port Connectivity Checks: "processor:my_processor|is_ne:isNotBLT"
+ 60. Port Connectivity Checks: "processor:my_processor|is_ne:isNotBNE"
+ 61. Port Connectivity Checks: "processor:my_processor|is_ne:isNotJType"
+ 62. Port Connectivity Checks: "processor:my_processor|is_ne:isNotStore"
+ 63. Port Connectivity Checks: "processor:my_processor|is_ne:isNotLoad"
+ 64. Port Connectivity Checks: "processor:my_processor|is_ne:isNotRType"
+ 65. Port Connectivity Checks: "regfile:my_regfile|decoder5_32:d1"
+ 66. Port Connectivity Checks: "regfile:my_regfile|reg_32:rew"
+ 67. Analysis & Elaboration Messages
+ 68. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -97,32 +98,229 @@ agreement for further details.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
+; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 24 11:13:37 2022       ;
+; Analysis & Elaboration Status      ; Successful - Thu Nov 24 13:05:29 2022       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; skeleton                                    ;
-; Top-level Entity Name              ; processor                                   ;
+; Top-level Entity Name              ; skeleton                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 766                                         ;
-;     Total combinational functions  ; 754                                         ;
-;     Dedicated logic registers      ; 24                                          ;
-; Total registers                    ; 24                                          ;
-; Total pins                         ; 235                                         ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration IP Cores Summary                                                                  ;
++--------+--------------+---------+--------------+--------------+------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance        ; IP Include File ;
++--------+--------------+---------+--------------+--------------+------------------------+-----------------+
+; Altera ; RAM: 1-PORT  ; 17.0    ; N/A          ; N/A          ; |skeleton|dmem:my_dmem ; dmem.v          ;
+; Altera ; ROM: 1-PORT  ; 17.0    ; N/A          ; N/A          ; |skeleton|imem:my_imem ; imem.v          ;
++--------+--------------+---------+--------------+--------------+------------------------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Source assignments for imem:my_imem|altsyncram:altsyncram_component|altsyncram_q3b1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------+
+; Assignment                      ; Value              ; From ; To                                   ;
++---------------------------------+--------------------+------+--------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                    ;
++---------------------------------+--------------------+------+--------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Source assignments for dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------+
+; Assignment                      ; Value              ; From ; To                                   ;
++---------------------------------+--------------------+------+--------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                    ;
++---------------------------------+--------------------+------+--------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: imem:my_imem|altsyncram:altsyncram_component ;
++------------------------------------+------------------------------+-----------------------+
+; Parameter Name                     ; Value                        ; Type                  ;
++------------------------------------+------------------------------+-----------------------+
+; BYTE_SIZE_BLOCK                    ; 8                            ; Untyped               ;
+; AUTO_CARRY_CHAINS                  ; ON                           ; AUTO_CARRY            ;
+; IGNORE_CARRY_BUFFERS               ; OFF                          ; IGNORE_CARRY          ;
+; AUTO_CASCADE_CHAINS                ; ON                           ; AUTO_CASCADE          ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                          ; IGNORE_CASCADE        ;
+; WIDTH_BYTEENA                      ; 1                            ; Untyped               ;
+; OPERATION_MODE                     ; ROM                          ; Untyped               ;
+; WIDTH_A                            ; 32                           ; Signed Integer        ;
+; WIDTHAD_A                          ; 12                           ; Signed Integer        ;
+; NUMWORDS_A                         ; 4096                         ; Signed Integer        ;
+; OUTDATA_REG_A                      ; CLOCK0                       ; Untyped               ;
+; ADDRESS_ACLR_A                     ; NONE                         ; Untyped               ;
+; OUTDATA_ACLR_A                     ; NONE                         ; Untyped               ;
+; WRCONTROL_ACLR_A                   ; NONE                         ; Untyped               ;
+; INDATA_ACLR_A                      ; NONE                         ; Untyped               ;
+; BYTEENA_ACLR_A                     ; NONE                         ; Untyped               ;
+; WIDTH_B                            ; 1                            ; Untyped               ;
+; WIDTHAD_B                          ; 1                            ; Untyped               ;
+; NUMWORDS_B                         ; 1                            ; Untyped               ;
+; INDATA_REG_B                       ; CLOCK1                       ; Untyped               ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                       ; Untyped               ;
+; RDCONTROL_REG_B                    ; CLOCK1                       ; Untyped               ;
+; ADDRESS_REG_B                      ; CLOCK1                       ; Untyped               ;
+; OUTDATA_REG_B                      ; UNREGISTERED                 ; Untyped               ;
+; BYTEENA_REG_B                      ; CLOCK1                       ; Untyped               ;
+; INDATA_ACLR_B                      ; NONE                         ; Untyped               ;
+; WRCONTROL_ACLR_B                   ; NONE                         ; Untyped               ;
+; ADDRESS_ACLR_B                     ; NONE                         ; Untyped               ;
+; OUTDATA_ACLR_B                     ; NONE                         ; Untyped               ;
+; RDCONTROL_ACLR_B                   ; NONE                         ; Untyped               ;
+; BYTEENA_ACLR_B                     ; NONE                         ; Untyped               ;
+; WIDTH_BYTEENA_A                    ; 1                            ; Signed Integer        ;
+; WIDTH_BYTEENA_B                    ; 1                            ; Untyped               ;
+; RAM_BLOCK_TYPE                     ; AUTO                         ; Untyped               ;
+; BYTE_SIZE                          ; 8                            ; Untyped               ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                    ; Untyped               ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ         ; Untyped               ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ         ; Untyped               ;
+; INIT_FILE                          ; ./mif_outputs/basic_test.mif ; Untyped               ;
+; INIT_FILE_LAYOUT                   ; PORT_A                       ; Untyped               ;
+; MAXIMUM_DEPTH                      ; 0                            ; Untyped               ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                       ; Untyped               ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                       ; Untyped               ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                       ; Untyped               ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                       ; Untyped               ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN              ; Untyped               ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN              ; Untyped               ;
+; ENABLE_ECC                         ; FALSE                        ; Untyped               ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                        ; Untyped               ;
+; WIDTH_ECCSTATUS                    ; 3                            ; Untyped               ;
+; DEVICE_FAMILY                      ; Cyclone IV E                 ; Untyped               ;
+; CBXI_PARAMETER                     ; altsyncram_q3b1              ; Untyped               ;
++------------------------------------+------------------------------+-----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dmem:my_dmem|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------------+
+; Parameter Name                     ; Value                ; Type                          ;
++------------------------------------+----------------------+-------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                       ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                    ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                  ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                  ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                       ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                       ;
+; WIDTH_A                            ; 32                   ; Signed Integer                ;
+; WIDTHAD_A                          ; 12                   ; Signed Integer                ;
+; NUMWORDS_A                         ; 4096                 ; Signed Integer                ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                       ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                       ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                       ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                       ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                       ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                       ;
+; WIDTH_B                            ; 1                    ; Untyped                       ;
+; WIDTHAD_B                          ; 1                    ; Untyped                       ;
+; NUMWORDS_B                         ; 1                    ; Untyped                       ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                       ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                       ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                       ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                       ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                       ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                       ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                       ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                       ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                       ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                       ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                       ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                       ;
+; BYTE_SIZE                          ; 8                    ; Untyped                       ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
+; INIT_FILE                          ; UNUSED               ; Untyped                       ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                       ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                       ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                       ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                       ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                       ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                       ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                       ;
+; CBXI_PARAMETER                     ; altsyncram_0jf1      ; Untyped                       ;
++------------------------------------+----------------------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                         ;
++-------------------------------------------+----------------------------------------------+
+; Name                                      ; Value                                        ;
++-------------------------------------------+----------------------------------------------+
+; Number of entity instances                ; 2                                            ;
+; Entity Instance                           ; imem:my_imem|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                          ;
+;     -- WIDTH_A                            ; 32                                           ;
+;     -- NUMWORDS_A                         ; 4096                                         ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                       ;
+;     -- WIDTH_B                            ; 1                                            ;
+;     -- NUMWORDS_B                         ; 1                                            ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                       ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                 ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                         ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                    ;
+; Entity Instance                           ; dmem:my_dmem|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                  ;
+;     -- WIDTH_A                            ; 32                                           ;
+;     -- NUMWORDS_A                         ; 4096                                         ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                       ;
+;     -- WIDTH_B                            ; 1                                            ;
+;     -- NUMWORDS_B                         ; 1                                            ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                       ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                 ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                         ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                    ;
++-------------------------------------------+----------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                        ;
+; Analysis & Elaboration Settings                                                                                      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; processor          ; skeleton           ;
+; Top-level entity name                                                      ; skeleton           ; skeleton           ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -202,547 +400,368 @@ agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 2           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-+----------------------------+-------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                           ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                             ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
-; program_counter.v                ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/program_counter.v      ;         ;
-; fulladder.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/fulladder.v            ;         ;
-; dffe.v                           ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/dffe.v                 ;         ;
-; alu.v                            ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/alu.v                  ;         ;
-; processor.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/processor.v            ;         ;
-; pc_adder.v                       ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/pc_adder.v             ;         ;
-; sign_extension.v                 ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/sign_extension.v       ;         ;
-; mux_32bit.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/mux_32bit.v            ;         ;
-; initalize.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/initalize.v            ;         ;
-; initalize_12.v                   ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/initalize_12.v         ;         ;
-; initalize_32.v                   ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/initalize_32.v         ;         ;
-; is_ne.v                          ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/is_ne.v                ;         ;
-; check_two.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/check_two.v            ;         ;
-; check_overflow.v                 ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/check_overflow.v       ;         ;
-; mux_5bit.v                       ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/mux_5bit.v             ;         ;
-; fulladder_12bits.v               ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/fulladder_12bits.v     ;         ;
-; fulladder_PC.v                   ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/fulladder_PC.v         ;         ;
-; is_ne_32bit.v                    ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/is_ne_32bit.v          ;         ;
-; sign_extension_27bit.v           ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project4/sign_extension_27bit.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                   ;
-+---------------------------------------------+-----------------+
-; Resource                                    ; Usage           ;
-+---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 766             ;
-;                                             ;                 ;
-; Total combinational functions               ; 754             ;
-; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 372             ;
-;     -- 3 input functions                    ; 361             ;
-;     -- <=2 input functions                  ; 21              ;
-;                                             ;                 ;
-; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 659             ;
-;     -- arithmetic mode                      ; 95              ;
-;                                             ;                 ;
-; Total registers                             ; 24              ;
-;     -- Dedicated logic registers            ; 24              ;
-;     -- I/O registers                        ; 0               ;
-;                                             ;                 ;
-; I/O pins                                    ; 235             ;
-;                                             ;                 ;
-; Embedded Multiplier 9-bit elements          ; 0               ;
-;                                             ;                 ;
-; Maximum fan-out node                        ; q_imem[8]~input ;
-; Maximum fan-out                             ; 80              ;
-; Total fan-out                               ; 3049            ;
-; Average fan-out                             ; 2.44            ;
-+---------------------------------------------+-----------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                        ;
-+---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+------------------+--------------+
-; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                             ; Entity Name      ; Library Name ;
-+---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+------------------+--------------+
-; |processor                                  ; 754 (38)            ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 235  ; 0            ; |processor                                                                                      ; processor        ; work         ;
-;    |alu:a1|                                 ; 538 (538)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|alu:a1                                                                               ; alu              ; work         ;
-;    |check_overflow:checkingoverflow|        ; 52 (9)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow                                                      ; check_overflow   ; work         ;
-;       |fulladder_PC:pc_plusone|             ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone                              ; fulladder_PC     ; work         ;
-;          |fulladder:intializei[10].fai|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[10].fai ; fulladder        ; work         ;
-;          |fulladder:intializei[2].fai|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[2].fai  ; fulladder        ; work         ;
-;          |fulladder:intializei[3].fai|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[3].fai  ; fulladder        ; work         ;
-;          |fulladder:intializei[4].fai|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[4].fai  ; fulladder        ; work         ;
-;          |fulladder:intializei[6].fai|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[6].fai  ; fulladder        ; work         ;
-;          |fulladder:intializei[7].fai|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[7].fai  ; fulladder        ; work         ;
-;       |mux_32bit:m5|                        ; 34 (34)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_overflow:checkingoverflow|mux_32bit:m5                                         ; mux_32bit        ; work         ;
-;    |check_two:isSETX|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_two:isSETX                                                                     ; check_two        ; work         ;
-;    |check_two:isSUB_Rtype|                  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|check_two:isSUB_Rtype                                                                ; check_two        ; work         ;
-;    |is_ne:isNotBEX|                         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|is_ne:isNotBEX                                                                       ; is_ne            ; work         ;
-;    |is_ne:isNotJAL|                         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|is_ne:isNotJAL                                                                       ; is_ne            ; work         ;
-;    |is_ne:isNotJR|                          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|is_ne:isNotJR                                                                        ; is_ne            ; work         ;
-;    |is_ne:isNotJType|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|is_ne:isNotJType                                                                     ; is_ne            ; work         ;
-;    |is_ne:isNotLoad|                        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|is_ne:isNotLoad                                                                      ; is_ne            ; work         ;
-;    |is_ne:isNotRType|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|is_ne:isNotRType                                                                     ; is_ne            ; work         ;
-;    |is_ne:isNotStore|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|is_ne:isNotStore                                                                     ; is_ne            ; work         ;
-;    |mux_32bit:data_mem|                     ; 59 (59)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mux_32bit:data_mem                                                                   ; mux_32bit        ; work         ;
-;    |mux_5bit:rt_mux2|                       ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mux_5bit:rt_mux2                                                                     ; mux_5bit         ; work         ;
-;    |pc_adder:padd|                          ; 29 (7)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd                                                                        ; pc_adder         ; work         ;
-;       |fulladder_12bits:f1|                 ; 12 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1                                                    ; fulladder_12bits ; work         ;
-;          |fulladder:fa11|                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:fa11                                     ; fulladder        ; work         ;
-;          |fulladder:intialize[10].fai|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[10].fai                        ; fulladder        ; work         ;
-;          |fulladder:intialize[1].fai|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[1].fai                         ; fulladder        ; work         ;
-;          |fulladder:intialize[2].fai|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[2].fai                         ; fulladder        ; work         ;
-;          |fulladder:intialize[3].fai|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[3].fai                         ; fulladder        ; work         ;
-;          |fulladder:intialize[4].fai|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[4].fai                         ; fulladder        ; work         ;
-;          |fulladder:intialize[5].fai|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[5].fai                         ; fulladder        ; work         ;
-;          |fulladder:intialize[6].fai|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[6].fai                         ; fulladder        ; work         ;
-;          |fulladder:intialize[7].fai|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[7].fai                         ; fulladder        ; work         ;
-;          |fulladder:intialize[8].fai|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[8].fai                         ; fulladder        ; work         ;
-;          |fulladder:intialize[9].fai|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|fulladder_12bits:f1|fulladder:intialize[9].fai                         ; fulladder        ; work         ;
-;       |is_ne_32bit:checkrstatus0|           ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|pc_adder:padd|is_ne_32bit:checkrstatus0                                              ; is_ne_32bit      ; work         ;
-;    |program_counter:pc|                     ; 21 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc                                                                   ; program_counter  ; work         ;
-;       |dffe_ref:intialize[0].df|            ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[0].df                                          ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[10].df|           ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[10].df                                         ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[11].df|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[11].df                                         ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[1].df|            ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[1].df                                          ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[2].df|            ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[2].df                                          ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[3].df|            ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[3].df                                          ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[4].df|            ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[4].df                                          ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[5].df|            ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[5].df                                          ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[6].df|            ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[6].df                                          ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[7].df|            ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[7].df                                          ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[8].df|            ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[8].df                                          ; dffe_ref         ; work         ;
-;       |dffe_ref:intialize[9].df|            ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:intialize[9].df                                          ; dffe_ref         ; work         ;
-;       |dffe_ref:prev_intialize[0].df_prev|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:prev_intialize[0].df_prev                                ; dffe_ref         ; work         ;
-;       |dffe_ref:prev_intialize[10].df_prev| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:prev_intialize[10].df_prev                               ; dffe_ref         ; work         ;
-;       |dffe_ref:prev_intialize[11].df_prev| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:prev_intialize[11].df_prev                               ; dffe_ref         ; work         ;
-;       |dffe_ref:prev_intialize[1].df_prev|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:prev_intialize[1].df_prev                                ; dffe_ref         ; work         ;
-;       |dffe_ref:prev_intialize[2].df_prev|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:prev_intialize[2].df_prev                                ; dffe_ref         ; work         ;
-;       |dffe_ref:prev_intialize[3].df_prev|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:prev_intialize[3].df_prev                                ; dffe_ref         ; work         ;
-;       |dffe_ref:prev_intialize[4].df_prev|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:prev_intialize[4].df_prev                                ; dffe_ref         ; work         ;
-;       |dffe_ref:prev_intialize[5].df_prev|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:prev_intialize[5].df_prev                                ; dffe_ref         ; work         ;
-;       |dffe_ref:prev_intialize[6].df_prev|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:prev_intialize[6].df_prev                                ; dffe_ref         ; work         ;
-;       |dffe_ref:prev_intialize[7].df_prev|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:prev_intialize[7].df_prev                                ; dffe_ref         ; work         ;
-;       |dffe_ref:prev_intialize[8].df_prev|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:prev_intialize[8].df_prev                                ; dffe_ref         ; work         ;
-;       |dffe_ref:prev_intialize[9].df_prev|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|program_counter:pc|dffe_ref:prev_intialize[9].df_prev                                ; dffe_ref         ; work         ;
-+---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 24    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 12    ;
-; Number of registers using Asynchronous Clear ; 24    ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |processor|program_counter:pc|dffe_ref:intialize[11].df|q            ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |processor|check_overflow:checkingoverflow|mux_32bit:m5|orgate[9].ok ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |processor|check_overflow:checkingoverflow|out_reg[2]                ;
-; 35:1               ; 8 bits    ; 184 LEs       ; 40 LEs               ; 144 LEs                ; No         ; |processor|alu:a1|Selector16                                         ;
-; 35:1               ; 8 bits    ; 184 LEs       ; 48 LEs               ; 136 LEs                ; No         ; |processor|alu:a1|Selector10                                         ;
-; 36:1               ; 4 bits    ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; No         ; |processor|alu:a1|Selector26                                         ;
-; 36:1               ; 4 bits    ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; No         ; |processor|alu:a1|Selector6                                          ;
-; 37:1               ; 2 bits    ; 48 LEs        ; 12 LEs               ; 36 LEs                 ; No         ; |processor|alu:a1|Selector28                                         ;
-; 37:1               ; 2 bits    ; 48 LEs        ; 14 LEs               ; 34 LEs                 ; No         ; |processor|alu:a1|Selector2                                          ;
-; 38:1               ; 2 bits    ; 50 LEs        ; 14 LEs               ; 36 LEs                 ; No         ; |processor|alu:a1|Selector31                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[31].faj" ;
-+------+--------+----------+---------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                               ;
-+------+--------+----------+---------------------------------------------------------------------------------------+
-; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.   ;
-; in1  ; Input  ; Info     ; Stuck at GND                                                                          ;
-; in2  ; Input  ; Info     ; Stuck at GND                                                                          ;
-+------+--------+----------+---------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[30].faj" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                                                           ;
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[29].faj" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                                                           ;
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[28].faj" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                                                           ;
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[27].faj" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                                                           ;
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[26].faj" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                                                           ;
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[25].faj" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                                                           ;
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[24].faj" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                                                           ;
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[23].faj" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                                                           ;
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[22].faj" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                                                           ;
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[21].faj" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                                                           ;
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[20].faj" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                                                           ;
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[19].faj" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                                                           ;
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[18].faj" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                                                           ;
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[17].faj" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                                                           ;
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[16].faj" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                                                           ;
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[15].faj" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                                                           ;
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[14].faj" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                                                           ;
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[13].faj" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                                                           ;
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[12].faj" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                                                           ;
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[11].fai" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[10].fai" ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-; in2  ; Input ; Info     ; Stuck at GND                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[9].fai" ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                               ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-; in2  ; Input ; Info     ; Stuck at GND                                                                          ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[8].fai" ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                               ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-; in2  ; Input ; Info     ; Stuck at GND                                                                          ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[7].fai" ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                               ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-; in2  ; Input ; Info     ; Stuck at GND                                                                          ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[6].fai" ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                               ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-; in2  ; Input ; Info     ; Stuck at GND                                                                          ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[5].fai" ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                               ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-; in2  ; Input ; Info     ; Stuck at GND                                                                          ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[4].fai" ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                               ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-; in2  ; Input ; Info     ; Stuck at GND                                                                          ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[3].fai" ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                               ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-; in2  ; Input ; Info     ; Stuck at GND                                                                          ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[2].fai" ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                               ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-; in2  ; Input ; Info     ; Stuck at GND                                                                          ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[1].fai" ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                               ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-; in2  ; Input ; Info     ; Stuck at GND                                                                          ;
-+------+-------+----------+---------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:fa0" ;
-+------+-------+----------+-------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                 ;
-+------+-------+----------+-------------------------------------------------------------------------+
-; in2  ; Input ; Info     ; Stuck at GND                                                            ;
-; cin  ; Input ; Info     ; Stuck at VCC                                                            ;
-+------+-------+----------+-------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m3" ;
-+------------+-------+----------+------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                  ;
-+------------+-------+----------+------------------------------------------+
-; in1[1..0]  ; Input ; Info     ; Stuck at VCC                             ;
-; in1[31..2] ; Input ; Info     ; Stuck at GND                             ;
-+------------+-------+----------+------------------------------------------+
-
-
-+--------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m2" ;
-+------------+-------+----------+------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                  ;
-+------------+-------+----------+------------------------------------------+
-; in1[31..2] ; Input ; Info     ; Stuck at GND                             ;
-; in1[1]     ; Input ; Info     ; Stuck at VCC                             ;
-; in1[0]     ; Input ; Info     ; Stuck at GND                             ;
-+------------+-------+----------+------------------------------------------+
-
-
-+--------------------------------------------------------------------------+
-; Port Connectivity Checks: "check_overflow:checkingoverflow|mux_32bit:m1" ;
-+------------+-------+----------+------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                  ;
-+------------+-------+----------+------------------------------------------+
-; in1[31..1] ; Input ; Info     ; Stuck at GND                             ;
-; in1[0]     ; Input ; Info     ; Stuck at VCC                             ;
-+------------+-------+----------+------------------------------------------+
-
-
-+----------------------------------------------+
-; Port Connectivity Checks: "mux_5bit:rt_mux2" ;
-+-----------+-------+----------+---------------+
-; Port      ; Type  ; Severity ; Details       ;
-+-----------+-------+----------+---------------+
-; in0[4..1] ; Input ; Info     ; Stuck at VCC  ;
-; in0[0]    ; Input ; Info     ; Stuck at GND  ;
-+-----------+-------+----------+---------------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[31].faj" ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                      ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                          ;
+; in1  ; Input  ; Info     ; Stuck at GND                                                                                                 ;
+; in2  ; Input  ; Info     ; Stuck at GND                                                                                                 ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[30].faj" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                                                                  ;
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[29].faj" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                                                                  ;
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[28].faj" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                                                                  ;
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[27].faj" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                                                                  ;
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[26].faj" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                                                                  ;
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[25].faj" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                                                                  ;
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[24].faj" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                                                                  ;
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[23].faj" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                                                                  ;
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[22].faj" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                                                                  ;
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[21].faj" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                                                                  ;
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[20].faj" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                                                                  ;
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[19].faj" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                                                                  ;
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[18].faj" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                                                                  ;
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[17].faj" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                                                                  ;
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[16].faj" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                                                                  ;
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[15].faj" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                                                                  ;
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[14].faj" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                                                                  ;
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[13].faj" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                                                                  ;
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializej[12].faj" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                                                                  ;
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[11].fai" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[10].fai" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[9].fai" ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                      ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                 ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[8].fai" ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                      ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                 ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[7].fai" ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                      ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                 ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[6].fai" ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                      ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                 ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[5].fai" ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                      ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                 ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[4].fai" ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                      ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                 ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[3].fai" ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                      ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                 ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[2].fai" ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                      ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                 ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:intializei[1].fai" ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                      ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                                                                 ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone|fulladder:fa0" ;
++------+-------+----------+------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                        ;
++------+-------+----------+------------------------------------------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                                                   ;
+; cin  ; Input ; Info     ; Stuck at VCC                                                                                   ;
++------+-------+----------+------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|mux_32bit:m3" ;
++------------+-------+----------+-----------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                         ;
++------------+-------+----------+-----------------------------------------------------------------+
+; in1[1..0]  ; Input ; Info     ; Stuck at VCC                                                    ;
+; in1[31..2] ; Input ; Info     ; Stuck at GND                                                    ;
++------------+-------+----------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|mux_32bit:m2" ;
++------------+-------+----------+-----------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                         ;
++------------+-------+----------+-----------------------------------------------------------------+
+; in1[31..2] ; Input ; Info     ; Stuck at GND                                                    ;
+; in1[1]     ; Input ; Info     ; Stuck at VCC                                                    ;
+; in1[0]     ; Input ; Info     ; Stuck at GND                                                    ;
++------------+-------+----------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_overflow:checkingoverflow|mux_32bit:m1" ;
++------------+-------+----------+-----------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                         ;
++------------+-------+----------+-----------------------------------------------------------------+
+; in1[31..1] ; Input ; Info     ; Stuck at GND                                                    ;
+; in1[0]     ; Input ; Info     ; Stuck at VCC                                                    ;
++------------+-------+----------+-----------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------+
-; Port Connectivity Checks: "pc_adder:padd|is_ne_32bit:checkrstatus0" ;
-+------+-------+----------+-------------------------------------------+
-; Port ; Type  ; Severity ; Details                                   ;
-+------+-------+----------+-------------------------------------------+
-; in2  ; Input ; Info     ; Stuck at GND                              ;
-+------+-------+----------+-------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|mux_5bit:rt_mux2" ;
++-----------+-------+----------+--------------------------------------+
+; Port      ; Type  ; Severity ; Details                              ;
++-----------+-------+----------+--------------------------------------+
+; in0[4..1] ; Input ; Info     ; Stuck at VCC                         ;
+; in0[0]    ; Input ; Info     ; Stuck at GND                         ;
++-----------+-------+----------+--------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|pc_adder:padd|is_ne_32bit:checkrstatus0" ;
++------+-------+----------+------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                          ;
++------+-------+----------+------------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                                     ;
++------+-------+----------+------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "pc_adder:padd|fulladder_12bits:f1"                                                  ;
+; Port Connectivity Checks: "processor:my_processor|pc_adder:padd|fulladder_12bits:f1"                           ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -751,233 +770,220 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------+
-; Port Connectivity Checks: "program_counter:pc" ;
-+--------+-------+----------+--------------------+
-; Port   ; Type  ; Severity ; Details            ;
-+--------+-------+----------+--------------------+
-; enable ; Input ; Info     ; Stuck at VCC       ;
-+--------+-------+----------+--------------------+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|program_counter:pc" ;
++--------+-------+----------+-------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                   ;
++--------+-------+----------+-------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                              ;
++--------+-------+----------+-------------------------------------------+
 
 
-+----------------------------------------------+
-; Port Connectivity Checks: "check_two:isSETX" ;
-+--------+-------+----------+------------------+
-; Port   ; Type  ; Severity ; Details          ;
-+--------+-------+----------+------------------+
-; in2[4] ; Input ; Info     ; Stuck at VCC     ;
-; in2[3] ; Input ; Info     ; Stuck at GND     ;
-; in2[2] ; Input ; Info     ; Stuck at VCC     ;
-; in2[1] ; Input ; Info     ; Stuck at GND     ;
-; in2[0] ; Input ; Info     ; Stuck at VCC     ;
-; in4[4] ; Input ; Info     ; Stuck at VCC     ;
-; in4[3] ; Input ; Info     ; Stuck at GND     ;
-; in4[2] ; Input ; Info     ; Stuck at VCC     ;
-; in4[1] ; Input ; Info     ; Stuck at GND     ;
-; in4[0] ; Input ; Info     ; Stuck at VCC     ;
-+--------+-------+----------+------------------+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_two:isSETX" ;
++--------+-------+----------+-----------------------------------------+
+; Port   ; Type  ; Severity ; Details                                 ;
++--------+-------+----------+-----------------------------------------+
+; in2[4] ; Input ; Info     ; Stuck at VCC                            ;
+; in2[3] ; Input ; Info     ; Stuck at GND                            ;
+; in2[2] ; Input ; Info     ; Stuck at VCC                            ;
+; in2[1] ; Input ; Info     ; Stuck at GND                            ;
+; in2[0] ; Input ; Info     ; Stuck at VCC                            ;
+; in4[4] ; Input ; Info     ; Stuck at VCC                            ;
+; in4[3] ; Input ; Info     ; Stuck at GND                            ;
+; in4[2] ; Input ; Info     ; Stuck at VCC                            ;
+; in4[1] ; Input ; Info     ; Stuck at GND                            ;
+; in4[0] ; Input ; Info     ; Stuck at VCC                            ;
++--------+-------+----------+-----------------------------------------+
 
 
-+--------------------------------------------------+
-; Port Connectivity Checks: "check_two:isBLT_type" ;
-+-----------+-------+----------+-------------------+
-; Port      ; Type  ; Severity ; Details           ;
-+-----------+-------+----------+-------------------+
-; in2[2..1] ; Input ; Info     ; Stuck at VCC      ;
-; in2[4..3] ; Input ; Info     ; Stuck at GND      ;
-; in2[0]    ; Input ; Info     ; Stuck at GND      ;
-; in4[2..1] ; Input ; Info     ; Stuck at VCC      ;
-; in4[4..3] ; Input ; Info     ; Stuck at GND      ;
-; in4[0]    ; Input ; Info     ; Stuck at GND      ;
-+-----------+-------+----------+-------------------+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_two:isBLT_type" ;
++-----------+-------+----------+------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                  ;
++-----------+-------+----------+------------------------------------------+
+; in2[2..1] ; Input ; Info     ; Stuck at VCC                             ;
+; in2[4..3] ; Input ; Info     ; Stuck at GND                             ;
+; in2[0]    ; Input ; Info     ; Stuck at GND                             ;
+; in4[2..1] ; Input ; Info     ; Stuck at VCC                             ;
+; in4[4..3] ; Input ; Info     ; Stuck at GND                             ;
+; in4[0]    ; Input ; Info     ; Stuck at GND                             ;
++-----------+-------+----------+------------------------------------------+
 
 
-+--------------------------------------------------+
-; Port Connectivity Checks: "check_two:isBNE_type" ;
-+-----------+-------+----------+-------------------+
-; Port      ; Type  ; Severity ; Details           ;
-+-----------+-------+----------+-------------------+
-; in2[4..2] ; Input ; Info     ; Stuck at GND      ;
-; in2[1]    ; Input ; Info     ; Stuck at VCC      ;
-; in2[0]    ; Input ; Info     ; Stuck at GND      ;
-; in4[4..2] ; Input ; Info     ; Stuck at GND      ;
-; in4[1]    ; Input ; Info     ; Stuck at VCC      ;
-; in4[0]    ; Input ; Info     ; Stuck at GND      ;
-+-----------+-------+----------+-------------------+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_two:isBNE_type" ;
++-----------+-------+----------+------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                  ;
++-----------+-------+----------+------------------------------------------+
+; in2[4..2] ; Input ; Info     ; Stuck at GND                             ;
+; in2[1]    ; Input ; Info     ; Stuck at VCC                             ;
+; in2[0]    ; Input ; Info     ; Stuck at GND                             ;
+; in4[4..2] ; Input ; Info     ; Stuck at GND                             ;
+; in4[1]    ; Input ; Info     ; Stuck at VCC                             ;
+; in4[0]    ; Input ; Info     ; Stuck at GND                             ;
++-----------+-------+----------+------------------------------------------+
 
 
-+---------------------------------------------------+
-; Port Connectivity Checks: "check_two:isADD_Itype" ;
-+-----------+-------+----------+--------------------+
-; Port      ; Type  ; Severity ; Details            ;
-+-----------+-------+----------+--------------------+
-; in2[4..3] ; Input ; Info     ; Stuck at GND       ;
-; in2[2]    ; Input ; Info     ; Stuck at VCC       ;
-; in2[1]    ; Input ; Info     ; Stuck at GND       ;
-; in2[0]    ; Input ; Info     ; Stuck at VCC       ;
-; in4[4..3] ; Input ; Info     ; Stuck at GND       ;
-; in4[2]    ; Input ; Info     ; Stuck at VCC       ;
-; in4[1]    ; Input ; Info     ; Stuck at GND       ;
-; in4[0]    ; Input ; Info     ; Stuck at VCC       ;
-+-----------+-------+----------+--------------------+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_two:isADD_Itype" ;
++-----------+-------+----------+-------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                   ;
++-----------+-------+----------+-------------------------------------------+
+; in2[4..3] ; Input ; Info     ; Stuck at GND                              ;
+; in2[2]    ; Input ; Info     ; Stuck at VCC                              ;
+; in2[1]    ; Input ; Info     ; Stuck at GND                              ;
+; in2[0]    ; Input ; Info     ; Stuck at VCC                              ;
+; in4[4..3] ; Input ; Info     ; Stuck at GND                              ;
+; in4[2]    ; Input ; Info     ; Stuck at VCC                              ;
+; in4[1]    ; Input ; Info     ; Stuck at GND                              ;
+; in4[0]    ; Input ; Info     ; Stuck at VCC                              ;
++-----------+-------+----------+-------------------------------------------+
 
 
-+---------------------------------------------------+
-; Port Connectivity Checks: "check_two:isSUB_Rtype" ;
-+-----------+-------+----------+--------------------+
-; Port      ; Type  ; Severity ; Details            ;
-+-----------+-------+----------+--------------------+
-; in2       ; Input ; Info     ; Stuck at GND       ;
-; in4[4..1] ; Input ; Info     ; Stuck at GND       ;
-; in4[0]    ; Input ; Info     ; Stuck at VCC       ;
-+-----------+-------+----------+--------------------+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_two:isSUB_Rtype" ;
++-----------+-------+----------+-------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                   ;
++-----------+-------+----------+-------------------------------------------+
+; in2       ; Input ; Info     ; Stuck at GND                              ;
+; in4[4..1] ; Input ; Info     ; Stuck at GND                              ;
+; in4[0]    ; Input ; Info     ; Stuck at VCC                              ;
++-----------+-------+----------+-------------------------------------------+
 
 
-+---------------------------------------------------+
-; Port Connectivity Checks: "check_two:isADD_Rtype" ;
-+------+-------+----------+-------------------------+
-; Port ; Type  ; Severity ; Details                 ;
-+------+-------+----------+-------------------------+
-; in2  ; Input ; Info     ; Stuck at GND            ;
-; in4  ; Input ; Info     ; Stuck at GND            ;
-+------+-------+----------+-------------------------+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|check_two:isADD_Rtype" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                                   ;
+; in4  ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
 
 
-+---------------------------------------------+
-; Port Connectivity Checks: "is_ne:isNotBEX"  ;
-+-----------+-------+----------+--------------+
-; Port      ; Type  ; Severity ; Details      ;
-+-----------+-------+----------+--------------+
-; in2[2..1] ; Input ; Info     ; Stuck at VCC ;
-; in2[4]    ; Input ; Info     ; Stuck at VCC ;
-; in2[3]    ; Input ; Info     ; Stuck at GND ;
-; in2[0]    ; Input ; Info     ; Stuck at GND ;
-+-----------+-------+----------+--------------+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|is_ne:isNotBEX" ;
++-----------+-------+----------+------------------------------------+
+; Port      ; Type  ; Severity ; Details                            ;
++-----------+-------+----------+------------------------------------+
+; in2[2..1] ; Input ; Info     ; Stuck at VCC                       ;
+; in2[4]    ; Input ; Info     ; Stuck at VCC                       ;
+; in2[3]    ; Input ; Info     ; Stuck at GND                       ;
+; in2[0]    ; Input ; Info     ; Stuck at GND                       ;
++-----------+-------+----------+------------------------------------+
 
 
-+---------------------------------------------+
-; Port Connectivity Checks: "is_ne:isNotJR"   ;
-+-----------+-------+----------+--------------+
-; Port      ; Type  ; Severity ; Details      ;
-+-----------+-------+----------+--------------+
-; in2[4..3] ; Input ; Info     ; Stuck at GND ;
-; in2[1..0] ; Input ; Info     ; Stuck at GND ;
-; in2[2]    ; Input ; Info     ; Stuck at VCC ;
-+-----------+-------+----------+--------------+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|is_ne:isNotJR" ;
++-----------+-------+----------+-----------------------------------+
+; Port      ; Type  ; Severity ; Details                           ;
++-----------+-------+----------+-----------------------------------+
+; in2[4..3] ; Input ; Info     ; Stuck at GND                      ;
+; in2[1..0] ; Input ; Info     ; Stuck at GND                      ;
+; in2[2]    ; Input ; Info     ; Stuck at VCC                      ;
++-----------+-------+----------+-----------------------------------+
 
 
-+---------------------------------------------+
-; Port Connectivity Checks: "is_ne:isNotJAL"  ;
-+-----------+-------+----------+--------------+
-; Port      ; Type  ; Severity ; Details      ;
-+-----------+-------+----------+--------------+
-; in2[1..0] ; Input ; Info     ; Stuck at VCC ;
-; in2[4..2] ; Input ; Info     ; Stuck at GND ;
-+-----------+-------+----------+--------------+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|is_ne:isNotJAL" ;
++-----------+-------+----------+------------------------------------+
+; Port      ; Type  ; Severity ; Details                            ;
++-----------+-------+----------+------------------------------------+
+; in2[1..0] ; Input ; Info     ; Stuck at VCC                       ;
+; in2[4..2] ; Input ; Info     ; Stuck at GND                       ;
++-----------+-------+----------+------------------------------------+
 
 
-+---------------------------------------------+
-; Port Connectivity Checks: "is_ne:isNotBLT"  ;
-+-----------+-------+----------+--------------+
-; Port      ; Type  ; Severity ; Details      ;
-+-----------+-------+----------+--------------+
-; in2[2..1] ; Input ; Info     ; Stuck at VCC ;
-; in2[4..3] ; Input ; Info     ; Stuck at GND ;
-; in2[0]    ; Input ; Info     ; Stuck at GND ;
-+-----------+-------+----------+--------------+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|is_ne:isNotBLT" ;
++-----------+-------+----------+------------------------------------+
+; Port      ; Type  ; Severity ; Details                            ;
++-----------+-------+----------+------------------------------------+
+; in2[2..1] ; Input ; Info     ; Stuck at VCC                       ;
+; in2[4..3] ; Input ; Info     ; Stuck at GND                       ;
+; in2[0]    ; Input ; Info     ; Stuck at GND                       ;
++-----------+-------+----------+------------------------------------+
 
 
-+---------------------------------------------+
-; Port Connectivity Checks: "is_ne:isNotBNE"  ;
-+-----------+-------+----------+--------------+
-; Port      ; Type  ; Severity ; Details      ;
-+-----------+-------+----------+--------------+
-; in2[4..2] ; Input ; Info     ; Stuck at GND ;
-; in2[1]    ; Input ; Info     ; Stuck at VCC ;
-; in2[0]    ; Input ; Info     ; Stuck at GND ;
-+-----------+-------+----------+--------------+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|is_ne:isNotBNE" ;
++-----------+-------+----------+------------------------------------+
+; Port      ; Type  ; Severity ; Details                            ;
++-----------+-------+----------+------------------------------------+
+; in2[4..2] ; Input ; Info     ; Stuck at GND                       ;
+; in2[1]    ; Input ; Info     ; Stuck at VCC                       ;
+; in2[0]    ; Input ; Info     ; Stuck at GND                       ;
++-----------+-------+----------+------------------------------------+
 
 
-+----------------------------------------------+
-; Port Connectivity Checks: "is_ne:isNotJType" ;
-+-----------+-------+----------+---------------+
-; Port      ; Type  ; Severity ; Details       ;
-+-----------+-------+----------+---------------+
-; in2[4..1] ; Input ; Info     ; Stuck at GND  ;
-; in2[0]    ; Input ; Info     ; Stuck at VCC  ;
-+-----------+-------+----------+---------------+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|is_ne:isNotJType" ;
++-----------+-------+----------+--------------------------------------+
+; Port      ; Type  ; Severity ; Details                              ;
++-----------+-------+----------+--------------------------------------+
+; in2[4..1] ; Input ; Info     ; Stuck at GND                         ;
+; in2[0]    ; Input ; Info     ; Stuck at VCC                         ;
++-----------+-------+----------+--------------------------------------+
 
 
-+----------------------------------------------+
-; Port Connectivity Checks: "is_ne:isNotStore" ;
-+-----------+-------+----------+---------------+
-; Port      ; Type  ; Severity ; Details       ;
-+-----------+-------+----------+---------------+
-; in2[2..0] ; Input ; Info     ; Stuck at VCC  ;
-; in2[4..3] ; Input ; Info     ; Stuck at GND  ;
-+-----------+-------+----------+---------------+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|is_ne:isNotStore" ;
++-----------+-------+----------+--------------------------------------+
+; Port      ; Type  ; Severity ; Details                              ;
++-----------+-------+----------+--------------------------------------+
+; in2[2..0] ; Input ; Info     ; Stuck at VCC                         ;
+; in2[4..3] ; Input ; Info     ; Stuck at GND                         ;
++-----------+-------+----------+--------------------------------------+
 
 
-+---------------------------------------------+
-; Port Connectivity Checks: "is_ne:isNotLoad" ;
-+-----------+-------+----------+--------------+
-; Port      ; Type  ; Severity ; Details      ;
-+-----------+-------+----------+--------------+
-; in2[2..0] ; Input ; Info     ; Stuck at GND ;
-; in2[4]    ; Input ; Info     ; Stuck at GND ;
-; in2[3]    ; Input ; Info     ; Stuck at VCC ;
-+-----------+-------+----------+--------------+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|is_ne:isNotLoad" ;
++-----------+-------+----------+-------------------------------------+
+; Port      ; Type  ; Severity ; Details                             ;
++-----------+-------+----------+-------------------------------------+
+; in2[2..0] ; Input ; Info     ; Stuck at GND                        ;
+; in2[4]    ; Input ; Info     ; Stuck at GND                        ;
+; in2[3]    ; Input ; Info     ; Stuck at VCC                        ;
++-----------+-------+----------+-------------------------------------+
 
 
-+----------------------------------------------+
-; Port Connectivity Checks: "is_ne:isNotRType" ;
-+------+-------+----------+--------------------+
-; Port ; Type  ; Severity ; Details            ;
-+------+-------+----------+--------------------+
-; in2  ; Input ; Info     ; Stuck at GND       ;
-+------+-------+----------+--------------------+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|is_ne:isNotRType" ;
++------+-------+----------+-------------------------------------------+
+; Port ; Type  ; Severity ; Details                                   ;
++------+-------+----------+-------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                              ;
++------+-------+----------+-------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 235                         ;
-; cycloneiii_ff         ; 24                          ;
-;     CLR               ; 12                          ;
-;     CLR SLD           ; 12                          ;
-; cycloneiii_lcell_comb ; 755                         ;
-;     arith             ; 95                          ;
-;         3 data inputs ; 95                          ;
-;     normal            ; 660                         ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 21                          ;
-;         3 data inputs ; 266                         ;
-;         4 data inputs ; 372                         ;
-;                       ;                             ;
-; Max LUT depth         ; 21.10                       ;
-; Average LUT depth     ; 12.78                       ;
-+-----------------------+-----------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regfile:my_regfile|decoder5_32:d1"                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; o0   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:03     ;
-+----------------+--------------+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "regfile:my_regfile|reg_32:rew" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; en   ; Input ; Info     ; Stuck at GND                    ;
+; clr  ; Input ; Info     ; Stuck at VCC                    ;
++------+-------+----------+---------------------------------+
 
 
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Nov 24 11:13:19 2022
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off skeleton -c skeleton
+    Info: Processing started: Thu Nov 24 13:05:15 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off skeleton -c skeleton --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file reg_32.v
@@ -1038,44 +1044,86 @@ Info (12021): Found 1 design units, including 1 entities, in source file is_ne_3
     Info (12023): Found entity 1: is_ne_32bit File: C:/Users/ka266/Documents/Project4/is_ne_32bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sign_extension_27bit.v
     Info (12023): Found entity 1: sign_extension_27bit File: C:/Users/ka266/Documents/Project4/sign_extension_27bit.v Line: 1
-Info (12127): Elaborating entity "processor" for the top level hierarchy
-Info (12128): Elaborating entity "is_ne" for hierarchy "is_ne:isNotRType" File: C:/Users/ka266/Documents/Project4/processor.v Line: 100
-Info (12128): Elaborating entity "check_two" for hierarchy "check_two:isADD_Rtype" File: C:/Users/ka266/Documents/Project4/processor.v Line: 110
-Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:pc" File: C:/Users/ka266/Documents/Project4/processor.v Line: 128
-Info (12128): Elaborating entity "dffe_ref" for hierarchy "program_counter:pc|dffe_ref:intialize[0].df" File: C:/Users/ka266/Documents/Project4/program_counter.v Line: 11
-Info (12128): Elaborating entity "pc_adder" for hierarchy "pc_adder:padd" File: C:/Users/ka266/Documents/Project4/processor.v Line: 129
-Info (12128): Elaborating entity "fulladder_12bits" for hierarchy "pc_adder:padd|fulladder_12bits:f1" File: C:/Users/ka266/Documents/Project4/pc_adder.v Line: 18
-Info (12128): Elaborating entity "fulladder" for hierarchy "pc_adder:padd|fulladder_12bits:f1|fulladder:fa0" File: C:/Users/ka266/Documents/Project4/fulladder_12bits.v Line: 8
-Info (12128): Elaborating entity "is_ne_32bit" for hierarchy "pc_adder:padd|is_ne_32bit:checkrstatus0" File: C:/Users/ka266/Documents/Project4/pc_adder.v Line: 22
-Info (12128): Elaborating entity "mux_5bit" for hierarchy "mux_5bit:rt_mux1" File: C:/Users/ka266/Documents/Project4/processor.v Line: 134
-Info (12128): Elaborating entity "initalize" for hierarchy "initalize:rs" File: C:/Users/ka266/Documents/Project4/processor.v Line: 137
-Info (12128): Elaborating entity "sign_extension" for hierarchy "sign_extension:si" File: C:/Users/ka266/Documents/Project4/processor.v Line: 149
-Info (12128): Elaborating entity "alu" for hierarchy "alu:a1" File: C:/Users/ka266/Documents/Project4/processor.v Line: 156
+Info (12127): Elaborating entity "skeleton" for the top level hierarchy
+Info (12128): Elaborating entity "extend_clock" for hierarchy "extend_clock:processor_clk" File: C:/Users/ka266/Documents/Project4/skeleton.v Line: 25
+Info (12128): Elaborating entity "invert_clock" for hierarchy "invert_clock:dmem_clk" File: C:/Users/ka266/Documents/Project4/skeleton.v Line: 27
+Warning (10235): Verilog HDL Always Construct warning at invert_clock.v(7): variable "rst" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ka266/Documents/Project4/invert_clock.v Line: 7
+Info (12128): Elaborating entity "imem" for hierarchy "imem:my_imem" File: C:/Users/ka266/Documents/Project4/skeleton.v Line: 39
+Info (12128): Elaborating entity "altsyncram" for hierarchy "imem:my_imem|altsyncram:altsyncram_component" File: C:/Users/ka266/Documents/Project4/imem.v Line: 82
+Info (12130): Elaborated megafunction instantiation "imem:my_imem|altsyncram:altsyncram_component" File: C:/Users/ka266/Documents/Project4/imem.v Line: 82
+Info (12133): Instantiated megafunction "imem:my_imem|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/ka266/Documents/Project4/imem.v Line: 82
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "./mif_outputs/basic_test.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "4096"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "widthad_a" = "12"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_q3b1.tdf
+    Info (12023): Found entity 1: altsyncram_q3b1 File: C:/Users/ka266/Documents/Project4/db/altsyncram_q3b1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_q3b1" for hierarchy "imem:my_imem|altsyncram:altsyncram_component|altsyncram_q3b1:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "dmem" for hierarchy "dmem:my_dmem" File: C:/Users/ka266/Documents/Project4/skeleton.v Line: 54
+Info (12128): Elaborating entity "altsyncram" for hierarchy "dmem:my_dmem|altsyncram:altsyncram_component" File: C:/Users/ka266/Documents/Project4/dmem.v Line: 86
+Info (12130): Elaborated megafunction instantiation "dmem:my_dmem|altsyncram:altsyncram_component" File: C:/Users/ka266/Documents/Project4/dmem.v Line: 86
+Info (12133): Instantiated megafunction "dmem:my_dmem|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/ka266/Documents/Project4/dmem.v Line: 86
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "4096"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "12"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0jf1.tdf
+    Info (12023): Found entity 1: altsyncram_0jf1 File: C:/Users/ka266/Documents/Project4/db/altsyncram_0jf1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_0jf1" for hierarchy "dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "regfile" for hierarchy "regfile:my_regfile" File: C:/Users/ka266/Documents/Project4/skeleton.v Line: 73
+Info (12128): Elaborating entity "reg_32" for hierarchy "regfile:my_regfile|reg_32:rew" File: C:/Users/ka266/Documents/Project4/regfile.v Line: 22
+Info (12128): Elaborating entity "dffe_ref" for hierarchy "regfile:my_regfile|reg_32:rew|dffe_ref:intialize[0].df" File: C:/Users/ka266/Documents/Project4/reg_32.v Line: 17
+Info (12128): Elaborating entity "decoder5_32" for hierarchy "regfile:my_regfile|decoder5_32:d1" File: C:/Users/ka266/Documents/Project4/regfile.v Line: 27
+Info (12128): Elaborating entity "processor" for hierarchy "processor:my_processor" File: C:/Users/ka266/Documents/Project4/skeleton.v Line: 99
+Info (12128): Elaborating entity "is_ne" for hierarchy "processor:my_processor|is_ne:isNotRType" File: C:/Users/ka266/Documents/Project4/processor.v Line: 100
+Info (12128): Elaborating entity "check_two" for hierarchy "processor:my_processor|check_two:isADD_Rtype" File: C:/Users/ka266/Documents/Project4/processor.v Line: 110
+Info (12128): Elaborating entity "program_counter" for hierarchy "processor:my_processor|program_counter:pc" File: C:/Users/ka266/Documents/Project4/processor.v Line: 128
+Info (12128): Elaborating entity "pc_adder" for hierarchy "processor:my_processor|pc_adder:padd" File: C:/Users/ka266/Documents/Project4/processor.v Line: 129
+Info (12128): Elaborating entity "fulladder_12bits" for hierarchy "processor:my_processor|pc_adder:padd|fulladder_12bits:f1" File: C:/Users/ka266/Documents/Project4/pc_adder.v Line: 18
+Info (12128): Elaborating entity "fulladder" for hierarchy "processor:my_processor|pc_adder:padd|fulladder_12bits:f1|fulladder:fa0" File: C:/Users/ka266/Documents/Project4/fulladder_12bits.v Line: 8
+Info (12128): Elaborating entity "is_ne_32bit" for hierarchy "processor:my_processor|pc_adder:padd|is_ne_32bit:checkrstatus0" File: C:/Users/ka266/Documents/Project4/pc_adder.v Line: 22
+Info (12128): Elaborating entity "mux_5bit" for hierarchy "processor:my_processor|mux_5bit:rt_mux1" File: C:/Users/ka266/Documents/Project4/processor.v Line: 134
+Info (12128): Elaborating entity "initalize" for hierarchy "processor:my_processor|initalize:rs" File: C:/Users/ka266/Documents/Project4/processor.v Line: 137
+Info (12128): Elaborating entity "sign_extension" for hierarchy "processor:my_processor|sign_extension:si" File: C:/Users/ka266/Documents/Project4/processor.v Line: 149
+Info (12128): Elaborating entity "alu" for hierarchy "processor:my_processor|alu:a1" File: C:/Users/ka266/Documents/Project4/processor.v Line: 156
 Warning (10270): Verilog HDL Case Statement warning at alu.v(25): incomplete case statement has no default case item File: C:/Users/ka266/Documents/Project4/alu.v Line: 25
-Info (12128): Elaborating entity "check_overflow" for hierarchy "check_overflow:checkingoverflow" File: C:/Users/ka266/Documents/Project4/processor.v Line: 157
-Info (12128): Elaborating entity "mux_32bit" for hierarchy "check_overflow:checkingoverflow|mux_32bit:m1" File: C:/Users/ka266/Documents/Project4/check_overflow.v Line: 18
-Info (12128): Elaborating entity "sign_extension_27bit" for hierarchy "check_overflow:checkingoverflow|sign_extension_27bit:s" File: C:/Users/ka266/Documents/Project4/check_overflow.v Line: 22
-Info (12128): Elaborating entity "fulladder_PC" for hierarchy "check_overflow:checkingoverflow|fulladder_PC:pc_plusone" File: C:/Users/ka266/Documents/Project4/check_overflow.v Line: 28
-Info (12128): Elaborating entity "initalize_12" for hierarchy "initalize_12:dm_address" File: C:/Users/ka266/Documents/Project4/processor.v Line: 160
-Info (12128): Elaborating entity "initalize_32" for hierarchy "initalize_32:dmaddress_data" File: C:/Users/ka266/Documents/Project4/processor.v Line: 164
-Info (286030): Timing-Driven Synthesis is running
+Info (12128): Elaborating entity "check_overflow" for hierarchy "processor:my_processor|check_overflow:checkingoverflow" File: C:/Users/ka266/Documents/Project4/processor.v Line: 157
+Info (12128): Elaborating entity "mux_32bit" for hierarchy "processor:my_processor|check_overflow:checkingoverflow|mux_32bit:m1" File: C:/Users/ka266/Documents/Project4/check_overflow.v Line: 18
+Info (12128): Elaborating entity "sign_extension_27bit" for hierarchy "processor:my_processor|check_overflow:checkingoverflow|sign_extension_27bit:s" File: C:/Users/ka266/Documents/Project4/check_overflow.v Line: 22
+Info (12128): Elaborating entity "fulladder_PC" for hierarchy "processor:my_processor|check_overflow:checkingoverflow|fulladder_PC:pc_plusone" File: C:/Users/ka266/Documents/Project4/check_overflow.v Line: 28
+Info (12128): Elaborating entity "initalize_12" for hierarchy "processor:my_processor|initalize_12:dm_address" File: C:/Users/ka266/Documents/Project4/processor.v Line: 160
+Info (12128): Elaborating entity "initalize_32" for hierarchy "processor:my_processor|initalize_32:dmaddress_data" File: C:/Users/ka266/Documents/Project4/processor.v Line: 164
 Info (144001): Generated suppressed messages file C:/Users/ka266/Documents/Project4/output_files/skeleton.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1001 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 130 input pins
-    Info (21059): Implemented 105 output pins
-    Info (21061): Implemented 766 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4741 megabytes
-    Info: Processing ended: Thu Nov 24 11:13:37 2022
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:25
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4746 megabytes
+    Info: Processing ended: Thu Nov 24 13:05:29 2022
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:20
 
 
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
 The suppressed messages can be found in C:/Users/ka266/Documents/Project4/output_files/skeleton.map.smsg.
 
 

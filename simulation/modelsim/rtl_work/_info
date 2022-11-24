@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/ka266/Documents/Project4/simulation/modelsim
 valu
-Z1 !s110 1669306481
+Z1 !s110 1669313757
 !i10b 1
 !s100 CM2POFHhm`MRQRPIcjMQG0
 IQo;a6mOe74Mff=JXdQD8a2
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1669306481.000000
+Z4 !s108 1669313757.000000
 !s107 C:/Users/ka266/Documents/Project4/alu.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/alu.v|
 !i113 1
@@ -31,7 +31,7 @@ Z5 o-vlog01compat -work work
 Z6 !s92 -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4
 Z7 tCvgOpt 0
 vcheck_overflow
-Z8 !s110 1669306482
+Z8 !s110 1669313759
 !i10b 1
 !s100 Kl?HjA=UV8o>EaTlV6O7;2
 I4TNW[Q1VO4aTL74KC=Igi1
@@ -45,7 +45,7 @@ R3
 r1
 !s85 0
 31
-Z9 !s108 1669306482.000000
+Z9 !s108 1669313759.000000
 !s107 C:/Users/ka266/Documents/Project4/check_overflow.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/check_overflow.v|
 !i113 1
@@ -74,6 +74,28 @@ R9
 R5
 R6
 R7
+vdecoder5_32
+R1
+!i10b 1
+!s100 4W3`G8oe:ChSoe`VN?k6D3
+INOCjBI>lz>8dVWI1KUH<O1
+R2
+R0
+w1665605775
+8C:/Users/ka266/Documents/Project4/decoder5_32.v
+FC:/Users/ka266/Documents/Project4/decoder5_32.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/ka266/Documents/Project4/decoder5_32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/decoder5_32.v|
+!i113 1
+R5
+R6
+R7
 vdffe_ref
 R1
 !i10b 1
@@ -92,6 +114,50 @@ r1
 R4
 !s107 C:/Users/ka266/Documents/Project4/dffe.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/dffe.v|
+!i113 1
+R5
+R6
+R7
+vdmem
+Z10 !s110 1669313758
+!i10b 1
+!s100 Ig2U5z`UQ`aKkLjgP8hjc1
+IRWbo9kY`<XFTJQTYihTKQ1
+R2
+R0
+w1667174681
+8C:/Users/ka266/Documents/Project4/dmem.v
+FC:/Users/ka266/Documents/Project4/dmem.v
+Z11 L0 40
+R3
+r1
+!s85 0
+31
+Z12 !s108 1669313758.000000
+!s107 C:/Users/ka266/Documents/Project4/dmem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/dmem.v|
+!i113 1
+R5
+R6
+R7
+vextend_clock
+R10
+!i10b 1
+!s100 CF`glV3M<dgA=Bkk0G?XQ0
+IJGzzjU2j]FH;=YFZ9>]We0
+R2
+R0
+w1667491258
+8C:/Users/ka266/Documents/Project4/extend_clock.v
+FC:/Users/ka266/Documents/Project4/extend_clock.v
+L0 1
+R3
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/ka266/Documents/Project4/extend_clock.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/extend_clock.v|
 !i113 1
 R5
 R6
@@ -141,7 +207,7 @@ R5
 R6
 R7
 vfulladder_PC
-Z10 !s110 1669306483
+R8
 !i10b 1
 !s100 1EWOo[7X1R8]b`bXb]alR0
 ITFF`zJX7Fm=?Z8d_mDfj_3
@@ -155,7 +221,7 @@ R3
 r1
 !s85 0
 31
-Z11 !s108 1669306483.000000
+R9
 !s107 C:/Users/ka266/Documents/Project4/fulladder_PC.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/fulladder_PC.v|
 !i113 1
@@ -163,8 +229,30 @@ R5
 R6
 R7
 nfulladder_@p@c
+vimem
+R1
+!i10b 1
+!s100 eUM5=<=R`9QgHJ=YcTAHO0
+IQB9GN[YfTlnmbG<0T>33W1
+R2
+R0
+w1667173733
+8C:/Users/ka266/Documents/Project4/imem.v
+FC:/Users/ka266/Documents/Project4/imem.v
+R11
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/ka266/Documents/Project4/imem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/imem.v|
+!i113 1
+R5
+R6
+R7
 vinitalize
-R8
+R10
 !i10b 1
 !s100 jKibOH7OI@Ff59Y>2?X4e3
 I588_Va7GGU7GSeHe[>X8N3
@@ -178,7 +266,7 @@ R3
 r1
 !s85 0
 31
-R9
+R12
 !s107 C:/Users/ka266/Documents/Project4/initalize.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/initalize.v|
 !i113 1
@@ -200,7 +288,7 @@ R3
 r1
 !s85 0
 31
-R9
+R12
 !s107 C:/Users/ka266/Documents/Project4/initalize_12.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/initalize_12.v|
 !i113 1
@@ -229,6 +317,28 @@ R9
 R5
 R6
 R7
+vinvert_clock
+R10
+!i10b 1
+!s100 OVF[QZRjJ;Y20ecPDCIgW2
+I^gNaU]>G7mUf_[MO^U>fR3
+R2
+R0
+w1667962031
+8C:/Users/ka266/Documents/Project4/invert_clock.v
+FC:/Users/ka266/Documents/Project4/invert_clock.v
+L0 1
+R3
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/ka266/Documents/Project4/invert_clock.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/invert_clock.v|
+!i113 1
+R5
+R6
+R7
 vis_ne
 R8
 !i10b 1
@@ -252,7 +362,7 @@ R5
 R6
 R7
 vis_ne_32bit
-R10
+R8
 !i10b 1
 !s100 BbVF5HI3P=<jzW6gRzJM[0
 I:^3S3E7UinL@6G2C?ET^Q3
@@ -266,7 +376,7 @@ R3
 r1
 !s85 0
 31
-R11
+R9
 !s107 C:/Users/ka266/Documents/Project4/is_ne_32bit.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/is_ne_32bit.v|
 !i113 1
@@ -274,7 +384,7 @@ R5
 R6
 R7
 vmux_32bit
-R1
+R10
 !i10b 1
 !s100 Fe5AOZ_FFb7M[eHnOLB[E2
 IJ>8:Dd=O:C@iQa29c^<WD2
@@ -288,7 +398,7 @@ R3
 r1
 !s85 0
 31
-R4
+R12
 !s107 C:/Users/ka266/Documents/Project4/mux_32bit.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/mux_32bit.v|
 !i113 1
@@ -318,7 +428,7 @@ R5
 R6
 R7
 vpc_adder
-R1
+R10
 !i10b 1
 !s100 IeABMVcdWWbYRT^cAoQd40
 Ic4FS1UBPRmUbIm8n9k<;^2
@@ -332,7 +442,7 @@ R3
 r1
 !s85 0
 31
-R4
+R12
 !s107 C:/Users/ka266/Documents/Project4/pc_adder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/pc_adder.v|
 !i113 1
@@ -340,7 +450,7 @@ R5
 R6
 R7
 vprocessor
-R1
+R10
 !i10b 1
 !s100 ^k[l73^_WQL?3k19TC80c2
 ILbzI60G5]=;G?Oznd<cPK0
@@ -362,13 +472,13 @@ R5
 R6
 R7
 vprocessor_tb
-R10
+!s110 1669313760
 !i10b 1
-!s100 =8PXhMg5IeGR=hE<2HV0j0
-ICPLD@TdZVEC1?7T>La6]H1
+!s100 ln=Nmc?B?mczV^60>2mNb3
+I1j>m0AodaEU=i8Eki0m8f0
 R2
 R0
-w1669305621
+w1669313745
 8C:/Users/ka266/Documents/Project4/processor_tb.v
 FC:/Users/ka266/Documents/Project4/processor_tb.v
 L0 3
@@ -376,7 +486,7 @@ R3
 r1
 !s85 0
 31
-R11
+!s108 1669313760.000000
 !s107 C:/Users/ka266/Documents/Project4/processor_tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/processor_tb.v|
 !i113 1
@@ -405,8 +515,52 @@ R4
 R5
 R6
 R7
-vsign_extension
+vreg_32
 R1
+!i10b 1
+!s100 KLKEDeo8nGKeDJWA=UCWC1
+I7Mk9`1`LT:j_??eV`ljd]1
+R2
+R0
+w1665588704
+8C:/Users/ka266/Documents/Project4/reg_32.v
+FC:/Users/ka266/Documents/Project4/reg_32.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/ka266/Documents/Project4/reg_32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/reg_32.v|
+!i113 1
+R5
+R6
+R7
+vregfile
+R1
+!i10b 1
+!s100 EKFMe6<AJjX]6I6fM<9H01
+IgT58QnEHSQbYZch27a1mZ3
+R2
+R0
+w1665685234
+8C:/Users/ka266/Documents/Project4/regfile.v
+FC:/Users/ka266/Documents/Project4/regfile.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/ka266/Documents/Project4/regfile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/regfile.v|
+!i113 1
+R5
+R6
+R7
+vsign_extension
+R10
 !i10b 1
 !s100 =i1OOCGa`C]fS2kbN9hQ11
 Ize1Od4b@Wz4EYl>^JigmP2
@@ -420,7 +574,7 @@ R3
 r1
 !s85 0
 31
-R4
+R12
 !s107 C:/Users/ka266/Documents/Project4/sign_extension.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/sign_extension.v|
 !i113 1
@@ -428,7 +582,7 @@ R5
 R6
 R7
 vsign_extension_27bit
-R10
+R8
 !i10b 1
 !s100 0E`<HIV`F=n:eVEbB[_5e2
 Ije80XH^PeCEN[bW^7G;ig2
@@ -442,9 +596,31 @@ R3
 r1
 !s85 0
 31
-R11
+R9
 !s107 C:/Users/ka266/Documents/Project4/sign_extension_27bit.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/sign_extension_27bit.v|
+!i113 1
+R5
+R6
+R7
+vskeleton
+R1
+!i10b 1
+!s100 PjPdMm<AWbIS3Uzn26=Y13
+IM4:_lRoaJfBC38zmT9F3P2
+R2
+R0
+w1669308957
+8C:/Users/ka266/Documents/Project4/skeleton.v
+FC:/Users/ka266/Documents/Project4/skeleton.v
+L0 12
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/ka266/Documents/Project4/skeleton.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/skeleton.v|
 !i113 1
 R5
 R6

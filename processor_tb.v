@@ -15,6 +15,7 @@ module processor_tb();
     reg  [31:0] data_readRegA, data_readRegB;
 	
 
+	/**
 	 integer counter =0;
 	 integer previous_counter =0 ;
  
@@ -849,8 +850,8 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 	// Clock generator
 	always
 		#10     clock = ~clock;    // toggle
-
-/**		
+**/
+		
 	 reg  main_clock, main_ctrl_reset;
     wire imem_clock, dmem_clock, processor_clock, regfile_clock;
     wire [31:0] main_q_imem;
@@ -1203,13 +1204,800 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
+		  @(posedge imem_clock);
+				$display("*Checking addi $1, $0, 162");
+				if(main_q_imem != 32'b00101000010000000000000010100010) begin
+					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
+				end
+				if(main_ctrl_writeEnable != 1'b1) begin
+					$display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end
+				if(main_ctrl_writeReg != 5'd1) begin
+					$display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd1);
+				end
+				if(main_data_writeReg != 32'd162) begin
+					$display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd162);
+				end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock);
+				$display("*Checking addi $2, $0, 3");
+				if(main_q_imem != 32'b00101000100000000000000000000011) begin
+					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
+				end
+				if(main_ctrl_writeEnable != 1'b1) begin
+					$display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end
+				if(main_ctrl_writeReg != 5'd2) begin
+					$display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd2);
+				end
+				if(main_data_writeReg != 32'd3) begin
+					$display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd3);
+				end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  
+		  begin
 		  @(posedge imem_clock); 
-			  $display("*Checking end");
-			  if(main_q_imem != 32'b00000000000000000000000000000000) begin
-				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00000000000000000000000000000000);
+			  $display("*Checking sw $2, 1($1)");
+			  if(main_q_imem != 32'b00111000100000100000000000000001) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111000100000100000000000000001);
+			  end
+			  if(main_ctrl_writeEnable != 1'b0) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+			  end
+				if(main_wren != 1'b1) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end 
+				if(main_address_dmem != 12'd163) begin
+			    $display("**Error on main_address_dmem read %h but expected %h.", main_address_dmem,  12'd163);
+			  end
+			  if(main_data != 32'd3) begin
+			    $display("**Error on main_data read %h but expected %h.", main_data,  32'd3);
 			  end
 		  end
 		  
+		  begin
+		  @(posedge imem_clock);
+				$display("*Checking addi $2, $0, 6");
+				if(main_q_imem != 32'b00101000100000000000000000000110) begin
+					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000100000000000000000000110);
+				end
+				if(main_ctrl_writeEnable != 1'b1) begin
+					$display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end
+				if(main_ctrl_writeReg != 5'd2) begin
+					$display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd2);
+				end
+				if(main_data_writeReg != 32'd6) begin
+					$display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd6);
+				end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking sw $2, 2($1)");
+			  if(main_q_imem != 32'b00111000100000100000000000000010) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
+			  end
+			  if(main_ctrl_writeEnable != 1'b0) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+			  end
+				if(main_wren != 1'b1) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end 
+				if(main_address_dmem != 12'd164) begin
+			    $display("**Error on main_address_dmem read %h but expected %h.", main_address_dmem,  12'd164);
+			  end
+			  if(main_data != 32'd6) begin
+			    $display("**Error on main_data read %h but expected %h.", main_data,  32'd6);
+			  end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock);
+				$display("*Checking addi $2, $0, 9");
+				if(main_q_imem != 32'b00101000100000000000000000001001) begin
+					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
+				end
+				if(main_ctrl_writeEnable != 1'b1) begin
+					$display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end
+				if(main_ctrl_writeReg != 5'd2) begin
+					$display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd2);
+				end
+				if(main_data_writeReg != 32'd9) begin
+					$display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd9);
+				end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking sw $2, 2($1)");
+			  if(main_q_imem != 32'b00111000100000100000000000000011) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
+			  end
+			  if(main_ctrl_writeEnable != 1'b0) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+			  end
+				if(main_wren != 1'b1) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end 
+				if(main_address_dmem != 12'd165) begin
+			    $display("**Error on main_address_dmem read %h but expected %h.", main_address_dmem,  12'd165);
+			  end
+			  if(main_data != 32'd9) begin
+			    $display("**Error on main_data read %h but expected %h.", main_data,  32'd9);
+			  end
+		  end
+
+		  begin
+		  @(posedge imem_clock);
+				$display("*Checking addi $2, $0, 12");
+				if(main_q_imem != 32'b00101000100000000000000000001100) begin
+					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
+				end
+				if(main_ctrl_writeEnable != 1'b1) begin
+					$display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end
+				if(main_ctrl_writeReg != 5'd2) begin
+					$display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd2);
+				end
+				if(main_data_writeReg != 32'd12) begin
+					$display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd12);
+				end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking sw $2, 4($1)");
+			  if(main_q_imem != 32'b00111000100000100000000000000100) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
+			  end
+			  if(main_ctrl_writeEnable != 1'b0) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+			  end
+				if(main_wren != 1'b1) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end 
+				if(main_address_dmem != 12'd166) begin
+			    $display("**Error on main_address_dmem read %h but expected %h.", main_address_dmem,  12'd166);
+			  end
+			  if(main_data != 32'd12) begin
+			    $display("**Error on main_data read %h but expected %h.", main_data,  32'd12);
+			  end
+		  end		  
+
+		  begin
+		  @(posedge imem_clock);
+				$display("*Checking addi $2, $0, 15");
+				if(main_q_imem != 32'b00101000100000000000000000001111) begin
+					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
+				end
+				if(main_ctrl_writeEnable != 1'b1) begin
+					$display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end
+				if(main_ctrl_writeReg != 5'd2) begin
+					$display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd2);
+				end
+				if(main_data_writeReg != 32'd15) begin
+					$display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd15);
+				end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking sw $2, 6($1)");
+			  if(main_q_imem != 32'b00111000100000100000000000000101) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
+			  end
+			  if(main_ctrl_writeEnable != 1'b0) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+			  end
+				if(main_wren != 1'b1) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end 
+				if(main_address_dmem != 12'd167) begin
+			    $display("**Error on main_address_dmem read %h but expected %h.", main_address_dmem,  12'd167);
+			  end
+			  if(main_data != 32'd15) begin
+			    $display("**Error on main_data read %h but expected %h.", main_data,  32'd15);
+			  end
+		  end		
+
+		  begin
+		  @(posedge imem_clock);
+				$display("*Checking addi $2, $0, 18");
+				if(main_q_imem != 32'b00101000100000000000000000010010) begin
+					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
+				end
+				if(main_ctrl_writeEnable != 1'b1) begin
+					$display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end
+				if(main_ctrl_writeReg != 5'd2) begin
+					$display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd2);
+				end
+				if(main_data_writeReg != 32'd18) begin
+					$display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd18);
+				end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking sw $2, 6($1)");
+			  if(main_q_imem != 32'b00111000100000100000000000000110) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
+			  end
+			  if(main_ctrl_writeEnable != 1'b0) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+			  end
+				if(main_wren != 1'b1) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end 
+				if(main_address_dmem != 12'd168) begin
+			    $display("**Error on main_address_dmem read %h but expected %h.", main_address_dmem,  12'd168);
+			  end
+			  if(main_data != 32'd18) begin
+			    $display("**Error on main_data read %h but expected %h.", main_data,  32'd18);
+			  end
+		  end	
+		  
+		  begin
+		  @(posedge imem_clock);
+				$display("*Checking addi $2, $0, 21");
+				if(main_q_imem != 32'b00101000100000000000000000010101) begin
+					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
+				end
+				if(main_ctrl_writeEnable != 1'b1) begin
+					$display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end
+				if(main_ctrl_writeReg != 5'd2) begin
+					$display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd2);
+				end
+				if(main_data_writeReg != 32'd21) begin
+					$display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd21);
+				end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking sw $2, 7($1)");
+			  if(main_q_imem != 32'b00111000100000100000000000000111) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
+			  end
+			  if(main_ctrl_writeEnable != 1'b0) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+			  end
+				if(main_wren != 1'b1) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end 
+				if(main_address_dmem != 12'd169) begin
+			    $display("**Error on main_address_dmem read %h but expected %h.", main_address_dmem,  12'd169);
+			  end
+			  if(main_data != 32'd21) begin
+			    $display("**Error on main_data read %h but expected %h.", main_data,  32'd21);
+			  end
+		  end	
+
+		  begin
+		  @(posedge imem_clock);
+				$display("*Checking addi $2, $0, 24");
+				if(main_q_imem != 32'b00101000100000000000000000011000) begin
+					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
+				end
+				if(main_ctrl_writeEnable != 1'b1) begin
+					$display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end
+				if(main_ctrl_writeReg != 5'd2) begin
+					$display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd2);
+				end
+				if(main_data_writeReg != 32'd24) begin
+					$display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd24);
+				end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking sw $2, 7($1)");
+			  if(main_q_imem != 32'b00111000100000100000000000001000) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
+			  end
+			  if(main_ctrl_writeEnable != 1'b0) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+			  end
+				if(main_wren != 1'b1) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end 
+				if(main_address_dmem != 12'd170) begin
+			    $display("**Error on main_address_dmem read %h but expected %h.", main_address_dmem,  12'd170);
+			  end
+			  if(main_data != 32'd24) begin
+			    $display("**Error on main_data read %h but expected %h.", main_data,  32'd24);
+			  end
+		  end	
+
+		  begin
+		  @(posedge imem_clock);
+				$display("*Checking addi $2, $0, 27");
+				if(main_q_imem != 32'b00101000100000000000000000011011) begin
+					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
+				end
+				if(main_ctrl_writeEnable != 1'b1) begin
+					$display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end
+				if(main_ctrl_writeReg != 5'd2) begin
+					$display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd2);
+				end
+				if(main_data_writeReg != 32'd27) begin
+					$display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd27);
+				end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking sw $2, 9($1)");
+			  if(main_q_imem != 32'b00111000100000100000000000001001) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
+			  end
+			  if(main_ctrl_writeEnable != 1'b0) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+			  end
+				if(main_wren != 1'b1) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end 
+				if(main_address_dmem != 12'd171) begin
+			    $display("**Error on main_address_dmem read %h but expected %h.", main_address_dmem,  12'd171);
+			  end
+			  if(main_data != 32'd27) begin
+			    $display("**Error on main_data read %h but expected %h.", main_data,  32'd27);
+			  end
+		  end	 
+		  begin
+		  @(posedge imem_clock);
+				$display("*Checking addi $2, $0, 30");
+				if(main_q_imem != 32'b00101000100000000000000000011110) begin
+					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
+				end
+				if(main_ctrl_writeEnable != 1'b1) begin
+					$display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end
+				if(main_ctrl_writeReg != 5'd2) begin
+					$display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd2);
+				end
+				if(main_data_writeReg != 32'd30) begin
+					$display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd30);
+				end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end	  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking sw $2, 10($1)");
+			  if(main_q_imem != 32'b00111000100000100000000000001010) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
+			  end
+			  if(main_ctrl_writeEnable != 1'b0) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+			  end
+				if(main_wren != 1'b1) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end 
+				if(main_address_dmem != 12'd172) begin
+			    $display("**Error on main_address_dmem read %h but expected %h.", main_address_dmem,  12'd172);
+			  end
+			  if(main_data != 32'd30) begin
+			    $display("**Error on main_data read %h but expected %h.", main_data,  32'd30);
+			  end
+		  end	 
+		  
+		  begin
+		  @(posedge imem_clock);
+				$display("*Checking addi $2, $0, 33");
+				if(main_q_imem != 32'b00101000100000000000000000100001) begin
+					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
+				end
+				if(main_ctrl_writeEnable != 1'b1) begin
+					$display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end
+				if(main_ctrl_writeReg != 5'd2) begin
+					$display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd2);
+				end
+				if(main_data_writeReg != 32'd33) begin
+					$display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd33);
+				end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end	  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking sw $2, 11($1)");
+			  if(main_q_imem != 32'b00111000100000100000000000001011) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
+			  end
+			  if(main_ctrl_writeEnable != 1'b0) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+			  end
+				if(main_wren != 1'b1) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end 
+				if(main_address_dmem != 12'd173) begin
+			    $display("**Error on main_address_dmem read %h but expected %h.", main_address_dmem,  12'd173);
+			  end
+			  if(main_data != 32'd33) begin
+			    $display("**Error on main_data read %h but expected %h.", main_data,  32'd33);
+			  end
+		  end	
+
+		  begin
+		  @(posedge imem_clock);
+				$display("*Checking addi $2, $0, 36");
+				if(main_q_imem != 32'b00101000100000000000000000100100) begin
+					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
+				end
+				if(main_ctrl_writeEnable != 1'b1) begin
+					$display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end
+				if(main_ctrl_writeReg != 5'd2) begin
+					$display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd2);
+				end
+				if(main_data_writeReg != 32'd36) begin
+					$display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd36);
+				end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end	  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking sw $2, 11($1)");
+			  if(main_q_imem != 32'b00111000100000100000000000001100) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
+			  end
+			  if(main_ctrl_writeEnable != 1'b0) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+			  end
+				if(main_wren != 1'b1) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end 
+				if(main_address_dmem != 12'd174) begin
+			    $display("**Error on main_address_dmem read %h but expected %h.", main_address_dmem,  12'd174);
+			  end
+			  if(main_data != 32'd36) begin
+			    $display("**Error on main_data read %h but expected %h.", main_data,  32'd36);
+			  end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock);
+				$display("*Checking addi $2, $0, 39");
+				if(main_q_imem != 32'b00101000100000000000000000100111) begin
+					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
+				end
+				if(main_ctrl_writeEnable != 1'b1) begin
+					$display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end
+				if(main_ctrl_writeReg != 5'd2) begin
+					$display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd2);
+				end
+				if(main_data_writeReg != 32'd39) begin
+					$display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd39);
+				end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end	  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking sw $2, 11($1)");
+			  if(main_q_imem != 32'b00111000100000100000000000001101) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
+			  end
+			  if(main_ctrl_writeEnable != 1'b0) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+			  end
+				if(main_wren != 1'b1) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+				end 
+				if(main_address_dmem != 12'd175) begin
+			    $display("**Error on main_address_dmem read %h but expected %h.", main_address_dmem,  12'd175);
+			  end
+			  if(main_data != 32'd39) begin
+			    $display("**Error on main_data read %h but expected %h.", main_data,  32'd39);
+			  end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking lw $4, 1($1)");
+			  if(main_q_imem != 32'b01000001000000100000000000000001) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
+			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd4) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd4);
+			  end
+			  if(main_data_writeReg != 32'd3) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd3);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking lw $5, 2($1)");
+			  if(main_q_imem != 32'b01000001010000100000000000000010) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
+			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd5) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd5);
+			  end
+			  if(main_data_writeReg != 32'd6) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd6);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking lw $6, 3($1)");
+			  if(main_q_imem != 32'b01000001100000100000000000000011) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
+			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd6) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd6);
+			  end
+			  if(main_data_writeReg != 32'd9) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd9);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking lw $7, 4($1)");
+			  if(main_q_imem != 32'b01000001110000100000000000000100) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
+			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd7) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd7);
+			  end
+			  if(main_data_writeReg != 32'd12) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd12);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking lw $8, 5($1)");
+			  if(main_q_imem != 32'b01000010000000100000000000000101) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
+			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd8) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd8);
+			  end
+			  if(main_data_writeReg != 32'd15) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd15);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking lw $9, 6($1)");
+			  if(main_q_imem != 32'b01000010010000100000000000000110) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
+			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd9) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd9);
+			  end
+			  if(main_data_writeReg != 32'd18) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd18);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking lw $10, 7($1)");
+			  if(main_q_imem != 32'b01000010100000100000000000000111) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
+			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd10) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd10);
+			  end
+			  if(main_data_writeReg != 32'd21) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd21);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking lw $11, 8($1)");
+			  if(main_q_imem != 32'b01000010110000100000000000001000) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
+			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd11) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd11);
+			  end
+			  if(main_data_writeReg != 32'd24) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd24);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking lw $12, 9($1)");
+			  if(main_q_imem != 32'b01000011000000100000000000001001) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
+			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd12) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd12);
+			  end
+			  if(main_data_writeReg != 32'd27) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd27);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking lw $13, 10($1)");
+			  if(main_q_imem != 32'b01000011010000100000000000001010) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
+			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd13) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd13);
+			  end
+			  if(main_data_writeReg != 32'd30) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd30);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking lw $14, 11($1)");
+			  if(main_q_imem != 32'b01000011100000100000000000001011) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
+			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd14) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd14);
+			  end
+			  if(main_data_writeReg != 32'd33) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd33);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking lw $15, 12($1)");
+			  if(main_q_imem != 32'b01000011110000100000000000001100) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
+			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd15) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd15);
+			  end
+			  if(main_data_writeReg != 32'd36) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd36);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
+		  		  
+		  begin
+		  @(posedge imem_clock); 
+			  $display("*Checking lw $16, 13($1)");
+			  if(main_q_imem != 32'b01000100000000100000000000001101) begin
+				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
+			  end
+			  if(main_ctrl_writeEnable != 1'b1) begin
+				 $display("**Error on main_ctrl_writeEnable read %h but expected %h.", main_ctrl_writeEnable,  1'b1);
+			  end
+			  if(main_ctrl_writeReg != 5'd16) begin
+			    $display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd16);
+			  end
+			  if(main_data_writeReg != 32'd39) begin
+			    $display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd39);
+			  end
+				if(main_wren != 1'b0) begin
+					$display("**Error on main_wren read %h but expected %h.", main_ctrl_writeEnable,  1'b0);
+				end
+		  end
 		  begin
 		  @(posedge imem_clock); 
 			  $display("*Checking end");
@@ -1218,7 +2006,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			  end
 		  end
 		  
-		  
+		  		  
 
 		  $display($time, " << End  Simulation Skeleton>>");
 		  $stop;
@@ -1227,6 +2015,6 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 	always
 	#10     main_clock = ~main_clock;    // toggle
 
-**/
+
 	
 endmodule 
