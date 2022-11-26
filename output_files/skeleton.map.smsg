@@ -1,7 +1,7 @@
 Warning (10273): Verilog HDL warning at regfile.v(48): extended using "x" or "z" File: C:/Users/ka266/Documents/Project4/regfile.v Line: 48
 Warning (10273): Verilog HDL warning at regfile.v(63): extended using "x" or "z" File: C:/Users/ka266/Documents/Project4/regfile.v Line: 63
-Info (10281): Verilog HDL Declaration information at processor.v(98): object "is_store" differs only in case from object "is_Store" in the same scope File: C:/Users/ka266/Documents/Project4/processor.v Line: 98
-Info (10281): Verilog HDL Declaration information at processor.v(98): object "is_jr" differs only in case from object "is_JR" in the same scope File: C:/Users/ka266/Documents/Project4/processor.v Line: 98
-Info (10281): Verilog HDL Declaration information at processor.v(97): object "is_regb_rd" differs only in case from object "is_REGB_RD" in the same scope File: C:/Users/ka266/Documents/Project4/processor.v Line: 97
+Info (10281): Verilog HDL Declaration information at processor.v(99): object "is_store" differs only in case from object "is_Store" in the same scope File: C:/Users/ka266/Documents/Project4/processor.v Line: 99
+Info (10281): Verilog HDL Declaration information at processor.v(99): object "is_jr" differs only in case from object "is_JR" in the same scope File: C:/Users/ka266/Documents/Project4/processor.v Line: 99
+Info (10281): Verilog HDL Declaration information at processor.v(98): object "is_regb_rd" differs only in case from object "is_REGB_RD" in the same scope File: C:/Users/ka266/Documents/Project4/processor.v Line: 98
 Warning (10268): Verilog HDL information at extend_clock.v(7): always construct contains both blocking and non-blocking assignments File: C:/Users/ka266/Documents/Project4/extend_clock.v Line: 7
 Warning (10268): Verilog HDL information at extend_clock_negedge.v(7): always construct contains both blocking and non-blocking assignments File: C:/Users/ka266/Documents/Project4/extend_clock_negedge.v Line: 7

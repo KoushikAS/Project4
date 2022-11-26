@@ -70,7 +70,8 @@ module processor(
     data_writeReg,                  // O: Data to write to for regfile
     data_readRegA,                  // I: Data from port A of regfile
     data_readRegB                   // I: Data from port B of regfile
-);
+
+	 );
     // Control signals
     input clock, reset;
 
@@ -120,7 +121,8 @@ module processor(
 	or is_REGB_RD(is_regb_rd, is_bne_blt, is_store, is_jr);
 	 /* Level 1 for Program counter */
 	
-	 wire[11:0] pc_in, prev_pc;
+	 wire[11:0] pc_in;
+	 wire[11:0] prev_pc;
 	 wire[4:0] dest_reg;
 	 wire is_not_eq;
 	 wire is_less_than, overflow;
@@ -142,18 +144,21 @@ module processor(
 	
 	 /* Level 3 ALU */
 	 
-	 wire[31:0] alu_out, immed, alu_in2, overflow_out, tmp_in2;
+	 wire[31:0] alu_out, immed, alu_in2, alu_in1, overflow_out, tmp_in2;
 	 wire[4:0] alu_opcode;
 
 	
 	 sign_extension si(immed, q_imem[16:0]);
 	 
 	 assign tmp_in2 = is_not_rtype? immed: data_readRegB; 		//chosing the right input for alu   
-	 assign alu_in2 = is_bne_blt? data_readRegB: tmp_in2 ; 		//chosing the right input for alu   
+ 
+	 assign alu_in2 = is_bne_blt? data_readRegA: tmp_in2 ; 		//chosing the right input for alu   
+	 assign alu_in1 = is_bne_blt? data_readRegB: data_readRegA ; 		//chosing the right input for alu   
+
 	 assign alu_opcode = is_not_rtype? 5'd0: q_imem[6:2]; 	//chosing the right op code for alu
 	 
 	 
-	 alu a1(data_readRegA, alu_in2, alu_opcode, q_imem[11:7], alu_out, is_not_eq, is_less_than, overflow);
+	 alu a1(alu_in1, alu_in2, alu_opcode, q_imem[11:7], alu_out, is_not_eq, is_less_than, overflow);
 	 check_overflow  checkingoverflow (overflow_out, ctrl_writeReg, alu_out, dest_reg, overflow, is_add_rtype, is_sub_rtype, is_add_i, prev_pc, is_not_jal, q_imem[26:0], is_setx);
 	
 	 /* Level 4 Data memory*/	

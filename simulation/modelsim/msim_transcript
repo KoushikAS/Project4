@@ -12,293 +12,304 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/reg_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:57 on Nov 24,2022
+# Start time: 14:04:55 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/reg_32.v 
 # -- Compiling module reg_32
 # 
 # Top level modules:
 # 	reg_32
-# End time: 13:15:57 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:55 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/decoder5_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:57 on Nov 24,2022
+# Start time: 14:04:55 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/decoder5_32.v 
 # -- Compiling module decoder5_32
 # 
 # Top level modules:
 # 	decoder5_32
-# End time: 13:15:57 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:55 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/regfile.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:57 on Nov 24,2022
+# Start time: 14:04:55 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/regfile.v 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 13:15:57 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:55 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/program_counter.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:57 on Nov 24,2022
+# Start time: 14:04:55 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/program_counter.v 
 # -- Compiling module program_counter
 # 
 # Top level modules:
 # 	program_counter
-# End time: 13:15:57 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:55 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/fulladder.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:57 on Nov 24,2022
+# Start time: 14:04:55 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/fulladder.v 
 # -- Compiling module fulladder
 # 
 # Top level modules:
 # 	fulladder
-# End time: 13:15:57 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:55 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/imem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:57 on Nov 24,2022
+# Start time: 14:04:55 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/imem.v 
 # -- Compiling module imem
 # 
 # Top level modules:
 # 	imem
-# End time: 13:15:57 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:56 on Nov 26,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/dffe.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:57 on Nov 24,2022
+# Start time: 14:04:56 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/dffe.v 
 # -- Compiling module dffe_ref
 # 
 # Top level modules:
 # 	dffe_ref
-# End time: 13:15:57 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:56 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/alu.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:57 on Nov 24,2022
+# Start time: 14:04:56 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/alu.v 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 13:15:57 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:56 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/skeleton.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:57 on Nov 24,2022
+# Start time: 14:04:56 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/skeleton.v 
 # -- Compiling module skeleton
 # 
 # Top level modules:
 # 	skeleton
-# End time: 13:15:57 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:56 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/processor.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:57 on Nov 24,2022
+# Start time: 14:04:56 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/processor.v 
 # -- Compiling module processor
 # 
 # Top level modules:
 # 	processor
-# End time: 13:15:58 on Nov 24,2022, Elapsed time: 0:00:01
+# End time: 14:04:56 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/dmem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:58 on Nov 24,2022
+# Start time: 14:04:56 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/dmem.v 
 # -- Compiling module dmem
 # 
 # Top level modules:
 # 	dmem
-# End time: 13:15:58 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:56 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/pc_adder.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:58 on Nov 24,2022
+# Start time: 14:04:56 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/pc_adder.v 
 # -- Compiling module pc_adder
 # 
 # Top level modules:
 # 	pc_adder
-# End time: 13:15:58 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:56 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/sign_extension.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:58 on Nov 24,2022
+# Start time: 14:04:56 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/sign_extension.v 
 # -- Compiling module sign_extension
 # 
 # Top level modules:
 # 	sign_extension
-# End time: 13:15:58 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:56 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/mux_32bit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:58 on Nov 24,2022
+# Start time: 14:04:56 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/mux_32bit.v 
 # -- Compiling module mux_32bit
 # 
 # Top level modules:
 # 	mux_32bit
-# End time: 13:15:58 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:56 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/extend_clock.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:58 on Nov 24,2022
+# Start time: 14:04:56 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/extend_clock.v 
 # -- Compiling module extend_clock
 # 
 # Top level modules:
 # 	extend_clock
-# End time: 13:15:58 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:56 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/invert_clock.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:58 on Nov 24,2022
+# Start time: 14:04:56 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/invert_clock.v 
 # -- Compiling module invert_clock
 # 
 # Top level modules:
 # 	invert_clock
-# End time: 13:15:58 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:57 on Nov 26,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/initalize.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:58 on Nov 24,2022
+# Start time: 14:04:57 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/initalize.v 
 # -- Compiling module initalize
 # 
 # Top level modules:
 # 	initalize
-# End time: 13:15:58 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:57 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/initalize_12.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:58 on Nov 24,2022
+# Start time: 14:04:57 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/initalize_12.v 
 # -- Compiling module initalize_12
 # 
 # Top level modules:
 # 	initalize_12
-# End time: 13:15:59 on Nov 24,2022, Elapsed time: 0:00:01
+# End time: 14:04:57 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/initalize_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:59 on Nov 24,2022
+# Start time: 14:04:57 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/initalize_32.v 
 # -- Compiling module initalize_32
 # 
 # Top level modules:
 # 	initalize_32
-# End time: 13:15:59 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:57 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/is_ne.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:59 on Nov 24,2022
+# Start time: 14:04:57 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/is_ne.v 
 # -- Compiling module is_ne
 # 
 # Top level modules:
 # 	is_ne
-# End time: 13:15:59 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:57 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/check_two.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:59 on Nov 24,2022
+# Start time: 14:04:57 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/check_two.v 
 # -- Compiling module check_two
 # 
 # Top level modules:
 # 	check_two
-# End time: 13:15:59 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:57 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/check_overflow.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:59 on Nov 24,2022
+# Start time: 14:04:57 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/check_overflow.v 
 # -- Compiling module check_overflow
 # 
 # Top level modules:
 # 	check_overflow
-# End time: 13:15:59 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:57 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/mux_5bit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:59 on Nov 24,2022
+# Start time: 14:04:57 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/mux_5bit.v 
 # -- Compiling module mux_5bit
 # 
 # Top level modules:
 # 	mux_5bit
-# End time: 13:15:59 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:57 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/fulladder_12bits.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:59 on Nov 24,2022
+# Start time: 14:04:57 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/fulladder_12bits.v 
 # -- Compiling module fulladder_12bits
 # 
 # Top level modules:
 # 	fulladder_12bits
-# End time: 13:15:59 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:57 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/fulladder_PC.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:59 on Nov 24,2022
+# Start time: 14:04:57 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/fulladder_PC.v 
 # -- Compiling module fulladder_PC
 # 
 # Top level modules:
 # 	fulladder_PC
-# End time: 13:15:59 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:57 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/is_ne_32bit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:59 on Nov 24,2022
+# Start time: 14:04:57 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/is_ne_32bit.v 
 # -- Compiling module is_ne_32bit
 # 
 # Top level modules:
 # 	is_ne_32bit
-# End time: 13:15:59 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:58 on Nov 26,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/sign_extension_27bit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:15:59 on Nov 24,2022
+# Start time: 14:04:58 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/sign_extension_27bit.v 
 # -- Compiling module sign_extension_27bit
 # 
 # Top level modules:
 # 	sign_extension_27bit
-# End time: 13:15:59 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:58 on Nov 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/assign_clock.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:04:58 on Nov 26,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/assign_clock.v 
+# -- Compiling module assign_clock
+# 
+# Top level modules:
+# 	assign_clock
+# End time: 14:04:58 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/processor_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:16:00 on Nov 24,2022
+# Start time: 14:04:58 on Nov 26,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project4" C:/Users/ka266/Documents/Project4/processor_tb.v 
 # -- Compiling module processor_tb
 # 
 # Top level modules:
 # 	processor_tb
-# End time: 13:16:00 on Nov 24,2022, Elapsed time: 0:00:00
+# End time: 14:04:58 on Nov 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  processor_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" processor_tb 
-# Start time: 13:16:00 on Nov 24,2022
+# Start time: 14:04:58 on Nov 26,2022
 # Loading work.processor_tb
 # Loading work.skeleton
 # Loading work.extend_clock
 # Loading work.invert_clock
+# Loading work.assign_clock
 # Loading work.imem
 # Loading altera_mf_ver.altsyncram
 # Loading work.dmem
@@ -331,9 +342,9 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: ka266  Hostname: VCM-28338  ProcessID: 3364
-#           Attempting to use alternate WLF file "./wlfte3h8xz".
+#           Attempting to use alternate WLF file "./wlftz8std1".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfte3h8xz
+#           Using alternate file: ./wlftz8std1
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -342,9 +353,7 @@
 #                    0 << Starting the Simulation for skeleton >>
 # *Checking nop.
 # *Checking addi $1, $0, 5
-# *IMP 1st instruction on main_data_writeReg read 00000005.
 # *Checking addi $2, $0, 3
-# *IMP 1st instruction on main_data_writeReg read 00000003.
 # *Checking add  $3, $1, $2
 # *Checking sub $4, $1, $2
 # *Checking and $5, $0, $1
@@ -357,7 +366,9 @@
 # *Checking sw $10, 1($0)
 # *Checking sw $11, 2($0)
 # *Checking lw $12, 1($0)
+# **Error on main_data_writeReg read 00000237 but expected 00000159.
 # *Checking lw $13, 2($0)
+# **Error on main_data_writeReg read 00000159 but expected 00000237.
 # *Checking addi $1, $0, 162
 # *Checking addi $2, $0, 3
 # *Checking sw $2, 1($1)
@@ -386,22 +397,53 @@
 # *Checking addi $2, $0, 39
 # *Checking sw $2, 11($1)
 # *Checking lw $4, 1($1)
+# **Error on main_data_writeReg read 00000027 but expected 00000003.
 # *Checking lw $5, 2($1)
+# **Error on main_data_writeReg read 00000003 but expected 00000006.
 # *Checking lw $6, 3($1)
+# **Error on main_data_writeReg read 00000006 but expected 00000009.
 # *Checking lw $7, 4($1)
+# **Error on main_data_writeReg read 00000009 but expected 0000000c.
 # *Checking lw $8, 5($1)
+# **Error on main_data_writeReg read 0000000c but expected 0000000f.
 # *Checking lw $9, 6($1)
+# **Error on main_data_writeReg read 0000000f but expected 00000012.
 # *Checking lw $10, 7($1)
+# **Error on main_data_writeReg read 00000012 but expected 00000015.
 # *Checking lw $11, 8($1)
+# **Error on main_data_writeReg read 00000015 but expected 00000018.
 # *Checking lw $12, 9($1)
+# **Error on main_data_writeReg read 00000018 but expected 0000001b.
 # *Checking lw $13, 10($1)
+# **Error on main_data_writeReg read 0000001b but expected 0000001e.
 # *Checking lw $14, 11($1)
+# **Error on main_data_writeReg read 0000001e but expected 00000021.
 # *Checking lw $15, 12($1)
+# **Error on main_data_writeReg read 00000021 but expected 00000024.
 # *Checking lw $16, 13($1)
+# **Error on main_data_writeReg read 00000024 but expected 00000027.
+# *Checking J 58
+# *Checking jal 60
+# **Error on main_data_writeReg read 0000003b but expected 00000039.
+# *Checking addi $4, $0, 63
+# *Checking jr $4
+# *Checking setx 0
+# *Checking bex 100
+# *Checking setx 4
+# *Checking bex 68
+# *Checking addi $2, $0, 10
+# *Checking addi $1, $0, 5
+# *Checking bne $1, $2, 1
+# *Checking addi $1, $0, 10
+# *Checking bne $1, $2, 100
+# *Checking addi $1, $0, 0
+# *Checking blt $1, $2, 1
+# *Checking addi $1, $0, 10
+# *Checking blt $1, $2, 100
+# *Checking addi $1, $0, 5
 # *Checking end
-#                 2450 << End  Simulation Skeleton>>
-# ** Note: $stop    : C:/Users/ka266/Documents/Project4/processor_tb.v(2012)
-#    Time: 2450 ns  Iteration: 2  Instance: /processor_tb
-# Break in Module processor_tb at C:/Users/ka266/Documents/Project4/processor_tb.v line 2012
-# End time: 13:39:32 on Nov 24,2022, Elapsed time: 0:23:32
-# Errors: 0, Warnings: 2
+# *Checking end
+#                 6150 << End  Simulation Skeleton>>
+# ** Note: $stop    : C:/Users/ka266/Documents/Project4/processor_tb.v(2675)
+#    Time: 6150 ns  Iteration: 3  Instance: /processor_tb
+# Break in Module processor_tb at C:/Users/ka266/Documents/Project4/processor_tb.v line 2675
