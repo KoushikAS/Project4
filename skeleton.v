@@ -26,8 +26,8 @@ module skeleton(clock, reset, imem_clock, dmem_clock, processor_clock, regfile_c
 	 	
 	 extend_clock imem_clk (imem_clock, reset,  clock); 
 	 extend_clock processor_clk (processor_clock, reset, imem_clock);
-	 invert_clock regfile_clk (regfile_clock, reset, imem_clock);
-	 assign_clock dmem_clk (dmem_clock, reset,  clock);
+	 invert_clock dmem_clk (dmem_clock, reset,  clock);
+	 extend_clock regfile_clk (regfile_clock, reset, dmem_clock);
 		 
 	 
     /** IMEM **/

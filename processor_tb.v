@@ -1112,8 +1112,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $11, $0, 567");
 			  if(main_q_imem != 32'b00101010110000000000001000110111) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101010110000000000001000110111);
@@ -1302,7 +1301,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  
 		  begin
 		  @(posedge processor_clock);
-		 @(posedge regfile_clock);  
+		  @(posedge regfile_clock);  
 			  $display("*Checking sw $2, 2($1)");
 			  if(main_q_imem != 32'b00111000100000100000000000000010) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
@@ -1343,8 +1342,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking sw $2, 2($1)");
 			  if(main_q_imem != 32'b00111000100000100000000000000011) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
@@ -1364,8 +1362,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $2, $0, 12");
 				if(main_q_imem != 32'b00101000100000000000000000001100) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -1385,8 +1382,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking sw $2, 4($1)");
 			  if(main_q_imem != 32'b00111000100000100000000000000100) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
@@ -1406,8 +1402,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end		  
 
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $2, $0, 15");
 				if(main_q_imem != 32'b00101000100000000000000000001111) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -1427,8 +1422,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking sw $2, 6($1)");
 			  if(main_q_imem != 32'b00111000100000100000000000000101) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
@@ -1448,8 +1442,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end		
 
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $2, $0, 18");
 				if(main_q_imem != 32'b00101000100000000000000000010010) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -1469,8 +1462,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking sw $2, 6($1)");
 			  if(main_q_imem != 32'b00111000100000100000000000000110) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
@@ -1490,8 +1482,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end	
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $2, $0, 21");
 				if(main_q_imem != 32'b00101000100000000000000000010101) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -1511,8 +1502,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking sw $2, 7($1)");
 			  if(main_q_imem != 32'b00111000100000100000000000000111) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
@@ -1532,8 +1522,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end	
 
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $2, $0, 24");
 				if(main_q_imem != 32'b00101000100000000000000000011000) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -1553,8 +1542,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking sw $2, 7($1)");
 			  if(main_q_imem != 32'b00111000100000100000000000001000) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
@@ -1574,8 +1562,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end	
 
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $2, $0, 27");
 				if(main_q_imem != 32'b00101000100000000000000000011011) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -1595,8 +1582,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking sw $2, 9($1)");
 			  if(main_q_imem != 32'b00111000100000100000000000001001) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
@@ -1615,8 +1601,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			  end
 		  end	 
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $2, $0, 30");
 				if(main_q_imem != 32'b00101000100000000000000000011110) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -1635,8 +1620,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 				end
 		  end	  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking sw $2, 10($1)");
 			  if(main_q_imem != 32'b00111000100000100000000000001010) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
@@ -1656,8 +1640,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end	 
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $2, $0, 33");
 				if(main_q_imem != 32'b00101000100000000000000000100001) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -1676,8 +1659,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 				end
 		  end	  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking sw $2, 11($1)");
 			  if(main_q_imem != 32'b00111000100000100000000000001011) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
@@ -1697,8 +1679,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end	
 
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $2, $0, 36");
 				if(main_q_imem != 32'b00101000100000000000000000100100) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -1717,8 +1698,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 				end
 		  end	  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking sw $2, 11($1)");
 			  if(main_q_imem != 32'b00111000100000100000000000001100) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
@@ -1738,8 +1718,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $2, $0, 39");
 				if(main_q_imem != 32'b00101000100000000000000000100111) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -1758,8 +1737,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 				end
 		  end	  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking sw $2, 11($1)");
 			  if(main_q_imem != 32'b00111000100000100000000000001101) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00111010110000000000000000000010);
@@ -1779,8 +1757,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking lw $4, 1($1)");
 			  if(main_q_imem != 32'b01000001000000100000000000000001) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
@@ -1800,8 +1777,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking lw $5, 2($1)");
 			  if(main_q_imem != 32'b01000001010000100000000000000010) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
@@ -1821,8 +1797,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking lw $6, 3($1)");
 			  if(main_q_imem != 32'b01000001100000100000000000000011) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
@@ -1842,8 +1817,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking lw $7, 4($1)");
 			  if(main_q_imem != 32'b01000001110000100000000000000100) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
@@ -1863,8 +1837,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking lw $8, 5($1)");
 			  if(main_q_imem != 32'b01000010000000100000000000000101) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
@@ -1884,8 +1857,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking lw $9, 6($1)");
 			  if(main_q_imem != 32'b01000010010000100000000000000110) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
@@ -1905,8 +1877,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking lw $10, 7($1)");
 			  if(main_q_imem != 32'b01000010100000100000000000000111) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
@@ -1927,8 +1898,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking lw $11, 8($1)");
 			  if(main_q_imem != 32'b01000010110000100000000000001000) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
@@ -1948,8 +1918,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking lw $12, 9($1)");
 			  if(main_q_imem != 32'b01000011000000100000000000001001) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
@@ -1969,8 +1938,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking lw $13, 10($1)");
 			  if(main_q_imem != 32'b01000011010000100000000000001010) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
@@ -1990,8 +1958,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking lw $14, 11($1)");
 			  if(main_q_imem != 32'b01000011100000100000000000001011) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
@@ -2011,8 +1978,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking lw $15, 12($1)");
 			  if(main_q_imem != 32'b01000011110000100000000000001100) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
@@ -2032,8 +1998,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking lw $16, 13($1)");
 			  if(main_q_imem != 32'b01000100000000100000000000001101) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b01000011000000000000000000000001);
@@ -2055,8 +2020,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  
 	
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking J 58");
 				if(main_q_imem != 32'b00001000000000000000000000111010) begin
 					$display("**Error on main_q_imem read %b but expected %b.", main_q_imem,  32'b00001000000000000000000000111010);
@@ -2076,8 +2040,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking jal 60");
 				if(main_q_imem != 32'b00011000000000000000000000111100) begin
 					$display("**Error on main_q_imem read %b but expected %b.", main_q_imem,  32'b00011000000000000000000000111100);
@@ -2088,8 +2051,8 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 				if(main_ctrl_writeReg != 5'd31) begin
 					$display("**Error on main_ctrl_writeReg read %h but expected %h.", main_ctrl_writeReg,  5'd31);
 				end
-				if(main_data_writeReg != 32'd57) begin
-					$display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd57);
+				if(main_data_writeReg != 32'd59) begin
+					$display("**Error on main_data_writeReg read %h but expected %h.", main_data_writeReg,  32'd59);
 				end
 				if(main_address_imem != 12'd60) begin
 					$display("**Error on main_address_imem read %d but expected %d.", main_address_imem,  12'd60);
@@ -2104,8 +2067,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  
 	
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $4, $0, 63");
 				if(main_q_imem != 32'b00101001000000000000000000111111) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2125,8 +2087,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end	
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking jr $4");
 				if(main_q_imem != 32'b00100001000000000000000000000000) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2146,8 +2107,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking setx 0");
 				if(main_q_imem != 32'b10101000000000000000000000000000) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2167,8 +2127,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end	
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking bex 100");
 				if(main_q_imem != 32'b10110000000000000000000001100100) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2182,8 +2141,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking setx 4");
 				if(main_q_imem != 32'b10101000000000000000000000000100) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2203,8 +2161,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end	
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking bex 68");
 				if(main_q_imem != 32'b10110000000000000000000001000100) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2224,8 +2181,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $2, $0, 10");
 				if(main_q_imem != 32'b00101000100000000000000000001010) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2245,8 +2201,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end	
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $1, $0, 5");
 				if(main_q_imem != 32'b00101000010000000000000000000101) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2266,8 +2221,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end	
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking bne $1, $2, 1");
 				if(main_q_imem != 32'b00010000010001000000000000000001) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2284,8 +2238,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $1, $0, 10");
 				if(main_q_imem != 32'b00101000010000000000000000001010) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2305,8 +2258,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end	
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking bne $1, $2, 100");
 				if(main_q_imem != 32'b00010000010001000000000001100100) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2323,8 +2275,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $1, $0, 0");
 				if(main_q_imem != 32'b00101000010000000000000000000000) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2344,8 +2295,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end	
 		  
 		   begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking blt $1, $2, 1");
 				if(main_q_imem != 32'b00110000010001000000000000000001) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2362,8 +2312,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $1, $0, 10");
 				if(main_q_imem != 32'b00101000010000000000000000001010) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2383,8 +2332,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end	
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking blt $1, $2, 100");
 				if(main_q_imem != 32'b00110000010001000000000001100100) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2401,8 +2349,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $1, $0, 5");
 				if(main_q_imem != 32'b00101000010000000000000000000101) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2423,8 +2370,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking end");
 			  if(main_q_imem != 32'b00000000000000000000000000000000) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00000000000000000000000000000000);
@@ -2432,8 +2378,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking end");
 			  if(main_q_imem != 32'b00000000000000000000000000000000) begin
 				 $display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00000000000000000000000000000000);
@@ -2442,8 +2387,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  
 		  		/** 
 		  	  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $1, $0, 1");
 				if(main_q_imem != 32'b00101000010000000000000000000001) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2463,8 +2407,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $2, $0, 1");
 				if(main_q_imem != 32'b00101000100000000000000000000001) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2484,8 +2427,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $3, $0, 3");
 				if(main_q_imem != 32'b00101000110000000000000000000011) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2505,8 +2447,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking add $1, $3, $2");
 				if(main_q_imem != 32'b00000000010000100010000000000000) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2526,8 +2467,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking bne $3, $1, 58");
 				if(main_q_imem != 32'b00010000110000100000000000111010) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2541,8 +2481,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking add $1, $1, $2");
 				if(main_q_imem != 32'b00000000010000100010000000000000) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2562,8 +2501,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking bne $3, $1, 58");
 				if(main_q_imem != 32'b00010000110000100000000000111010) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2577,8 +2515,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $1, $0, 1");
 				if(main_q_imem != 32'b00101000010000000000000000000001) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2598,8 +2535,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end		  
  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $1, $1, $2");
 				if(main_q_imem != 32'b00000000010000100010000000000000) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2619,8 +2555,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end	
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking blt $3, $1, 61");
 				if(main_q_imem != 32'b00110000110000100000000000111101) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2634,8 +2569,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking addi $1, $1, $2");
 				if(main_q_imem != 32'b00000000010000100010000000000000) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
@@ -2655,8 +2589,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 		  end	
 		  
 		  begin
-		  @(posedge processor_clock); 
-		  @(posedge regfile_clock); 
+		  @(posedge processor_clock);
 			  $display("*Checking blt $3, $1, 60");
 				if(main_q_imem != 32'b00110000110000100000000000111101) begin
 					$display("**Error on main_q_imem read %h but expected %h.", main_q_imem,  32'b00101000010000000000000000000101);
