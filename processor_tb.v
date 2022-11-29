@@ -15,7 +15,6 @@ module processor_tb();
     reg  [31:0] data_readRegA, data_readRegB;
 	
 
-	/**
 	 integer counter =0;
 	 integer previous_counter =0 ;
  
@@ -624,8 +623,8 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			//BLT RD, RS, N 
 		  //blt $1, $2, 2
 			q_imem = 32'b00110000010001000000000000000010;
-			data_readRegA = 32'd5;
-			data_readRegB = 32'd3;
+			data_readRegA = 32'd3;
+			data_readRegB = 32'd5;
 			q_dmem = 32'd6;
 			$display($time, " << Checking BLT False >>");
 			
@@ -657,8 +656,8 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 			//BLT RD, RS, N 
 		  //blt $1, $2, 2
 			q_imem = 32'b00110000010001000000000000000010;
-			data_readRegA = 32'd3;
-			data_readRegB = 32'd5;
+			data_readRegA = 32'd5;
+			data_readRegB = 32'd3;
 			q_dmem = 32'd6;
 			$display($time, " << Checking BLT True >>");
 			
@@ -850,7 +849,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 	// Clock generator
 	always
 		#10     clock = ~clock;    // toggle
-**/
+/**
 		
 	 reg  main_clock, main_ctrl_reset;
     wire imem_clock, dmem_clock, processor_clock, regfile_clock;
@@ -2447,6 +2446,6 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg,  data_readRegA, data_readRegB);
 	always
 	#10     main_clock = ~main_clock;    // toggle
 
-
+**/
 	
 endmodule 
