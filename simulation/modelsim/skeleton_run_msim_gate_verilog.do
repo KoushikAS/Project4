@@ -5,7 +5,7 @@ if {[file exists gate_work]} {
 vlib gate_work
 vmap work gate_work
 
-vlog -vlog01compat -work work +incdir+. {skeleton_min_1200mv_0c_fast.vo}
+vlog -vlog01compat -work work +incdir+. {skeleton_7_1200mv_85c_slow.vo}
 
 vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project4 {C:/Users/ka266/Documents/Project4/processor_tb.v}
 

@@ -9,35 +9,35 @@ z2
 cModel Technology
 Z0 dC:/Users/ka266/Documents/Project4/simulation/modelsim
 vhard_block
-Z1 !s110 1669664406
+Z1 !s110 1669681659
 !i10b 1
 !s100 >WK?ofZXPZCEeUD>;obon3
-I1NGH5d41oIHEF]e23k2jH3
+I1lBMai5?Ueg8:eJm8Vzg53
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1669580859
-Z4 8skeleton_min_1200mv_0c_fast.vo
-Z5 Fskeleton_min_1200mv_0c_fast.vo
+Z3 w1669679779
+Z4 8skeleton_7_1200mv_85c_slow.vo
+Z5 Fskeleton_7_1200mv_85c_slow.vo
 L0 72619
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1669664405.000000
-Z8 !s107 skeleton_min_1200mv_0c_fast.vo|
-Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|skeleton_min_1200mv_0c_fast.vo|
+Z7 !s108 1669681659.000000
+Z8 !s107 skeleton_7_1200mv_85c_slow.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|skeleton_7_1200mv_85c_slow.vo|
 !i113 1
 Z10 o-vlog01compat -work work
 Z11 !s92 -vlog01compat -work work +incdir+.
 Z12 tCvgOpt 0
 vprocessor_tb
-R1
+!s110 1669681660
 !i10b 1
-!s100 lBH8X?I<dLK1>=9ST<4VN3
-IXBLI`0oROSzA1EAP2JT]_3
+!s100 PJ6;TnYRV2X<f6zaoZlP10
+Ij0S2U1MzYeL2Ihc=4?AlA3
 R2
 R0
-w1669664241
+w1669681639
 8C:/Users/ka266/Documents/Project4/processor_tb.v
 FC:/Users/ka266/Documents/Project4/processor_tb.v
 L0 3
@@ -45,7 +45,7 @@ R6
 r1
 !s85 0
 31
-!s108 1669664406.000000
+!s108 1669681660.000000
 !s107 C:/Users/ka266/Documents/Project4/processor_tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project4|C:/Users/ka266/Documents/Project4/processor_tb.v|
 !i113 1
@@ -55,8 +55,8 @@ R12
 vskeleton
 R1
 !i10b 1
-!s100 jB4a0b1Y5bO5JfbV@eEf92
-I_k1hbXMb1ZM_`P8IR]FQ_1
+!s100 gN<c3TUMM6dz_kXo@;KAe1
+I8<DFjQLmLG63oO4`9Zo<Y1
 R2
 R0
 R3
